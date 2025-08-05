@@ -1,1 +1,740 @@
---[[ Protected with Moonsec V3 ]] return(function(...)local s={"\077\120\075\083\117\065\075\083\067\118\087\112\067\081\049\079";"\101\069\087\083\077\115\111\079\111\102\061\061","\122\120\109\113\122\053\061\061";"\101\079\087\043\077\083\112\076\119\083\077\049\077\120\119\115\117\115\080\061";"\118\108\050\097\122\065\121\061","\122\120\108\112\111\090\119\056";"\075\090\109\113\077\090\075\114\055\115\087\079\111\090\075\072\111\090\075\088\055\053\061\061","\077\081\075\113\117\086\122\079","\111\090\109\104\117\090\078\061";"\077\081\109\085\122\090\050\113","\051\048\077\115\117\118\110\068\105\109\067\112\110\066\107\117\107\077\075\051\122\112\072\100\099\097\113\051\066\066\086\088\098\088\087\102";"\047\078\087\055\122\088\109\075\066\079\112\084\057\078\054\067\075\115\050\119","\053\108\070\106\087\075\043\053\075\047\111\056\119\079\111\122\068\090\053\061";"\117\090\050\112\122\069\119\083\077\081\079\085\122\048\061\061","\057\083\079\100\078\086\111\115\075\078\049\104\068\047\088\049","\077\079\043\099\117\075\087\106\117\079\112\078\066\090\049\083","\057\081\055\083\117\076\119\053\065\115\050\071\119\083\116\056\057\083\067\061","\122\081\049\110\117\086\055\061";"\111\069\122\067\057\115\049\120\047\120\054\072\111\108\102\048\057\090\077\061","\077\086\087\114\057\065\054\076";"\118\108\050\116\117\081\087\079\068\102\061\061","\111\065\054\048\067\065\119\084","\075\078\109\047\119\072\122\054\067\076\115\120\057\088\083\108","\111\090\050\085\111\065\108\104\122\118\055\061","\078\073\112\106\117\090\087\043\119\083\116\090\111\090\087\081";"\100\104\080\079\122\089\056\116\100\080\061\061","\118\108\050\113\122\118\087\112\111\090\109\104\117\090\078\061";"","\117\071\055\061","\067\120\050\085\067\120\109\083","\067\120\112\112\077\080\061\061","\101\108\122\108\068\076\122\048\065\078\112\071\078\072\111\083","\111\079\075\089\057\073\079\107\078\120\109\107\119\088\112\104\119\053\061\061","\067\076\079\083\122\053\061\061","\117\065\109\083\057\102\061\061";"\067\120\043\073\122\090\050\101\068\071\111\081\047\079\088\061";"\122\086\119\108\067\080\061\061";"\078\115\080\049\057\072\119\076\075\075\111\104\087\075\087\079\053\053\061\061","\118\108\050\076\067\048\061\061";"\077\090\119\112\117\090\048\061","\087\065\108\072\075\109\111\054\047\047\053\061";"\100\080\061\061";"\122\118\043\114\117\086\055\061","\111\072\043\086\122\075\116\072\075\108\116\110\068\069\087\097\067\118\109\116";"\117\090\075\085";"\111\090\050\073\111\069\043\116\117\081\077\061";"\117\071\115\061"}local function r(r)return s[r-(-989045+1001306)]end for r,j in ipairs({{-930624-(-930625);-953003-(-953050)};{618718+-618717,-789866+789873};{5804-5796,650113+-650066}})do while j[591691+-591690]<j[718487+-718485]do s[j[890270-890269]],s[j[-685008+685010]],j[721844-721843],j[-92340+92342]=s[j[-1007289-(-1007291)]],s[j[-593984-(-593985)]],j[675948+-675947]+(-263708+263709),j[921055-921053]-(770389+-770388)end end do local r=table.insert local j=type local k=string.sub local R=table.concat local o=math.floor local A={w=-1045493-(-1045506),["\050"]=-171485+171546;y=-318622-(-318678);B=-711622-(-711634);O=-675599+675636,["\052"]=94073-94014;d=600774-600760;k=435892+-435834;h=971339+-971305;["\055"]=995251+-995243;["\043"]=557050-557041;A=-667296+667318;Z=-568417-(-568423);i=111904-111842,["\057"]=-522549+522575,r=-412213+412263;P=-428071+428103;U=32928+-32882;l=347500-347447,L=879555-879516;T=-959772-(-959815);["\048"]=-686411+686459,p=-587682-(-587715);["\054"]=-562409+562466;z=-1012704+1012729;Q=970405+-970367,o=91503-91474;b=399502+-399442;["\056"]=-910565+910605;W=682999+-682982,f=-555464+555464,H=114883-114848,q=894152+-894107;J=227379+-227368;e=-425740+425758;V=326121-326066,M=296587-296559;K=-424927+424948,v=-309048-(-309071),F=-846220+846221,["\053"]=-301424-(-301440),j=-22229+22271;["\047"]=821374-821355,["\049"]=-968278+968327;Y=-999079-(-999081),R=-500736-(-500799),S=-740375+740427;c=-446916+446926,a=703837+-703793,n=-69854+69901;g=-730994+731025;["\051"]=697326-697311;E=-545580+545587,x=-87019+87073,D=-532360-(-532390),G=-734665-(-734668);N=609753+-609733;s=-542706+542710,I=845957-845906;u=532470-532443,C=420720-420696,t=228799+-228758;X=781840-781804,m=-770580+770585}local y=s local u=string.char local K=string.len for s=-348537-(-348538),#y,157519-157518 do local J=y[s]if j(J)=="\115\116\114\105\110\103"then local j=K(J)local O={}local l=204189+-204188 local D=996863+-996863 local q=-788695-(-788695)while l<=j do local s=k(J,l,l)local R=A[s]if R then D=D+R*(942215-942151)^((297559-297556)-q)q=q+(335070+-335069)if q==790869+-790865 then q=864252+-864252 local s=o(D/(548693-483157))local j=o((D%(-752067+817603))/(-92887+93143))local k=D%(-434626-(-434882))r(O,u(s,j,k))D=27812+-27812 end elseif s=="\061"then r(O,u(o(D/(161519+-95983))))if l>=j or k(J,l+(-1003263-(-1003264)),l+(723179-723178))~="\061"then r(O,u(o((D%(645334+-579798))/(-675667+675923))))end break end l=l+(798498+-798497)end y[s]=R(O)end end end return(function(s,k,R,o,A,y,u,j,c,l,b,z,D,O,J,m,K,i,H,e,q)J,O,e,j,l,D,z,b,q,i,c,H,K,m={},function()l=l+(844305-844304)J[l]=-95749-(-95750)return l end,function(s,r)local k=D(r)local R=function(R,o)return j(s,{R,o},r,k)end return R end,function(j,R,o,A)local W,N,U,g,x,n,P,G,B,f,t,h,F,z,a,Q,v,X,w,p,q,V,l,Y,T,u,Z,d,L,J,D,C,M,S while j do if j<-611252+8872201 then if j<962134+2515195 then if j<2854982-755879 then if j<1292679-(-75126)then if j<-807873+1943575 then if j<1401648-541877 then if j<1283289-960453 then j=13322163-510111 K[o[-684829+684834]]=u J=nil else S=r(-583116-(-595424))U=O()G=H(-951006+4188368,{})K[U]=u d=1012259-1012194 C=-659347+659350 j=K[X]n=r(705113-692846)u=j(C,d)j=-611654+611654 C=O()d=j K[C]=u j=762792+-762792 u=s[S]M=j S={u(G)}j={k(S)}S=j u=829676-829674 j=S[u]u=r(588444-576152)G=j j=s[u]v=K[D]x=s[n]n=x(G)x=r(248884+-236590)N=v(n,x)v={N()}u=j(k(v))v=O()K[v]=u u=503657+-503656 N=K[C]x=N j=2888681-785663 N=902667-902666 n=N N=-261036+261036 L=n<N N=u-n end else j=10985383-(-1042460)end else if j<984896-(-328446)then j={}K[o[-1002411+1002413]]=j z=-931357+35184373020189 P=r(-495520+507808)X=198585-198330 u=K[o[-862539-(-862542)]]q=u j=-64268+11092310 u=l%z K[o[862086-862082]]=u w=l%X X=-72929-(-72931)z=w+X C=656452-656451 K[o[-405072+405077]]=z X=s[P]P=r(579297+-567031)w=X[P]P=123410-123409 X=w(J)w=r(-156678+168974)D[l]=w w=998900+-998673 d=C C=140783+-140783 M=d<C U=X C=P-d else D=D+z X=not w l=D<=q l=X and l X=D>=q X=w and X l=X or l X=-448627+9787631 j=l and X l=4923440-(-921083)j=j or l end end else if j<2069060-57788 then if j<2007708-418597 then K[l]=t F=K[g]Z=-543665-(-543666)h=F+Z W=Q[h]V=d+W W=-653078-(-653334)j=V%W h=K[B]d=j j=7798448-20954 W=M+h h=13138+-12882 V=W%h M=V else j=true K[o[-472409+472410]]=j u={}j=s[r(-560513-(-572804))]end else if j<-1026232+3124331 then u={}j=s[r(60702+-48415)]else J=r(-623713-(-635977))j=s[J]l=K[o[542961+-542953]]D=-239523+239523 J=j(l,D)j=6470562-438784 end end end else if j<320069+2498509 then if j<3187282-586805 then if j<3431043-982623 then if j<-121898+2420821 then N=N+n u=N<=x a=not L u=a and u a=N>=x a=L and a u=a or u a=-244204+2778603 j=u and a u=222543+12766702 j=j or u else j=-175722+11119729 end else p=r(-108645+120948)a=O()Y=-362879+362880 g=222179-221924 K[a]=N B=758538+-758438 u=s[p]p=r(-985720-(-997998))j=u[p]p=-10429-(-10430)u=j(p,B)p=O()K[p]=u B=-772386-(-772386)j=K[X]u=j(B,g)g=149623-149622 B=O()K[B]=u T=765100+-755100 j=K[X]f=K[p]u=j(g,f)Z=-971624-(-971624)g=O()K[g]=u W=r(-940297-(-952564))u=K[X]Q=846216+-846214 f=u(Y,Q)u=-43857+43858 Q=r(944456+-932193)j=f==u u=r(446022-433728)f=O()K[f]=j V=s[W]h=K[X]F={h(Z,T)}j=r(790740-778435)W=V(k(F))V=r(762465-750202)t=W..V Y=Q..t j=G[j]j=j(G,u,Y)Y=O()Q=r(-550000+562308)t=i(180116+8217805,{X,a,C,D,l,v;f;Y,p;g,B;U})K[Y]=j u=s[Q]Q={u(t)}j={k(Q)}Q=j j=K[f]j=j and 131475+10824287 or 391425+2696782 end else if j<2525504-(-166330)then j=348199+10901617 G=v B=G S[G]=B G=nil else l=K[o[1008141-1008139]]D=K[o[795790+-795787]]j=-985707+12754923 J=l==D u=J end end else if j<3473654-273587 then if j<3328225-354175 then w=u X=r(-623493+635796)u=s[X]X=r(269758+-257480)j=u[X]P=r(230297-218020)X=O()K[X]=j M=r(-33741+46018)u=s[P]P=r(-687384-(-699682))j=u[P]P=j C=j d=s[M]U=d j=d and 614267+13934388 or 10559744-212506 else V=K[l]t=V j=V and 6464089-765610 or-618661+1994660 end else if j<2970224-(-475026)then D=222527+10930911 u=14350823-297093 l=r(-16177-(-28457))J=l^D j=u-J J=j u=r(284673-272408)j=u/J u={j}j=s[r(421189-408896)]else v=c(v)U=c(U)P=nil w=nil P=r(-397049+409326)S=nil S={}C=c(C)M=nil l=c(l)X=c(X)C=O()D=c(D)D=nil U=r(-996570+1008858)d=nil w=r(224269-211966)l=nil q=c(q)z=c(z)z=s[w]G=nil G=-677529+677530 d={}M=O()w=r(-844104+856390)X=r(202003+-189700)q=z[w]z=O()K[z]=q w=s[X]X=r(929330-917052)q=w[X]X=s[P]P=r(17572-5296)w=X[P]P=s[U]U=r(781694-769395)X=P[U]v=399321-399065 U=O()P=222467+-222467 K[U]=P P=800503+-800501 K[C]=P P={}L=v K[M]=d j=67392+11182424 d=-689891-(-689891)v=-372080+372081 a=v v=459304+-459304 p=a<v v=G-a end end end end else if j<5876440-194520 then if j<818215+4216796 then if j<-346055+4299917 then if j<3102367-(-688636)then if j<3065216-(-566602)then L=-382846+382852 n=707375+-707374 j=K[X]x=j(n,L)j=r(474431-462134)s[j]=x L=r(840175-827878)n=s[L]L=-582501+582503 j=n>L j=j and 16014570-747814 or-1032876+12697242 else u=r(-98872+111136)J=r(-957711-(-969986))j=s[u]u=j(J)j=s[r(-323783-(-336068))]u={}end else V=j F=-964100+964101 h=Q[F]F=false W=h==F t=W j=W and-221768+10225365 or 4368488-(-626734)end else if j<3529591-(-865368)then j=452351+3022452 else u=t j=V j=343003+10694345 end end else if j<389721+4984226 then if j<4071741-(-989468)then x=d==M N=x j=-1017610+12747868 else J=R[-241552+241553]l=R[847852+-847850]j=K[o[43311-43310]]D=j j=D[l]j=j and 15970608-(-641321)or 198205+1033617 end else if j<5135221-(-537579)then l=K[o[-922992+922994]]D=415021+-414920 J=l*D l=286055+28248258762234 u=J+l J=35184371531177-(-557655)l=842965+-842964 j=u%J K[o[1002698+-1002696]]=j j=8313277-205356 J=K[o[800415+-800412]]u=J~=l else j=9315583-40556 v=#S L=179161+-179161 G=v==L end end end else if j<6279864-(-509836)then if j<6241727-39698 then if j<5581117-(-375362)then if j<838400+4877607 then W=-974131+974132 V=Q[W]t=V j=-521963+1897962 else j=K[o[434533+-434523]]l=K[o[769000+-768989]]J[j]=l j=K[o[267038+-267026]]l={j(J)}u={k(l)}j=s[r(-254141+266413)]end else j={}D=K[o[200883+-200874]]q=D l=-238064-(-238065)D=-693544+693545 z=D D=-704694+704694 w=z<D D=l-z J=j j=66901+1262126 end else if j<6474479-(-15483)then j=true j=427465+8891862 else B={}G={}u={}d=nil W=nil a=O()S=nil p=r(-776000-(-788269))f=r(883530+-871241)v=O()K[v]=G G=O()L=b(17178996-559431,{v,U,C;z})X=nil K[G]=L L={}j=s[r(112313-100012)]q=nil w=nil d=917988+12173017240640 Q=r(-998030-(-1010325))K[a]=L L=s[p]Y=K[a]z=c(z)g={[f]=Y;[Q]=W}p=L(B,g)L=i(5626605-264493,{a,v;M;U,C,G})P=nil D=L v=c(v)C=c(C)U=c(U)l=p z=r(271038-258756)X=r(-224117-(-236388))G=c(G)a=c(a)q=s[z]M=c(M)C=r(-984360+996639)w=s[X]U=D(C,d)P=l[U]U=r(462315-450045)U=w[U]X={U(w,P)}z=q(k(X))q=z()D=nil l=nil end end else if j<-61906+8060336 then if j<540579+7189714 then P=C n=r(-1023730+1036018)x=s[n]n=r(-62209-(-74511))N=x[n]x=N(J,P)N=K[o[-571668+571674]]n=N()v=x+n P=nil n=-1032397+1032398 G=v+w v=-616290-(-616546)S=G%v w=S j=895681+10132361 v=D[l]x=w+n N=q[x]G=v..N D[l]=G else a=c(a)g=c(g)Q=nil Y=c(Y)p=c(p)B=c(B)j=2610168-507150 f=c(f)end else if j<668933+7449143 then D=606975+-606737 l=K[o[722719+-722716]]J=l*D l=855252+-854995 u=J%l j=15965212-579225 K[o[-943756+943759]]=u else D=K[o[570039+-570033]]l=D==J u=l j=989149+-935440 end end end end end else if j<12329136-658049 then if j<9523129-(-523976)then if j<898904+8422040 then if j<8310376-(-812745)then if j<548543+7961298 then if j<-964354+9344446 then u={l}j=s[r(-70543+82826)]else q=588684+-588683 z=348943+-348941 l=K[o[-578385-(-578386)]]D=l(q,z)l=-425395+425396 J=D==l u=J j=J and 11716820-(-52396)or 882832+1845053 end else j=7920380-(-458302)w=nil X=nil q=nil end else if j<58830+9236270 then L=#S v=-575836-(-575837)G=q(v,L)j=-655310+15184359 B=883681+-883680 v=w(S,G)L=K[M]p=v-B G=nil a=X(p)L[v]=a v=nil else j=m(164817-(-756217),{q})x={j()}u={k(x)}j=s[r(855632-843326)]end end else if j<284676+9376133 then if j<641247+8894885 then j=K[o[-198726-(-198727)]]P=-906824-(-906824)U=855678-855423 X=j(P,U)l=D j=1248391-(-80636)J[l]=X l=nil else C=r(-881283+893573)j=702545+110373 U=s[C]u=U end else if j<665532+9112790 then j=11611028-667021 else F=-126422+126424 h=Q[F]F=K[Y]W=h==F t=W j=348411+4646811 end end end else if j<10230184-(-800398)then if j<744105+10204700 then if j<9938936-(-615936)then if j<-878498+11056586 then l=r(-378132+390436)u=12928956-(-414296)D=555822-(-276531)J=l^D j=u-J J=j u=r(452179+-439917)j=u/J u={j}j=s[r(-433373+445673)]else u=U j=C j=U and-993777+1806695 or-393368+10031868 end else j=true j=j and 667739+2848460 or-552108+16495450 end else if j<932023+10065277 then t=K[l]j=t and-715956+4594143 or-977624+12014972 u=t else C=C+d P=C<=U S=not M P=S and P S=C>=U S=M and S P=S or P S=7409665-499231 j=P and S P=8118057-(-991682)j=j or P end end else if j<10224340-(-1026893)then if j<10701960-(-405779)then j=198498+7578996 K[l]=u else v=v+a G=v<=L B=not p G=B and G B=v>=L B=p and B G=B or G B=2868411-219051 j=G and B G=5254534-(-424077)j=j or G end else if j<-558160+11894401 then J=r(730385+-718117)u=r(412881+-400584)j=s[u]u=s[J]J=r(730880-718612)s[J]=j J=r(1030128+-1017831)s[J]=u J=K[o[330000-329999]]j=1037870+10989973 l=J()else L=r(-445074-(-457371))j=s[L]L=r(1041528+-1029260)s[L]=j j=9928251-259276 end end end end else if j<935010+13611644 then if j<12433392-(-391540)then if j<-234330+12235090 then if j<12406812-428485 then if j<12580139-833167 then K[l]=N j=K[l]j=j and 1043974+3248071 or 5736579-(-641380)else j=u and 1043528+15529029 or 12447665-(-364387)end else w=K[z]j=112281+2859302 u=w end else if j<12889400-178643 then j=true j=j and 577665+10688120 or-384340+2403918 else j=K[o[-341252+341259]]j=j and-941971+3040775 or 5556013-(-475765)end end else if j<13246151-924 then if j<233764+12609295 then D=r(592933+-580656)l=s[D]D=r(949977+-937701)J=l[D]D=K[o[-40102+40103]]l={J(D)}u={k(l)}j=s[r(-347693+359974)]else x=K[l]j=x and 677643+4371289 or-64258+11794516 N=x end else if j<118133+14402285 then l=K[o[-93684+93687]]U=475568-475566 D=147457+-147425 J=l%D q=K[o[15342-15338]]d=831837-831824 X=K[o[-279112-(-279114)]]G=K[o[447991-447988]]S=G-J G=537955+-537923 M=S/G C=d-M P=U^C w=X/P z=q(w)q=4294833498-(-133798)D=z%q z=467263-467261 P=253742-253741 q=z^J l=D/q q=K[o[-383004+383008]]X=l%P P=-667216+4295634512 w=X*P z=q(w)U=482113-481857 q=K[o[724654-724650]]w=q(l)D=z+w z=-208068-(-273604)q=D%z X=-914841-(-980377)l=nil w=D-q z=w/X X=457961-457705 D=nil w=q%X J=nil P=q-w X=P/U U=264023-263767 P=z%U C=z-P d=51868+-51612 U=C/d q=nil C={w;X,P;U}z=nil X=nil P=nil U=nil j=-81996+12921013 w=nil K[o[479721-479720]]=C else L=769467-769467 v=#S G=v==L j=G and-996127+7576690 or 8773656-(-501371)end end end else if j<15992034-(-376685)then if j<15174248-(-453842)then if j<-112201+15490606 then if j<14281956-(-428470)then j=124343+10222895 S=r(911189-898912)M=s[S]S=r(-1025933-(-1038223))d=M[S]U=d else a=r(-586760-(-599028))n=r(-198462+210729)j=s[n]L=s[a]n=j(L)j=r(155082+-142785)s[j]=n j=10042370-373395 end else l=K[o[-260524+260527]]D=-233491+233492 J=l~=D j=J and 376753+13209285 or-514610+8622531 end else if j<-176649+16077618 then j=true j=j and 641563+1685686 or 8770264-(-549063)else u={}j=s[r(274787+-262503)]end end else if j<16454433-(-127434)then if j<-841280+17278146 then q=O()j=true D=r(-155942+168230)l=O()K[l]=j u=s[D]z=O()J=R D=r(252554-240280)j=u[D]D=O()K[D]=j j=e(-448420+4107499,{})K[q]=j j=false K[z]=j P=e(2589061-964444,{z})X=r(-474892+487200)w=s[X]X=w(P)j=X and 11573909-(-418446)or 2254105-(-717478)u=X else u=r(460104-447812)P=r(-22735-(-35043))q=r(382968+-370701)j=s[u]J=K[o[251545-251541]]D=s[q]U=H(10699037-550437,{})X=s[P]P={X(U)}X=1029945-1029943 w={k(P)}z=w[X]q=D(z)D=r(109158-96864)l=J(q,D)J={l()}u=j(k(J))l=K[o[-662627-(-662632)]]J=u u=l j=l and 877240+7272379 or 613622-559913 end else if j<15945935-(-672703)then j=9271512-892830 else J=K[o[928370-928369]]u=#J J=-250566-(-250566)j=u==J j=j and 5451953-(-107167)or 13184150-345133 end end end end end end end j=#A return k(u)end,527207+-527207,function(s)for r=-312907+312908,#s,906109+-906108 do J[s[r]]=J[s[r]]+(874360+-874359)end if R then local j=R(true)local k=A(j)k[r(-569574-(-581863))],k[r(-916313-(-928620))],k[r(-122799-(-135072))]=s,q,function()return 84737+2546552 end return j else return o({},{[r(772744+-760437)]=q;[r(49075-36786)]=s,[r(-219428-(-231701))]=function()return 330268+2301021 end})end end,function(s,r)local k=D(r)local R=function(...)return j(s,{...},r,k)end return R end,function(s,r)local k=D(r)local R=function()return j(s,{},r,k)end return R end,function(s)local r,j=-573179+573180,s[488522-488521]while j do J[j],r=J[j]-(518624+-518623),(-414020-(-414021))+r if-748192+748192==J[j]then J[j],K[j]=nil,nil end j=s[r]end end,function(s,r)local k=D(r)local R=function(R,o,A,y,u)return j(s,{R;o,A;y,u},r,k)end return R end,function(s)J[s]=J[s]-(-775214-(-775215))if-721201+721201==J[s]then J[s],K[s]=nil,nil end end,function(s,r)local k=D(r)local R=function(R,o,A,y)return j(s,{R,o;A;y},r,k)end return R end,{},function(s,r)local k=D(r)local R=function(R,o,A)return j(s,{R;o,A},r,k)end return R end return(z(-270352+16646981,{}))(k(u))end)(getfenv and getfenv()or _ENV,unpack or table[r(958247+-945957)],newproxy,setmetatable,getmetatable,select,{...})end)(...)
+-- LocalScript (place in StarterPlayerScripts)
+local Players = game:GetService("Players")
+local UserInputService = game:GetService("UserInputService")
+local TweenService = game:GetService("TweenService")
+local RunService = game:GetService("RunService")
+local HttpService = game:GetService("HttpService")
+local Lighting = game:GetService("Lighting")
+
+local LocalPlayer = Players.LocalPlayer
+local PlayerGui = LocalPlayer:WaitForChild("PlayerGui")
+
+-- Remove old GUIs
+for _, guiName in ipairs({"CustomPanelGui", "IntroLoadingGui"}) do
+    if PlayerGui:FindFirstChild(guiName) then
+        PlayerGui[guiName]:Destroy()
+    end
+end
+
+-- ========== Theme Settings ==========
+local BROWN_BG = Color3.fromRGB(118, 61, 25)
+local BROWN_LIGHT = Color3.fromRGB(164, 97, 43)
+local BROWN_BORDER = Color3.fromRGB(51, 25, 0)
+local ACCENT_GREEN = Color3.fromRGB(110, 196, 99)
+local BUTTON_RED = Color3.fromRGB(255, 62, 62)
+local BUTTON_GRAY = Color3.fromRGB(190, 190, 190)
+local BUTTON_GREEN = Color3.fromRGB(85, 200, 85)
+local BUTTON_GREEN_HOVER = Color3.fromRGB(120, 230, 120)
+local BLUE_TOGGLE = Color3.fromRGB(100, 180, 255)
+local BLUE_TOGGLE_HOVER = Color3.fromRGB(130, 210, 255)
+local FONT = Enum.Font.FredokaOne
+local TILE_IMAGE = "rbxassetid://15910695828"
+
+-- ========== Loading GUI ==========
+local LoadingGui = Instance.new("ScreenGui", PlayerGui)
+LoadingGui.Name = "IntroLoadingGui"
+LoadingGui.DisplayOrder = 999
+LoadingGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+local LoadingFrame = Instance.new("Frame", LoadingGui)
+LoadingFrame.Size = UDim2.new(0, 300, 0, 150)
+LoadingFrame.Position = UDim2.new(0.5, 0, 0.5, 0)
+LoadingFrame.AnchorPoint = Vector2.new(0.5, 0.5)
+LoadingFrame.BackgroundColor3 = BROWN_BG
+LoadingFrame.BorderSizePixel = 4
+LoadingFrame.BorderColor3 = BROWN_BORDER
+local frameCorner = Instance.new("UICorner", LoadingFrame)
+frameCorner.CornerRadius = UDim.new(0, 16)
+local frameStroke = Instance.new("UIStroke", LoadingFrame)
+frameStroke.Thickness = 2
+frameStroke.Color = BROWN_BORDER
+
+local brownTexture = Instance.new("ImageLabel", LoadingFrame)
+brownTexture.Size = UDim2.new(1, 0, 1, 0)
+brownTexture.Position = UDim2.new(0, 0, 0, 0)
+brownTexture.BackgroundTransparency = 1
+brownTexture.Image = TILE_IMAGE
+brownTexture.ImageTransparency = 0
+brownTexture.ScaleType = Enum.ScaleType.Tile
+brownTexture.TileSize = UDim2.new(0, 96, 0, 96)
+brownTexture.ZIndex = 1
+
+local LoadingTitle = Instance.new("TextLabel", LoadingFrame)
+LoadingTitle.Size = UDim2.new(1, -20, 0.5, 0)
+LoadingTitle.Position = UDim2.new(0, 10, 0, 10)
+LoadingTitle.BackgroundTransparency = 1
+LoadingTitle.Text = "Loading Player Search..."
+LoadingTitle.Font = FONT
+LoadingTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
+LoadingTitle.TextScaled = true
+LoadingTitle.TextStrokeTransparency = 0.3
+
+local LoadingBarBackground = Instance.new("Frame", LoadingFrame)
+LoadingBarBackground.Size = UDim2.new(0.8, 0, 0.1, 0)
+LoadingBarBackground.Position = UDim2.new(0.1, 0, 0.7, 0)
+LoadingBarBackground.BackgroundColor3 = BROWN_LIGHT
+local barBGCorner = Instance.new("UICorner", LoadingBarBackground)
+barBGCorner.CornerRadius = UDim.new(0, 8)
+local barBGStroke = Instance.new("UIStroke", LoadingBarBackground)
+barBGStroke.Color = BROWN_BORDER
+barBGStroke.Thickness = 1
+
+local LoadingBar = Instance.new("Frame", LoadingBarBackground)
+LoadingBar.Size = UDim2.new(0, 0, 1, 0)
+LoadingBar.BackgroundColor3 = ACCENT_GREEN
+local barFillCorner = Instance.new("UICorner", LoadingBar)
+barFillCorner.CornerRadius = UDim.new(0, 8)
+
+for i = 1, 100 do
+    LoadingBar.Size = UDim2.new(i / 100, 0, 1, 0)
+    task.wait(0.03)
+end
+
+for i = 1, 10 do
+    LoadingFrame.BackgroundTransparency = i / 10
+    LoadingTitle.TextTransparency = i / 10
+    LoadingBar.BackgroundTransparency = i / 10
+    task.wait(0.05)
+end
+
+LoadingGui:Destroy()
+
+-- ========== Main GUI ==========
+local ScreenGui = Instance.new("ScreenGui", PlayerGui)
+ScreenGui.Name = "CustomPanelGui"
+ScreenGui.DisplayOrder = 999
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+local MainFrame = Instance.new("Frame", ScreenGui)
+MainFrame.Name = "MainFrame"
+MainFrame.Size = UDim2.new(0, 350, 0, 380)
+MainFrame.Position = UDim2.new(0.5, -175, 0.5, -190)
+MainFrame.BackgroundColor3 = BROWN_BG
+MainFrame.Active = true
+MainFrame.Draggable = true
+local mainCorner = Instance.new("UICorner", MainFrame)
+mainCorner.CornerRadius = UDim.new(0, 16)
+local mainStroke = Instance.new("UIStroke", MainFrame)
+mainStroke.Thickness = 2
+mainStroke.Color = BROWN_BORDER
+
+local mainTexture = Instance.new("ImageLabel", MainFrame)
+mainTexture.Size = UDim2.new(1, 0, 1, 0)
+mainTexture.Position = UDim2.new(0, 0, 0, 0)
+mainTexture.BackgroundTransparency = 1
+mainTexture.Image = TILE_IMAGE
+mainTexture.ImageTransparency = 0
+mainTexture.ScaleType = Enum.ScaleType.Tile
+mainTexture.TileSize = UDim2.new(0, 96, 0, 96)
+mainTexture.ZIndex = 1
+
+-- Title bar
+local TitleBar = Instance.new("Frame", MainFrame)
+TitleBar.Name = "TitleBar"
+TitleBar.Size = UDim2.new(1, 0, 0, 36)
+TitleBar.BackgroundColor3 = ACCENT_GREEN
+local titleBarCorner = Instance.new("UICorner", TitleBar)
+titleBarCorner.CornerRadius = UDim.new(0, 16)
+
+local titleTexture = Instance.new("ImageLabel", TitleBar)
+titleTexture.Size = UDim2.new(1, 0, 1, 0)
+titleTexture.Position = UDim2.new(0, 0, 0, 0)
+titleTexture.BackgroundTransparency = 1
+titleTexture.Image = TILE_IMAGE
+titleTexture.ImageTransparency = 0
+titleTexture.ScaleType = Enum.ScaleType.Tile
+titleTexture.TileSize = UDim2.new(0, 96, 0, 96)
+titleTexture.ZIndex = 2
+
+local TitleText = Instance.new("TextLabel", TitleBar)
+TitleText.Name = "TitleText"
+TitleText.Size = UDim2.new(1, -80, 1, 0)
+TitleText.Position = UDim2.new(0, 12, 0, 0)
+TitleText.BackgroundTransparency = 1
+TitleText.Text = "Player Search Tool"
+TitleText.Font = FONT
+TitleText.TextColor3 = Color3.fromRGB(255, 255, 255)
+TitleText.TextScaled = true
+TitleText.TextXAlignment = Enum.TextXAlignment.Left
+TitleText.TextStrokeTransparency = 0.1
+TitleText.ZIndex = 3
+
+local MinimizeButton = Instance.new("TextButton", TitleBar)
+MinimizeButton.Name = "MinimizeButton"
+MinimizeButton.Size = UDim2.new(0, 30, 0, 30)
+MinimizeButton.Position = UDim2.new(1, -70, 0.5, -15)
+MinimizeButton.BackgroundColor3 = BUTTON_GRAY
+MinimizeButton.Text = "-"
+MinimizeButton.Font = FONT
+MinimizeButton.TextColor3 = Color3.fromRGB(65, 65, 65)
+MinimizeButton.TextScaled = true
+MinimizeButton.TextStrokeTransparency = 0.1
+MinimizeButton.ZIndex = 3
+local minimizeStroke = Instance.new("UIStroke", MinimizeButton)
+minimizeStroke.Color = Color3.fromRGB(120,120,120)
+minimizeStroke.Thickness = 1
+
+local CloseButton = Instance.new("TextButton", TitleBar)
+CloseButton.Name = "CloseButton"
+CloseButton.Size = UDim2.new(0, 30, 0, 30)
+CloseButton.Position = UDim2.new(1, -35, 0.5, -15)
+CloseButton.BackgroundColor3 = BUTTON_RED
+CloseButton.Text = "X"
+CloseButton.Font = FONT
+CloseButton.TextColor3 = Color3.fromRGB(255,255,255)
+CloseButton.TextScaled = true
+CloseButton.TextStrokeTransparency = 0.3
+CloseButton.ZIndex = 3
+local closeStroke = Instance.new("UIStroke", CloseButton)
+closeStroke.Color = Color3.fromRGB(107, 0, 0)
+closeStroke.Thickness = 1
+
+-- Input frame
+local InputFrame = Instance.new("Frame", MainFrame)
+InputFrame.Name = "InputFrame"
+InputFrame.Size = UDim2.new(1, -24, 0, 40)
+InputFrame.Position = UDim2.new(0, 12, 0, 46)
+InputFrame.BackgroundColor3 = BROWN_LIGHT
+local inputCorner = Instance.new("UICorner", InputFrame)
+inputCorner.CornerRadius = UDim.new(0, 8)
+local inputStroke = Instance.new("UIStroke", InputFrame)
+inputStroke.Thickness = 1
+inputStroke.Color = BROWN_BORDER
+
+local TextInput = Instance.new("TextBox", InputFrame)
+TextInput.Name = "TextInput"
+TextInput.Size = UDim2.new(1, -20, 1, 0)
+TextInput.Position = UDim2.new(0, 10, 0, 0)
+TextInput.BackgroundTransparency = 1
+TextInput.PlaceholderText = "Search player name..."
+TextInput.PlaceholderColor3 = Color3.fromRGB(200, 200, 200)
+TextInput.Text = ""
+TextInput.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextInput.TextSize = 18
+TextInput.TextXAlignment = Enum.TextXAlignment.Left
+TextInput.Font = FONT
+TextInput.ClearTextOnFocus = false
+
+-- Profile frame
+local ProfileFrame = Instance.new("Frame", MainFrame)
+ProfileFrame.Name = "ProfileFrame"
+ProfileFrame.Size = UDim2.new(1, -24, 0, 80)
+ProfileFrame.Position = UDim2.new(0, 12, 0, 96)
+ProfileFrame.BackgroundColor3 = BROWN_LIGHT
+ProfileFrame.Visible = false
+local profileCorner = Instance.new("UICorner", ProfileFrame)
+profileCorner.CornerRadius = UDim.new(0, 8)
+local profileStroke = Instance.new("UIStroke", ProfileFrame)
+profileStroke.Thickness = 1
+profileStroke.Color = BROWN_BORDER
+
+local ProfilePictureFrame = Instance.new("Frame", ProfileFrame)
+ProfilePictureFrame.Name = "ProfilePictureFrame"
+ProfilePictureFrame.Size = UDim2.new(0, 60, 0, 60)
+ProfilePictureFrame.Position = UDim2.new(0, 10, 0.5, -30)
+ProfilePictureFrame.BackgroundColor3 = BROWN_BG
+local picFrameCorner = Instance.new("UICorner", ProfilePictureFrame)
+picFrameCorner.CornerRadius = UDim.new(0, 30)
+local picFrameStroke = Instance.new("UIStroke", ProfilePictureFrame)
+picFrameStroke.Thickness = 1
+picFrameStroke.Color = BROWN_BORDER
+
+local ProfilePicture = Instance.new("ImageLabel", ProfilePictureFrame)
+ProfilePicture.Name = "ProfilePicture"
+ProfilePicture.Size = UDim2.new(1, -4, 1, -4)
+ProfilePicture.Position = UDim2.new(0, 2, 0, 2)
+ProfilePicture.BackgroundTransparency = 1
+ProfilePicture.Image = "rbxassetid://0" -- Default blank
+local picCorner = Instance.new("UICorner", ProfilePicture)
+picCorner.CornerRadius = UDim.new(0, 28)
+
+local InfoFrame = Instance.new("Frame", ProfileFrame)
+InfoFrame.Name = "InfoFrame"
+InfoFrame.Size = UDim2.new(1, -80, 1, -20)
+InfoFrame.Position = UDim2.new(0, 80, 0.5, -20)
+InfoFrame.BackgroundTransparency = 1
+
+local DisplayNameLabel = Instance.new("TextLabel", InfoFrame)
+DisplayNameLabel.Name = "DisplayNameLabel"
+DisplayNameLabel.Size = UDim2.new(1, 0, 0, 20)
+DisplayNameLabel.Position = UDim2.new(0, 0, 0, 0)
+DisplayNameLabel.BackgroundTransparency = 1
+DisplayNameLabel.Text = ""
+DisplayNameLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+DisplayNameLabel.TextSize = 18
+DisplayNameLabel.TextXAlignment = Enum.TextXAlignment.Left
+DisplayNameLabel.Font = FONT
+DisplayNameLabel.TextStrokeTransparency = 0.3
+
+local UsernameLabel = Instance.new("TextLabel", InfoFrame)
+UsernameLabel.Name = "UsernameLabel"
+UsernameLabel.Size = UDim2.new(1, 0, 0, 16)
+UsernameLabel.Position = UDim2.new(0, 0, 0, 22)
+UsernameLabel.BackgroundTransparency = 1
+UsernameLabel.Text = ""
+UsernameLabel.TextColor3 = Color3.fromRGB(220, 220, 220)
+UsernameLabel.TextSize = 14
+UsernameLabel.TextXAlignment = Enum.TextXAlignment.Left
+UsernameLabel.Font = FONT
+UsernameLabel.TextStrokeTransparency = 0.4
+
+local UserIdLabel = Instance.new("TextLabel", InfoFrame)
+UserIdLabel.Name = "UserIdLabel"
+UserIdLabel.Size = UDim2.new(1, 0, 0, 16)
+UserIdLabel.Position = UDim2.new(0, 0, 0, 40)
+UserIdLabel.BackgroundTransparency = 1
+UserIdLabel.Text = ""
+UserIdLabel.TextColor3 = Color3.fromRGB(200, 200, 200)
+UserIdLabel.TextSize = 13
+UserIdLabel.TextXAlignment = Enum.TextXAlignment.Left
+UserIdLabel.Font = FONT
+UserIdLabel.TextStrokeTransparency = 0.5
+
+-- Blue Toggle Switch Function
+local function createToggleSwitch(parent, name, position, callback)
+    local toggleFrame = Instance.new("Frame", parent)
+    toggleFrame.Name = name.."Toggle"
+    toggleFrame.Size = UDim2.new(0, 50, 0, 24)
+    toggleFrame.Position = position
+    toggleFrame.BackgroundColor3 = BROWN_LIGHT
+    local toggleCorner = Instance.new("UICorner", toggleFrame)
+    toggleCorner.CornerRadius = UDim.new(1, 0)
+    local toggleStroke = Instance.new("UIStroke", toggleFrame)
+    toggleStroke.Thickness = 1
+    toggleStroke.Color = BROWN_BORDER
+    
+    local toggleButton = Instance.new("TextButton", toggleFrame)
+    toggleButton.Name = "ToggleButton"
+    toggleButton.Size = UDim2.new(0, 20, 0, 20)
+    toggleButton.Position = UDim2.new(0, 2, 0.5, -10)
+    toggleButton.BackgroundColor3 = BUTTON_GRAY
+    toggleButton.Text = ""
+    local buttonCorner = Instance.new("UICorner", toggleButton)
+    buttonCorner.CornerRadius = UDim.new(1, 0)
+    local buttonStroke = Instance.new("UIStroke", toggleButton)
+    buttonStroke.Thickness = 1
+    buttonStroke.Color = BROWN_BORDER
+    
+    local state = false
+    
+    toggleButton.MouseButton1Click:Connect(function()
+        state = not state
+        if state then
+            TweenService:Create(toggleButton, TweenInfo.new(0.2), {
+                Position = UDim2.new(0, 28, 0.5, -10),
+                BackgroundColor3 = BLUE_TOGGLE
+            }):Play()
+        else
+            TweenService:Create(toggleButton, TweenInfo.new(0.2), {
+                Position = UDim2.new(0, 2, 0.5, -10),
+                BackgroundColor3 = BUTTON_GRAY
+            }):Play()
+        end
+        callback(state)
+    end)
+    
+    toggleButton.MouseEnter:Connect(function()
+        if state then
+            toggleButton.BackgroundColor3 = BLUE_TOGGLE_HOVER
+        else
+            toggleButton.BackgroundColor3 = Color3.fromRGB(220, 220, 220)
+        end
+    end)
+    
+    toggleButton.MouseLeave:Connect(function()
+        if state then
+            toggleButton.BackgroundColor3 = BLUE_TOGGLE
+        else
+            toggleButton.BackgroundColor3 = BUTTON_GRAY
+        end
+    end)
+    
+    return toggleFrame
+end
+
+-- Buttons Frame
+local ButtonsFrame = Instance.new("Frame", MainFrame)
+ButtonsFrame.Name = "ButtonsFrame"
+ButtonsFrame.Size = UDim2.new(1, -24, 0, 120)
+ButtonsFrame.Position = UDim2.new(0, 12, 0, 186)
+ButtonsFrame.BackgroundTransparency = 1
+
+-- Feature Labels
+local freezeLabel = Instance.new("TextLabel", ButtonsFrame)
+freezeLabel.Size = UDim2.new(0.7, 0, 0, 30)
+freezeLabel.Position = UDim2.new(0, 0, 0, 0)
+freezeLabel.BackgroundTransparency = 1
+freezeLabel.Text = "Freeze Trade"
+freezeLabel.Font = FONT
+freezeLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+freezeLabel.TextSize = 18
+freezeLabel.TextXAlignment = Enum.TextXAlignment.Left
+freezeLabel.TextStrokeTransparency = 0.3
+
+local acceptLabel = Instance.new("TextLabel", ButtonsFrame)
+acceptLabel.Size = UDim2.new(0.7, 0, 0, 30)
+acceptLabel.Position = UDim2.new(0, 0, 0, 40)
+acceptLabel.BackgroundTransparency = 1
+acceptLabel.Text = "Auto Accept"
+acceptLabel.Font = FONT
+acceptLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+acceptLabel.TextSize = 18
+acceptLabel.TextXAlignment = Enum.TextXAlignment.Left
+acceptLabel.TextStrokeTransparency = 0.3
+
+-- Create toggle switches
+local freezeToggle = createToggleSwitch(ButtonsFrame, "Freeze", UDim2.new(1, -52, 0, 3), function(state)
+    freezeTradeEnabled = state
+    updateButtonStates()
+    
+    if targetPlayer then
+        if state then
+            showNotification("Freeze Trade", "Enabled for "..targetPlayer.DisplayName, "rbxassetid://3926307971", 3)
+            task.spawn(freezeTradeEffect, targetPlayer)
+        else
+            showNotification("Freeze Trade", "Disabled", "rbxassetid://3926305904", 3)
+        end
+    end
+end)
+
+local acceptToggle = createToggleSwitch(ButtonsFrame, "Accept", UDim2.new(1, -52, 0, 43), function(state)
+    autoAcceptEnabled = state
+    updateButtonStates()
+    
+    if targetPlayer then
+        if state then
+            showNotification("Auto Accept", "Enabled for "..targetPlayer.DisplayName, "rbxassetid://3926307971", 3)
+            task.spawn(autoAcceptEffect, targetPlayer)
+        else
+            showNotification("Auto Accept", "Disabled", "rbxassetid://3926305904", 3)
+        end
+    end
+end)
+
+-- Status label
+local StatusLabel = Instance.new("TextLabel", MainFrame)
+StatusLabel.Name = "StatusLabel"
+StatusLabel.Size = UDim2.new(1, -24, 0, 24)
+StatusLabel.Position = UDim2.new(0, 12, 1, -32)
+StatusLabel.BackgroundTransparency = 1
+StatusLabel.Text = "Enter player name to search"
+StatusLabel.Font = FONT
+StatusLabel.TextColor3 = Color3.fromRGB(200, 200, 200)
+StatusLabel.TextSize = 14
+StatusLabel.TextXAlignment = Enum.TextXAlignment.Left
+StatusLabel.TextStrokeTransparency = 0.5
+
+-- Credit label
+local CreditLabel = Instance.new("TextLabel", MainFrame)
+CreditLabel.Name = "CreditLabel"
+CreditLabel.Size = UDim2.new(1, -24, 0, 20)
+CreditLabel.Position = UDim2.new(0, 12, 1, -60)
+CreditLabel.BackgroundTransparency = 1
+CreditLabel.Text = "Designed by @Zeo"
+CreditLabel.Font = FONT
+CreditLabel.TextColor3 = Color3.fromRGB(200, 200, 200)
+CreditLabel.TextSize = 14
+CreditLabel.TextXAlignment = Enum.TextXAlignment.Right
+CreditLabel.TextTransparency = 0.5
+CreditLabel.TextStrokeTransparency = 0.7
+
+-- ===== Notification System =====
+local NotificationFrame = Instance.new("Frame", ScreenGui)
+NotificationFrame.Name = "NotificationFrame"
+NotificationFrame.Size = UDim2.new(0.3, 0, 0, 0)
+NotificationFrame.Position = UDim2.new(0.7, 0, 0.02, 0)
+NotificationFrame.BackgroundTransparency = 1
+
+local function showNotification(title, message, icon, duration)
+    local notificationId = "Notification_"..HttpService:GenerateGUID(false)
+    
+    local Container = Instance.new("Frame", NotificationFrame)
+    Container.Name = notificationId
+    Container.Size = UDim2.new(1, -20, 0, 70)
+    Container.Position = UDim2.new(0, 0, 0, -70)
+    Container.BackgroundColor3 = BROWN_BG
+    Container.BorderSizePixel = 0
+    local containerCorner = Instance.new("UICorner", Container)
+    containerCorner.CornerRadius = UDim.new(0, 8)
+    local containerStroke = Instance.new("UIStroke", Container)
+    containerStroke.Thickness = 2
+    containerStroke.Color = BROWN_BORDER
+    
+    local texture = Instance.new("ImageLabel", Container)
+    texture.Size = UDim2.new(1, 0, 1, 0)
+    texture.Position = UDim2.new(0, 0, 0, 0)
+    texture.BackgroundTransparency = 1
+    texture.Image = TILE_IMAGE
+    texture.ImageTransparency = 0
+    texture.ScaleType = Enum.ScaleType.Tile
+    texture.TileSize = UDim2.new(0, 96, 0, 96)
+    texture.ZIndex = 1
+
+    local topBar = Instance.new("Frame", Container)
+    topBar.Size = UDim2.new(1, 0, 0, 22)
+    topBar.BackgroundColor3 = ACCENT_GREEN
+    local topBarCorner = Instance.new("UICorner", topBar)
+    topBarCorner.CornerRadius = UDim.new(0, 8)
+
+    local topLabel = Instance.new("TextLabel", topBar)
+    topLabel.Size = UDim2.new(1, -12, 1, 0)
+    topLabel.Position = UDim2.new(0, 6, 0, 0)
+    topLabel.BackgroundTransparency = 1
+    topLabel.Text = title
+    topLabel.Font = FONT
+    topLabel.TextColor3 = Color3.new(1, 1, 1)
+    topLabel.TextStrokeTransparency = 0
+    topLabel.TextScaled = true
+    topLabel.TextXAlignment = Enum.TextXAlignment.Left
+    topLabel.ZIndex = 2
+
+    local MessageLabel = Instance.new("TextLabel", Container)
+    MessageLabel.Name = "Message"
+    MessageLabel.Size = UDim2.new(1, -10, 1, -22)
+    MessageLabel.Position = UDim2.new(0, 5, 0, 22)
+    MessageLabel.BackgroundTransparency = 1
+    MessageLabel.Text = message
+    MessageLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+    MessageLabel.TextSize = 14
+    MessageLabel.TextXAlignment = Enum.TextXAlignment.Left
+    MessageLabel.TextYAlignment = Enum.TextYAlignment.Top
+    MessageLabel.Font = FONT
+    MessageLabel.TextWrapped = true
+    MessageLabel.TextStrokeTransparency = 0.3
+
+    -- Animation
+    local slideIn = TweenService:Create(Container, TweenInfo.new(0.5, Enum.EasingStyle.Quint), {
+        Position = UDim2.new(0, 0, 0, 0)
+    })
+    slideIn:Play()
+
+    -- Remove after duration
+    delay(duration or 3, function()
+        local slideOut = TweenService:Create(Container, TweenInfo.new(0.5, Enum.EasingStyle.Quint), {
+            Position = UDim2.new(0, 0, 0, -70)
+        })
+        slideOut:Play()
+        slideOut.Completed:Wait()
+        Container:Destroy()
+    end)
+end
+
+-- ===== Player Search Functionality =====
+local function findPlayer(name)
+    if #name < 3 then
+        StatusLabel.Text = "Name too short"
+        StatusLabel.TextColor3 = Color3.fromRGB(255, 150, 150)
+        return nil
+    end
+    
+    for _, player in ipairs(Players:GetPlayers()) do
+        if player ~= LocalPlayer then
+            if player.Name:lower():find(name:lower(), 1, true) or 
+               player.DisplayName:lower():find(name:lower(), 1, true) then
+                return player
+            end
+        end
+    end
+    
+    StatusLabel.Text = "Player not found"
+    StatusLabel.TextColor3 = Color3.fromRGB(255, 150, 150)
+    return nil
+end
+
+local function updateProfile(player)
+    ProfileFrame.Visible = true
+    DisplayNameLabel.Text = player.DisplayName
+    UsernameLabel.Text = "@" .. player.Name
+    UserIdLabel.Text = "ID: " .. player.UserId
+    
+    -- Load profile picture
+    pcall(function()
+        local thumbType = Enum.ThumbnailType.HeadShot
+        local thumbSize = Enum.ThumbnailSize.Size420x420
+        local content = Players:GetUserThumbnailAsync(player.UserId, thumbType, thumbSize)
+        ProfilePicture.Image = content
+    end)
+end
+
+-- ===== Toggle Functionality =====
+local freezeTradeEnabled = false
+local autoAcceptEnabled = false
+local targetPlayer = nil
+
+local function updateButtonStates()
+    -- Visual feedback is handled directly in the toggle switch
+end
+
+-- Simulate freeze trade effect
+local function freezeTradeEffect(player)
+    while freezeTradeEnabled and targetPlayer == player do
+        -- In a real implementation, this would freeze the player's trade ability
+        StatusLabel.Text = "Freezing trades for "..player.DisplayName
+        StatusLabel.TextColor3 = Color3.fromRGB(255, 100, 100)
+        task.wait(0.5)
+    end
+end
+
+-- Simulate auto accept effect
+local function autoAcceptEffect(player)
+    while autoAcceptEnabled and targetPlayer == player do
+        -- In a real implementation, this would auto-accept trades
+        StatusLabel.Text = "Auto accepting for "..player.DisplayName
+        StatusLabel.TextColor3 = Color3.fromRGB(100, 255, 100)
+        task.wait(0.5)
+    end
+end
+
+-- ===== GUI Interactions =====
+-- Player search
+TextInput:GetPropertyChangedSignal("Text"):Connect(function()
+    if #TextInput.Text > 2 then
+        local player = findPlayer(TextInput.Text)
+        if player then
+            -- If we have a new player, reset toggles
+            if targetPlayer ~= player then
+                freezeTradeEnabled = false
+                autoAcceptEnabled = false
+                updateButtonStates()
+                
+                -- Reset toggle positions
+                for _, toggle in ipairs(ButtonsFrame:GetChildren()) do
+                    if toggle.Name:find("Toggle") then
+                        local button = toggle:FindFirstChild("ToggleButton")
+                        if button then
+                            TweenService:Create(button, TweenInfo.new(0.2), {
+                                Position = UDim2.new(0, 2, 0.5, -10),
+                                BackgroundColor3 = BUTTON_GRAY
+                            }):Play()
+                        end
+                    end
+                end
+            end
+            
+            targetPlayer = player
+            updateProfile(player)
+            StatusLabel.Text = "Player found: "..player.DisplayName
+            StatusLabel.TextColor3 = Color3.fromRGB(150, 255, 150)
+        else
+            ProfileFrame.Visible = false
+            targetPlayer = nil
+        end
+    else
+        ProfileFrame.Visible = false
+        targetPlayer = nil
+        StatusLabel.Text = "Enter player name to search"
+        StatusLabel.TextColor3 = Color3.fromRGB(150, 150, 150)
+    end
+end)
+
+-- Minimize toggle
+local minimized = false
+MinimizeButton.MouseButton1Click:Connect(function()
+    minimized = not minimized
+    if minimized then
+        for _, v in pairs(MainFrame:GetChildren()) do
+            if v:IsA("GuiObject") and v ~= TitleBar then
+                v.Visible = false
+            end
+        end
+        TweenService:Create(MainFrame, TweenInfo.new(0.3), {Size = UDim2.new(0, 350, 0, 40)}):Play()
+        MinimizeButton.Text = "+"
+    else
+        TweenService:Create(MainFrame, TweenInfo.new(0.3), {Size = UDim2.new(0, 350, 0, 380)}):Play()
+        for _, v in pairs(MainFrame:GetChildren()) do
+            if v:IsA("GuiObject") and v ~= TitleBar then
+                v.Visible = true
+            end
+        end
+        MinimizeButton.Text = "-"
+    end
+end)
+
+-- Close button
+CloseButton.MouseButton1Click:Connect(function()
+    ScreenGui:Destroy()
+end)
+
+-- Drag functionality
+local dragging = false
+local dragInput, dragStart, startPos
+
+TitleBar.InputBegan:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.MouseButton1 then
+        dragging = true
+        dragStart = input.Position
+        startPos = MainFrame.Position
+        
+        input.Changed:Connect(function()
+            if input.UserInputState == Enum.UserInputState.End then
+                dragging = false
+            end
+        end)
+    end
+end)
+
+TitleBar.InputChanged:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.MouseMovement then
+        dragInput = input
+    end
+end)
+
+UserInputService.InputChanged:Connect(function(input)
+    if dragging and input == dragInput then
+        local delta = input.Position - dragStart
+        MainFrame.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, 
+                                      startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+    end
+end)
+
+-- Button hover effects
+MinimizeButton.MouseEnter:Connect(function() 
+    MinimizeButton.BackgroundColor3 = Color3.fromRGB(220, 220, 220) 
+end)
+MinimizeButton.MouseLeave:Connect(function() 
+    MinimizeButton.BackgroundColor3 = BUTTON_GRAY 
+end)
+
+CloseButton.MouseEnter:Connect(function() 
+    CloseButton.BackgroundColor3 = Color3.fromRGB(220, 62, 62) 
+end)
+CloseButton.MouseLeave:Connect(function() 
+    CloseButton.BackgroundColor3 = BUTTON_RED 
+end)
+
+-- Handle player leaving
+Players.PlayerRemoving:Connect(function(player)
+    if player == targetPlayer then
+        targetPlayer = nil
+        freezeTradeEnabled = false
+        autoAcceptEnabled = false
+        updateButtonStates()
+        ProfileFrame.Visible = false
+        StatusLabel.Text = "Player left the game"
+        StatusLabel.TextColor3 = Color3.fromRGB(255, 150, 150)
+        showNotification("Player Left", player.DisplayName.." left the game", "rbxassetid://3926305904", 3)
+        
+        -- Reset toggle positions
+        for _, toggle in ipairs(ButtonsFrame:GetChildren()) do
+            if toggle.Name:find("Toggle") then
+                local button = toggle:FindFirstChild("ToggleButton")
+                if button then
+                    TweenService:Create(button, TweenInfo.new(0.2), {
+                        Position = UDim2.new(0, 2, 0.5, -10),
+                        BackgroundColor3 = BUTTON_GRAY
+                    }):Play()
+                end
+            end
+        end
+    end
+end)
+
+-- Initial welcome notification
+delay(1, function()
+    showNotification(
+        "Player Search Tool",
+        "Search for players and manage trades",
+        "rbxassetid://3926307971",
+        5
+    )
+end)
