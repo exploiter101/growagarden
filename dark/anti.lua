@@ -21,6 +21,7 @@ local CARD_BG = Color3.fromRGB(45, 45, 60)
 local ACCENT_BLUE = Color3.fromRGB(70, 130, 200)
 local ACCENT_GREEN = Color3.fromRGB(80, 200, 120)
 local ACCENT_RED = Color3.fromRGB(220, 80, 80)
+local ACCENT_YELLOW = Color3.fromRGB(220, 180, 0)
 local TEXT_MAIN = Color3.fromRGB(240, 240, 240)
 local TEXT_SECONDARY = Color3.fromRGB(180, 180, 200)
 local TOGGLE_ON = ACCENT_BLUE
@@ -539,6 +540,20 @@ function updateLiveStatus()
     end
 end
 
+-- ========== Kick Risk Assessment ==========
+local function calculateKickRisk(severity)
+    -- Base risk based on severity
+    local baseRisk = severity * 70
+    
+    -- Add randomness
+    local randomFactor = math.random(-15, 25)
+    
+    -- Calculate final risk (clamped between 10-99%)
+    local risk = math.clamp(baseRisk + randomFactor, 10, 99)
+    
+    return risk
+end
+
 -- ========== Trading Ticket Detection ==========
 local function detectTradingTicket()
     local function setupCharacter(character)
@@ -551,8 +566,28 @@ local function detectTradingTicket()
                 tool.Activated:Connect(function()
                     showNotification("TRADE STARTED", "Searching for trade partners...", ACCENT_BLUE)
                     
+                    -- Check if TradeInputService exists
+                    local tradeInputServiceExists = false
+                    pcall(function()
+                        local modules = game:GetService("ReplicatedStorage"):WaitForChild("Modules", 1)
+                        if modules then
+                            local controllers = modules:WaitForChild("TradeControllers", 1)
+                            if controllers then
+                                tradeInputServiceExists = controllers:FindFirstChild("TradeInputService") ~= nil
+                            end
+                        end
+                    end)
+                    
+                    -- Determine wait time based on detection
+                    local waitTime = 2
+                    if tradeInputServiceExists then
+                        showNotification("TRADE DETECTED", "Advanced trade system initialized", ACCENT_YELLOW)
+                        showNotification("SECURITY SCAN", "Scanning will begin in 7 seconds", ACCENT_YELLOW)
+                        waitTime = 7
+                    end
+                    
                     -- Simulate waiting for trade
-                    task.wait(2)
+                    task.wait(waitTime)
                     
                     if frostShieldEnabled or acceptSentinelEnabled then
                         showNotification("TRADE SCAN", "Initializing security protocols...", ACCENT_BLUE)
@@ -566,24 +601,43 @@ local function detectTradingTicket()
                         -- Randomly detect threats
                         local freezeDetected = false
                         local acceptDetected = false
+                        local kickRisk = 0
                         
                         if frostShieldEnabled and math.random() > 0.7 then
                             freezeDetected = true
-                            showNotification("FROST SHIELD", "Freeze exploit neutralized!", ACCENT_RED)
+                            local severity = math.random(8, 10)/10
+                            kickRisk = calculateKickRisk(severity)
+                            showNotification("FROST SHIELD", "Freeze exploit detected! Kick risk: "..kickRisk.."%", ACCENT_RED)
                         end
                         
                         if acceptSentinelEnabled and math.random() > 0.7 then
                             acceptDetected = true
-                            showNotification("ACCEPT SENTINEL", "Auto-accept blocked!", ACCENT_RED)
+                            showNotification("ACCEPT SENTINEL", "Auto-accept pattern detected!", ACCENT_RED)
+                        end
+                        
+                        if freezeDetected and math.random() < (kickRisk/100) then
+                            -- Simulate being kicked
+                            task.wait(1)
+                            showNotification("TRADE FAILED", "You were kicked by the exploiter!", ACCENT_RED)
+                            return
                         end
                         
                         if not freezeDetected and not acceptDetected then
                             showNotification("TRADE SECURE", "No threats detected", ACCENT_GREEN)
                         else
-                            showNotification("GUARDIAN ACTIVE", "Trade secured", Color3.fromRGB(200, 150, 0))
+                            showNotification("GUARDIAN ACTIVE", "Trade secured", ACCENT_YELLOW)
                         end
                     else
-                        showNotification("TRADE WARNING", "Guardian inactive - trade at your own risk", ACCENT_RED)
+                        -- Calculate random kick risk when protection is off
+                        local risk = calculateKickRisk(math.random(6, 10)/10)
+                        showNotification("TRADE WARNING", "Guardian inactive - Kick risk: "..risk.."%", ACCENT_RED)
+                        
+                        -- Simulate being kicked with risk probability
+                        if math.random() < (risk/100) then
+                            task.wait(1)
+                            showNotification("TRADE FAILED", "You were kicked by the exploiter!", ACCENT_RED)
+                            return
+                        end
                     end
                     
                     -- Simulate trade completion
@@ -619,7 +673,7 @@ local function simulateGuardianEvents()
         if frostShieldEnabled or acceptSentinelEnabled then
             -- Randomly show protection events
             if math.random() < 0.3 then  -- 30% chance per interval
-                local eventType = math.random(1, 4)
+                local eventType = math.random(1, 5)
                 local eventText = ""
                 local eventColor = ACCENT_BLUE
                 
@@ -631,9 +685,14 @@ local function simulateGuardianEvents()
                 elseif eventType == 3 then
                     eventText = "Exploit neutralized"
                     eventColor = ACCENT_RED
-                else
+                elseif eventType == 4 then
                     eventText = "Monitoring trade activity"
-                    eventColor = Color3.fromRGB(200, 180, 80) -- Yellow
+                    eventColor = ACCENT_YELLOW
+                else
+                    -- Simulate kick risk assessment
+                    local risk = calculateKickRisk(math.random(3, 7)/10)
+                    eventText = "Kick risk assessment: "..risk.."%"
+                    eventColor = Color3.fromRGB(220, 120, 50) -- Orange
                 end
                 
                 showNotification("GUARDIAN ACTIVE", eventText, eventColor)
@@ -723,7 +782,7 @@ updateLiveStatus()
 task.delay(1, function()
     showNotification(
         "TRADE GUARDIAN",
-        "Activate shields to protect your trades",
+        "Activate shields to protect against trade exploits",
         ACCENT_BLUE
     )
 end)
@@ -733,7 +792,9 @@ local function simulateTradeDetection()
     while true do
         if frostShieldEnabled then
             if math.random(1, 100) > 90 then
-                showNotification("FROST SHIELD", "Blocked freeze attempt", ACCENT_BLUE)
+                -- Add kick risk to blocked attempts
+                local risk = calculateKickRisk(math.random(8, 10)/10)
+                showNotification("FROST SHIELD", "Blocked freeze attempt! Kick risk: "..risk.."%", ACCENT_BLUE)
             end
         end
         
