@@ -10,7 +10,7 @@ local PlayerGui = LocalPlayer:WaitForChild("PlayerGui")
 
 -- Remove old GUIs
 for _, gui in ipairs(PlayerGui:GetChildren()) do
-    if gui.Name == "AntiTradeGui" or gui.Name == "NotificationGui" then
+    if gui.Name == "TradeGuardGui" or gui.Name == "NotificationGui" then
         gui:Destroy()
     end
 end
@@ -30,7 +30,7 @@ local SHADOW_COLOR = Color3.fromRGB(20, 20, 30)
 
 -- ========== Create Main GUI ==========
 local ScreenGui = Instance.new("ScreenGui", PlayerGui)
-ScreenGui.Name = "AntiTradeGui"
+ScreenGui.Name = "TradeGuardGui"
 ScreenGui.DisplayOrder = 10
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
@@ -70,7 +70,7 @@ TitleText.Name = "TitleText"
 TitleText.Size = UDim2.new(0.7, 0, 1, 0)
 TitleText.Position = UDim2.new(0, 10, 0, 0)
 TitleText.BackgroundTransparency = 1
-TitleText.Text = "TRADE PROTECTION"
+TitleText.Text = "TRADE GUARDIAN"
 TitleText.Font = FONT
 TitleText.TextColor3 = TEXT_MAIN
 TitleText.TextSize = 14
@@ -89,74 +89,74 @@ local closeCorner = Instance.new("UICorner", CloseButton)
 closeCorner.CornerRadius = UDim.new(1, 0)
 
 -- ========== Protection Boxes ==========
--- Anti-Freeze Box
-local AntiFreezeBox = Instance.new("Frame", MainFrame)
-AntiFreezeBox.Name = "AntiFreezeBox"
-AntiFreezeBox.Size = UDim2.new(0.45, -10, 0, 70)
-AntiFreezeBox.Position = UDim2.new(0, 10, 0, 35)
-AntiFreezeBox.BackgroundColor3 = CARD_BG
-local boxCorner = Instance.new("UICorner", AntiFreezeBox)
+-- Frost Shield Box
+local FrostShieldBox = Instance.new("Frame", MainFrame)
+FrostShieldBox.Name = "FrostShieldBox"
+FrostShieldBox.Size = UDim2.new(0.45, -10, 0, 70)
+FrostShieldBox.Position = UDim2.new(0, 10, 0, 35)
+FrostShieldBox.BackgroundColor3 = CARD_BG
+local boxCorner = Instance.new("UICorner", FrostShieldBox)
 boxCorner.CornerRadius = UDim.new(0, 6)
 
 -- Box header
-local FreezeIcon = Instance.new("ImageLabel", AntiFreezeBox)
-FreezeIcon.Size = UDim2.new(0, 24, 0, 24)
-FreezeIcon.Position = UDim2.new(0.5, -12, 0, 8)
-FreezeIcon.BackgroundTransparency = 1
-FreezeIcon.Image = "rbxassetid://3926305904" -- Snowflake icon
-FreezeIcon.ImageColor3 = TEXT_MAIN
+local FrostIcon = Instance.new("ImageLabel", FrostShieldBox)
+FrostIcon.Size = UDim2.new(0, 24, 0, 24)
+FrostIcon.Position = UDim2.new(0.5, -12, 0, 8)
+FrostIcon.BackgroundTransparency = 1
+FrostIcon.Image = "rbxassetid://3926305904" -- Snowflake icon
+FrostIcon.ImageColor3 = TEXT_MAIN
 
 -- Toggle switch
-local FreezeToggle = Instance.new("Frame", AntiFreezeBox)
-FreezeToggle.Name = "Toggle"
-FreezeToggle.Size = UDim2.new(0, 40, 0, 20)
-FreezeToggle.Position = UDim2.new(0.5, -20, 1, -28)
-FreezeToggle.BackgroundColor3 = TOGGLE_OFF
-local toggleCorner = Instance.new("UICorner", FreezeToggle)
+local FrostToggle = Instance.new("Frame", FrostShieldBox)
+FrostToggle.Name = "Toggle"
+FrostToggle.Size = UDim2.new(0, 40, 0, 20)
+FrostToggle.Position = UDim2.new(0.5, -20, 1, -28)
+FrostToggle.BackgroundColor3 = TOGGLE_OFF
+local toggleCorner = Instance.new("UICorner", FrostToggle)
 toggleCorner.CornerRadius = UDim.new(1, 0)
 
-local ToggleButton = Instance.new("TextButton", FreezeToggle)
-ToggleButton.Name = "Button"
-ToggleButton.Size = UDim2.new(0, 16, 0, 16)
-ToggleButton.Position = UDim2.new(0, 2, 0.5, -8)
-ToggleButton.BackgroundColor3 = TEXT_MAIN
-ToggleButton.Text = ""
-local buttonCorner = Instance.new("UICorner", ToggleButton)
+local FrostToggleButton = Instance.new("TextButton", FrostToggle)
+FrostToggleButton.Name = "Button"
+FrostToggleButton.Size = UDim2.new(0, 16, 0, 16)
+FrostToggleButton.Position = UDim2.new(0, 2, 0.5, -8)
+FrostToggleButton.BackgroundColor3 = TEXT_MAIN
+FrostToggleButton.Text = ""
+local buttonCorner = Instance.new("UICorner", FrostToggleButton)
 buttonCorner.CornerRadius = UDim.new(1, 0)
 
 -- Settings button
-local FreezeSettings = Instance.new("TextButton", AntiFreezeBox)
-FreezeSettings.Name = "SettingsButton"
-FreezeSettings.Size = UDim2.new(0, 24, 0, 24)
-FreezeSettings.Position = UDim2.new(1, -28, 0, 8)
-FreezeSettings.BackgroundTransparency = 1
-FreezeSettings.Text = "⚙️"
-FreezeSettings.Font = Enum.Font.Gotham
-FreezeSettings.TextSize = 14
-FreezeSettings.TextColor3 = TEXT_MAIN
+local FrostSettings = Instance.new("TextButton", FrostShieldBox)
+FrostSettings.Name = "SettingsButton"
+FrostSettings.Size = UDim2.new(0, 24, 0, 24)
+FrostSettings.Position = UDim2.new(1, -28, 0, 8)
+FrostSettings.BackgroundTransparency = 1
+FrostSettings.Text = "⚙️"
+FrostSettings.Font = Enum.Font.Gotham
+FrostSettings.TextSize = 14
+FrostSettings.TextColor3 = TEXT_MAIN
 
 -- Status label
-local FreezeStatus = Instance.new("TextLabel", AntiFreezeBox)
-FreezeStatus.Size = UDim2.new(1, -10, 0, 16)
-FreezeStatus.Position = UDim2.new(0, 5, 1, -40)
-FreezeStatus.BackgroundTransparency = 1
-FreezeStatus.Text = "Inactive"
-FreezeStatus.Font = FONT
-FreezeStatus.TextColor3 = TEXT_SECONDARY
-FreezeStatus.TextSize = 12
-FreezeStatus.TextXAlignment = Enum.TextXAlignment.Center
+local FrostStatus = Instance.new("TextLabel", FrostShieldBox)
+FrostStatus.Size = UDim2.new(1, -10, 0, 16)
+FrostStatus.Position = UDim2.new(0, 5, 1, -40)
+FrostStatus.BackgroundTransparency = 1
+FrostStatus.Text = "INACTIVE"
+FrostStatus.Font = FONT
+FrostStatus.TextColor3 = TEXT_SECONDARY
+FrostStatus.TextSize = 12
+FrostStatus.TextXAlignment = Enum.TextXAlignment.Center
 
--- Anti-Auto Accept Box
-local AntiAcceptBox = Instance.new("Frame", MainFrame)
-AntiAcceptBox.Name = "AntiAcceptBox"
-AntiAcceptBox.Size = UDim2.new(0.45, -10, 0, 70)
-AntiAcceptBox.Position = UDim2.new(1, -120, 0, 35)
-AntiAcceptBox.BackgroundColor3 = CARD_BG
-local boxCorner2 = Instance.new("UICorner", AntiAcceptBox)
+-- Accept Sentinel Box
+local AcceptSentinelBox = Instance.new("Frame", MainFrame)
+AcceptSentinelBox.Name = "AcceptSentinelBox"
+AcceptSentinelBox.Size = UDim2.new(0.45, -10, 0, 70)
+AcceptSentinelBox.Position = UDim2.new(1, -120, 0, 35)
+AcceptSentinelBox.BackgroundColor3 = CARD_BG
+local boxCorner2 = Instance.new("UICorner", AcceptSentinelBox)
 boxCorner2.CornerRadius = UDim.new(0, 6)
 
 -- Box header
-local AcceptIcon = Instance.new("ImageLabel", AntiAcceptBox)
+local AcceptIcon = Instance.new("ImageLabel", AcceptSentinelBox)
 AcceptIcon.Size = UDim2.new(0, 24, 0, 24)
 AcceptIcon.Position = UDim2.new(0.5, -12, 0, 8)
 AcceptIcon.BackgroundTransparency = 1
@@ -164,7 +164,7 @@ AcceptIcon.Image = "rbxassetid://3926307971" -- Checkmark icon
 AcceptIcon.ImageColor3 = TEXT_MAIN
 
 -- Toggle switch
-local AcceptToggle = Instance.new("Frame", AntiAcceptBox)
+local AcceptToggle = Instance.new("Frame", AcceptSentinelBox)
 AcceptToggle.Name = "Toggle"
 AcceptToggle.Size = UDim2.new(0, 40, 0, 20)
 AcceptToggle.Position = UDim2.new(0.5, -20, 1, -28)
@@ -172,17 +172,17 @@ AcceptToggle.BackgroundColor3 = TOGGLE_OFF
 local toggleCorner2 = Instance.new("UICorner", AcceptToggle)
 toggleCorner2.CornerRadius = UDim.new(1, 0)
 
-local ToggleButton2 = Instance.new("TextButton", AcceptToggle)
-ToggleButton2.Name = "Button"
-ToggleButton2.Size = UDim2.new(0, 16, 0, 16)
-ToggleButton2.Position = UDim2.new(0, 2, 0.5, -8)
-ToggleButton2.BackgroundColor3 = TEXT_MAIN
-ToggleButton2.Text = ""
-local buttonCorner2 = Instance.new("UICorner", ToggleButton2)
+local AcceptToggleButton = Instance.new("TextButton", AcceptToggle)
+AcceptToggleButton.Name = "Button"
+AcceptToggleButton.Size = UDim2.new(0, 16, 0, 16)
+AcceptToggleButton.Position = UDim2.new(0, 2, 0.5, -8)
+AcceptToggleButton.BackgroundColor3 = TEXT_MAIN
+AcceptToggleButton.Text = ""
+local buttonCorner2 = Instance.new("UICorner", AcceptToggleButton)
 buttonCorner2.CornerRadius = UDim.new(1, 0)
 
 -- Settings button
-local AcceptSettings = Instance.new("TextButton", AntiAcceptBox)
+local AcceptSettings = Instance.new("TextButton", AcceptSentinelBox)
 AcceptSettings.Name = "SettingsButton"
 AcceptSettings.Size = UDim2.new(0, 24, 0, 24)
 AcceptSettings.Position = UDim2.new(1, -28, 0, 8)
@@ -193,11 +193,11 @@ AcceptSettings.TextSize = 14
 AcceptSettings.TextColor3 = TEXT_MAIN
 
 -- Status label
-local AcceptStatus = Instance.new("TextLabel", AntiAcceptBox)
+local AcceptStatus = Instance.new("TextLabel", AcceptSentinelBox)
 AcceptStatus.Size = UDim2.new(1, -10, 0, 16)
 AcceptStatus.Position = UDim2.new(0, 5, 1, -40)
 AcceptStatus.BackgroundTransparency = 1
-AcceptStatus.Text = "Inactive"
+AcceptStatus.Text = "INACTIVE"
 AcceptStatus.Font = FONT
 AcceptStatus.TextColor3 = TEXT_SECONDARY
 AcceptStatus.TextSize = 12
@@ -208,7 +208,7 @@ local GlobalStatus = Instance.new("TextLabel", MainFrame)
 GlobalStatus.Size = UDim2.new(1, -20, 0, 18)
 GlobalStatus.Position = UDim2.new(0, 10, 1, -22)
 GlobalStatus.BackgroundTransparency = 1
-GlobalStatus.Text = "Protections inactive"
+GlobalStatus.Text = "GUARDIAN INACTIVE"
 GlobalStatus.Font = FONT
 GlobalStatus.TextColor3 = TEXT_SECONDARY
 GlobalStatus.TextSize = 12
@@ -370,55 +370,56 @@ local function showNotification(title, message, color)
     end)
 end
 
--- ========== Anti-Exploit Functions ==========
-local antiFreezeEnabled = false
-local antiAcceptEnabled = false
-local antiFreezeDuration = 300
-local antiAcceptDuration = 300
+-- ========== Protection Functions ==========
+local frostShieldEnabled = false
+local acceptSentinelEnabled = false
+local frostShieldDuration = 300
+local acceptSentinelDuration = 300
 local currentSetting = ""
-local freezeEndTime = 0
+local frostEndTime = 0
 local acceptEndTime = 0
+local pulseTween = nil
 
 -- Update status labels
 local function updateStatusLabels()
-    -- Anti-Freeze status
-    if antiFreezeEnabled then
-        local remaining = math.ceil(freezeEndTime - tick())
+    -- Frost Shield status
+    if frostShieldEnabled then
+        local remaining = math.ceil(frostEndTime - tick())
         if remaining > 0 then
-            FreezeStatus.Text = remaining.."s"
-            FreezeStatus.TextColor3 = ACCENT_BLUE
+            FrostStatus.Text = remaining.."s"
+            FrostStatus.TextColor3 = ACCENT_BLUE
         else
-            antiFreezeEnabled = false
-            FreezeStatus.Text = "Inactive"
-            FreezeStatus.TextColor3 = TEXT_SECONDARY
+            frostShieldEnabled = false
+            FrostStatus.Text = "INACTIVE"
+            FrostStatus.TextColor3 = TEXT_SECONDARY
         end
     else
-        FreezeStatus.Text = "Inactive"
-        FreezeStatus.TextColor3 = TEXT_SECONDARY
+        FrostStatus.Text = "INACTIVE"
+        FrostStatus.TextColor3 = TEXT_SECONDARY
     end
     
-    -- Anti-Auto Accept status
-    if antiAcceptEnabled then
+    -- Accept Sentinel status
+    if acceptSentinelEnabled then
         local remaining = math.ceil(acceptEndTime - tick())
         if remaining > 0 then
             AcceptStatus.Text = remaining.."s"
             AcceptStatus.TextColor3 = ACCENT_GREEN
         else
-            antiAcceptEnabled = false
-            AcceptStatus.Text = "Inactive"
+            acceptSentinelEnabled = false
+            AcceptStatus.Text = "INACTIVE"
             AcceptStatus.TextColor3 = TEXT_SECONDARY
         end
     else
-        AcceptStatus.Text = "Inactive"
+        AcceptStatus.Text = "INACTIVE"
         AcceptStatus.TextColor3 = TEXT_SECONDARY
     end
     
     -- Global status
-    if antiFreezeEnabled or antiAcceptEnabled then
-        GlobalStatus.Text = "Protections active"
+    if frostShieldEnabled or acceptSentinelEnabled then
+        GlobalStatus.Text = "GUARDIAN ACTIVE"
         GlobalStatus.TextColor3 = TEXT_MAIN
     else
-        GlobalStatus.Text = "Protections inactive"
+        GlobalStatus.Text = "GUARDIAN INACTIVE"
         GlobalStatus.TextColor3 = TEXT_SECONDARY
     end
 end
@@ -444,49 +445,53 @@ local function toggleSwitch(button, frame, state)
     end
 end
 
--- Anti-Freeze protection
-local function startAntiFreeze()
-    antiFreezeEnabled = true
-    freezeEndTime = tick() + antiFreezeDuration
-    toggleSwitch(ToggleButton, FreezeToggle, true)
-    showNotification("Anti-Freeze", "Active for "..antiFreezeDuration.."s", ACCENT_BLUE)
+-- Frost Shield protection
+local function startFrostShield()
+    frostShieldEnabled = true
+    frostEndTime = tick() + frostShieldDuration
+    toggleSwitch(FrostToggleButton, FrostToggle, true)
+    showNotification("FROST SHIELD", "Active for "..frostShieldDuration.."s", ACCENT_BLUE)
     
     -- Simulate protection
-    while tick() < freezeEndTime and antiFreezeEnabled do
+    while tick() < frostEndTime and frostShieldEnabled do
         updateStatusLabels()
+        updateLiveStatus()
         task.wait(1)
     end
     
-    if antiFreezeEnabled then
-        antiFreezeEnabled = false
-        toggleSwitch(ToggleButton, FreezeToggle, false)
-        showNotification("Anti-Freeze", "Protection expired", TEXT_SECONDARY)
+    if frostShieldEnabled then
+        frostShieldEnabled = false
+        toggleSwitch(FrostToggleButton, FrostToggle, false)
+        showNotification("FROST SHIELD", "Protection expired", TEXT_SECONDARY)
     end
     updateStatusLabels()
+    updateLiveStatus()
 end
 
--- Anti-Auto Accept protection
-local function startAntiAutoAccept()
-    antiAcceptEnabled = true
-    acceptEndTime = tick() + antiAcceptDuration
-    toggleSwitch(ToggleButton2, AcceptToggle, true)
-    showNotification("Anti-Auto Accept", "Active for "..antiAcceptDuration.."s", ACCENT_GREEN)
+-- Accept Sentinel protection
+local function startAcceptSentinel()
+    acceptSentinelEnabled = true
+    acceptEndTime = tick() + acceptSentinelDuration
+    toggleSwitch(AcceptToggleButton, AcceptToggle, true)
+    showNotification("ACCEPT SENTINEL", "Active for "..acceptSentinelDuration.."s", ACCENT_GREEN)
     
     -- Simulate protection
-    while tick() < acceptEndTime and antiAcceptEnabled do
+    while tick() < acceptEndTime and acceptSentinelEnabled do
         updateStatusLabels()
+        updateLiveStatus()
         task.wait(1)
     end
     
-    if antiAcceptEnabled then
-        antiAcceptEnabled = false
-        toggleSwitch(ToggleButton2, AcceptToggle, false)
-        showNotification("Anti-Auto Accept", "Protection expired", TEXT_SECONDARY)
+    if acceptSentinelEnabled then
+        acceptSentinelEnabled = false
+        toggleSwitch(AcceptToggleButton, AcceptToggle, false)
+        showNotification("ACCEPT SENTINEL", "Protection expired", TEXT_SECONDARY)
     end
     updateStatusLabels()
+    updateLiveStatus()
 end
 
--- ========== Fake Live Protection Indicator ==========
+-- ========== Guardian Status Indicator ==========
 local LiveIndicator = Instance.new("Frame", MainFrame)
 LiveIndicator.Name = "LiveIndicator"
 LiveIndicator.Size = UDim2.new(0, 8, 0, 8)
@@ -501,31 +506,33 @@ LiveText.Name = "LiveText"
 LiveText.Size = UDim2.new(0, 50, 0, 12)
 LiveText.Position = UDim2.new(1, -60, 1, -16)
 LiveText.BackgroundTransparency = 1
-LiveText.Text = "INACTIVE"
+LiveText.Text = "OFFLINE"
 LiveText.Font = FONT
 LiveText.TextColor3 = TEXT_SECONDARY
 LiveText.TextSize = 10
 LiveText.TextXAlignment = Enum.TextXAlignment.Right
 
 -- Function to update live status
-local function updateLiveStatus()
-    if antiFreezeEnabled or antiAcceptEnabled then
+function updateLiveStatus()
+    if pulseTween then
+        pulseTween:Cancel()
+        pulseTween = nil
+    end
+    
+    if frostShieldEnabled or acceptSentinelEnabled then
         LiveIndicator.BackgroundColor3 = ACCENT_GREEN
         LiveText.Text = "LIVE"
         LiveText.TextColor3 = ACCENT_GREEN
         
         -- Add pulse animation when active
-        local pulse = TweenService:Create(LiveIndicator, TweenInfo.new(0.8, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut, -1, true), {
+        pulseTween = TweenService:Create(LiveIndicator, TweenInfo.new(0.8, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut, -1, true), {
             BackgroundTransparency = 0.5
         })
-        pulse:Play()
+        pulseTween:Play()
     else
         LiveIndicator.BackgroundColor3 = ACCENT_RED
-        LiveText.Text = "INACTIVE"
+        LiveText.Text = "OFFLINE"
         LiveText.TextColor3 = TEXT_SECONDARY
-        
-        -- Stop any existing animations
-        TweenService:GetTween(LiveIndicator):Cancel()
         LiveIndicator.BackgroundTransparency = 0
     end
 end
@@ -538,43 +545,43 @@ local function detectTradingTicketUse()
     humanoid:GetPropertyChangedSignal("Sit"):Connect(function()
         if humanoid.Sit then
             -- Player is sitting (simulating trade initiation)
-            if antiFreezeEnabled or antiAcceptEnabled then
-                showNotification("Trade Analysis", "Initializing trade security scan...", ACCENT_BLUE)
+            if frostShieldEnabled or acceptSentinelEnabled then
+                showNotification("TRADE SCAN", "Initializing security protocols...", ACCENT_BLUE)
                 
                 -- Simulate scanning process
                 for i = 1, 3 do
                     task.wait(0.5)
-                    showNotification("Trade Analysis", "Scanning trade partner... ("..i.."/3)", ACCENT_BLUE)
+                    showNotification("TRADE SCAN", "Analyzing trade partner... ("..i.."/3)", ACCENT_BLUE)
                 end
                 
                 -- Randomly detect threats
                 local freezeDetected = false
                 local acceptDetected = false
                 
-                if antiFreezeEnabled and math.random() > 0.7 then
+                if frostShieldEnabled and math.random() > 0.7 then
                     freezeDetected = true
-                    showNotification("Trade Guard", "Potential freeze exploit detected!", ACCENT_RED)
+                    showNotification("FROST SHIELD", "Freeze exploit neutralized!", ACCENT_RED)
                 end
                 
-                if antiAcceptEnabled and math.random() > 0.7 then
+                if acceptSentinelEnabled and math.random() > 0.7 then
                     acceptDetected = true
-                    showNotification("Trade Guard", "Auto-accept pattern detected!", ACCENT_RED)
+                    showNotification("ACCEPT SENTINEL", "Auto-accept blocked!", ACCENT_RED)
                 end
                 
                 if not freezeDetected and not acceptDetected then
-                    showNotification("Trade Analysis", "Trade verified - No threats found", ACCENT_GREEN)
+                    showNotification("TRADE SECURE", "No threats detected", ACCENT_GREEN)
                 else
-                    showNotification("Trade Guard", "Security measures applied", Color3.fromRGB(200, 150, 0))
+                    showNotification("GUARDIAN ACTIVE", "Trade secured", Color3.fromRGB(200, 150, 0))
                 end
             end
         end
     end)
 end
 
--- ========== Fake Protection Events ==========
-local function simulateLiveProtectionEvents()
+-- ========== Guardian Events ==========
+local function simulateGuardianEvents()
     while true do
-        if antiFreezeEnabled or antiAcceptEnabled then
+        if frostShieldEnabled or acceptSentinelEnabled then
             -- Randomly show protection events
             if math.random() < 0.3 then  -- 30% chance per interval
                 local eventType = math.random(1, 4)
@@ -582,19 +589,19 @@ local function simulateLiveProtectionEvents()
                 local eventColor = ACCENT_BLUE
                 
                 if eventType == 1 then
-                    eventText = "Verified trade request"
+                    eventText = "Trade request verified"
                 elseif eventType == 2 then
                     eventText = "Scanning trade items"
                     eventColor = ACCENT_GREEN
                 elseif eventType == 3 then
-                    eventText = "Protected against exploit"
+                    eventText = "Exploit neutralized"
                     eventColor = ACCENT_RED
                 else
                     eventText = "Monitoring trade activity"
                     eventColor = Color3.fromRGB(200, 180, 80) -- Yellow
                 end
                 
-                showNotification("Trade Guard", eventText, eventColor)
+                showNotification("GUARDIAN ACTIVE", eventText, eventColor)
             end
         end
         task.wait(math.random(3, 8))  -- Random interval between events
@@ -608,63 +615,63 @@ CloseButton.MouseButton1Click:Connect(function()
     NotificationGui:Destroy()
 end)
 
--- Anti-Freeze toggle
-ToggleButton.MouseButton1Click:Connect(function()
-    if not antiFreezeEnabled then
-        startAntiFreeze()
+-- Frost Shield toggle
+FrostToggleButton.MouseButton1Click:Connect(function()
+    if not frostShieldEnabled then
+        startFrostShield()
     else
-        antiFreezeEnabled = false
-        toggleSwitch(ToggleButton, FreezeToggle, false)
-        showNotification("Anti-Freeze", "Protection disabled", TEXT_SECONDARY)
+        frostShieldEnabled = false
+        toggleSwitch(FrostToggleButton, FrostToggle, false)
+        showNotification("FROST SHIELD", "Shield disabled", TEXT_SECONDARY)
         updateStatusLabels()
+        updateLiveStatus()
     end
-    updateLiveStatus()
 end)
 
--- Anti-Auto Accept toggle
-ToggleButton2.MouseButton1Click:Connect(function()
-    if not antiAcceptEnabled then
-        startAntiAutoAccept()
+-- Accept Sentinel toggle
+AcceptToggleButton.MouseButton1Click:Connect(function()
+    if not acceptSentinelEnabled then
+        startAcceptSentinel()
     else
-        antiAcceptEnabled = false
-        toggleSwitch(ToggleButton2, AcceptToggle, false)
-        showNotification("Anti-Auto Accept", "Protection disabled", TEXT_SECONDARY)
+        acceptSentinelEnabled = false
+        toggleSwitch(AcceptToggleButton, AcceptToggle, false)
+        showNotification("ACCEPT SENTINEL", "Sentinel disabled", TEXT_SECONDARY)
         updateStatusLabels()
+        updateLiveStatus()
     end
-    updateLiveStatus()
 end)
 
 -- Settings buttons
-FreezeSettings.MouseButton1Click:Connect(function()
+FrostSettings.MouseButton1Click:Connect(function()
     ModalFrame.Visible = true
-    ModalTitle.Text = "ANTI-FREEZE DURATION"
+    ModalTitle.Text = "FROST SHIELD DURATION"
     ModalTitle.BackgroundColor3 = ACCENT_BLUE
-    currentSetting = "AntiFreeze"
-    DurationInput.Text = tostring(antiFreezeDuration)
+    currentSetting = "FrostShield"
+    DurationInput.Text = tostring(frostShieldDuration)
 end)
 
 AcceptSettings.MouseButton1Click:Connect(function()
     ModalFrame.Visible = true
-    ModalTitle.Text = "ANTI-ACCEPT DURATION"
+    ModalTitle.Text = "ACCEPT SENTINEL DURATION"
     ModalTitle.BackgroundColor3 = ACCENT_GREEN
-    currentSetting = "AntiAccept"
-    DurationInput.Text = tostring(antiAcceptDuration)
+    currentSetting = "AcceptSentinel"
+    DurationInput.Text = tostring(acceptSentinelDuration)
 end)
 
 -- Modal buttons
 ConfirmButton.MouseButton1Click:Connect(function()
     local duration = tonumber(DurationInput.Text)
     if duration and duration > 0 then
-        if currentSetting == "AntiFreeze" then
-            antiFreezeDuration = duration
-            showNotification("Anti-Freeze", "Duration: "..duration.."s", ACCENT_BLUE)
-        elseif currentSetting == "AntiAccept" then
-            antiAcceptDuration = duration
-            showNotification("Anti-Auto Accept", "Duration: "..duration.."s", ACCENT_GREEN)
+        if currentSetting == "FrostShield" then
+            frostShieldDuration = duration
+            showNotification("FROST SHIELD", "Duration: "..duration.."s", ACCENT_BLUE)
+        elseif currentSetting == "AcceptSentinel" then
+            acceptSentinelDuration = duration
+            showNotification("ACCEPT SENTINEL", "Duration: "..duration.."s", ACCENT_GREEN)
         end
         updateStatusLabels()
     else
-        showNotification("Error", "Invalid duration", ACCENT_RED)
+        showNotification("ERROR", "Invalid duration", ACCENT_RED)
     end
     ModalFrame.Visible = false
 end)
@@ -680,8 +687,8 @@ updateLiveStatus()
 -- Initial welcome notification
 task.delay(1, function()
     showNotification(
-        "Trade Protection",
-        "Activate protections to secure trades",
+        "TRADE GUARDIAN",
+        "Activate shields to protect your trades",
         ACCENT_BLUE
     )
 end)
@@ -689,15 +696,15 @@ end)
 -- Simulate trade detection
 local function simulateTradeDetection()
     while true do
-        if antiFreezeEnabled then
+        if frostShieldEnabled then
             if math.random(1, 100) > 90 then
-                showNotification("Anti-Freeze", "Blocked freeze attempt", ACCENT_BLUE)
+                showNotification("FROST SHIELD", "Blocked freeze attempt", ACCENT_BLUE)
             end
         end
         
-        if antiAcceptEnabled then
+        if acceptSentinelEnabled then
             if math.random(1, 100) > 90 then
-                showNotification("Anti-Auto Accept", "Blocked forced trade", ACCENT_GREEN)
+                showNotification("ACCEPT SENTINEL", "Blocked forced trade", ACCENT_GREEN)
             end
         end
         
@@ -707,7 +714,7 @@ end
 
 -- Start simulation tasks
 task.spawn(simulateTradeDetection)
-task.spawn(simulateLiveProtectionEvents)
+task.spawn(simulateGuardianEvents)
 task.spawn(detectTradingTicketUse)
 
 -- Update status labels periodically
