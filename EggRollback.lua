@@ -23,9 +23,12 @@ local BROWN_BORDER = Color3.fromRGB(51, 25, 0)
 local ACCENT_GREEN = Color3.fromRGB(110, 196, 99)
 local BUTTON_RED = Color3.fromRGB(255, 62, 62)
 local BUTTON_GRAY = Color3.fromRGB(190, 190, 190)
+local BUTTON_GREEN = Color3.fromRGB(85, 200, 85)
+local BUTTON_GREEN_HOVER = Color3.fromRGB(120, 230, 120)
 local BLUE_TOGGLE = Color3.fromRGB(100, 180, 255)
 local BLUE_TOGGLE_HOVER = Color3.fromRGB(130, 210, 255)
 local FONT = Enum.Font.FredokaOne
+local TILE_IMAGE = "rbxassetid://15910695828"
 local MOBILE = UserInputService.TouchEnabled
 
 -- ========== Create Main GUI ==========
@@ -37,8 +40,8 @@ ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 -- Main frame with responsive sizing
 local MainFrame = Instance.new("Frame", ScreenGui)
 MainFrame.Name = "MainFrame"
-MainFrame.Size = MOBILE and UDim2.new(0.9, 0, 0, 260) or UDim2.new(0, 150, 0, 250)
-MainFrame.Position = MOBILE and UDim2.new(0.5, 0, 0.05, 0) or UDim2.new(0.5, -150, 0.05, 0)
+MainFrame.Size = MOBILE and UDim2.new(0.85, 0, 0, 260) or UDim2.new(0, 280, 0, 260)
+MainFrame.Position = MOBILE and UDim2.new(0.5, 0, 0.05, 0) or UDim2.new(0.5, -140, 0.05, 0)
 MainFrame.AnchorPoint = Vector2.new(0.5, 0)
 MainFrame.BackgroundColor3 = BROWN_BG
 MainFrame.Active = true
@@ -48,6 +51,15 @@ mainCorner.CornerRadius = UDim.new(0, 12)
 local mainStroke = Instance.new("UIStroke", MainFrame)
 mainStroke.Thickness = 2
 mainStroke.Color = BROWN_BORDER
+
+-- Add tile texture
+local tileTexture = Instance.new("ImageLabel", MainFrame)
+tileTexture.Size = UDim2.new(1, 0, 1, 0)
+tileTexture.BackgroundTransparency = 1
+tileTexture.Image = TILE_IMAGE
+tileTexture.ImageTransparency = 0.1
+tileTexture.ScaleType = Enum.ScaleType.Tile
+tileTexture.TileSize = UDim2.new(0, 96, 0, 96)
 
 -- Title bar
 local TitleBar = Instance.new("Frame", MainFrame)
@@ -70,8 +82,8 @@ TitleText.TextXAlignment = Enum.TextXAlignment.Left
 
 local CloseButton = Instance.new("TextButton", TitleBar)
 CloseButton.Name = "CloseButton"
-CloseButton.Size = UDim2.new(0, 28, 0, 28)
-CloseButton.Position = UDim2.new(1, -30, 0.5, -14)
+CloseButton.Size = UDim2.new(0, 26, 0, 26)
+CloseButton.Position = UDim2.new(1, -28, 0.5, -13)
 CloseButton.BackgroundColor3 = BUTTON_RED
 CloseButton.Text = "×"
 CloseButton.Font = Enum.Font.GothamBold
@@ -86,7 +98,7 @@ closeStroke.Color = Color3.fromRGB(150, 0, 0)
 -- Player selection
 local DropdownButton = Instance.new("TextButton", MainFrame)
 DropdownButton.Name = "DropdownButton"
-DropdownButton.Size = UDim2.new(1, -20, 0, 36)
+DropdownButton.Size = UDim2.new(1, -20, 0, 34)
 DropdownButton.Position = UDim2.new(0, 10, 0, 38)
 DropdownButton.BackgroundColor3 = BROWN_LIGHT
 DropdownButton.Text = "Select Player ▼"
@@ -102,8 +114,8 @@ dropStroke.Color = BROWN_BORDER
 -- Dropdown frame
 local DropdownFrame = Instance.new("Frame", MainFrame)
 DropdownFrame.Name = "DropdownFrame"
-DropdownFrame.Size = UDim2.new(1, -20, 0, 120)
-DropdownFrame.Position = UDim2.new(0, 10, 0, 78)
+DropdownFrame.Size = UDim2.new(1, -20, 0, 110)
+DropdownFrame.Position = UDim2.new(0, 10, 0, 76)
 DropdownFrame.BackgroundColor3 = BROWN_BG
 DropdownFrame.Visible = false
 DropdownFrame.ClipsDescendants = true
@@ -126,22 +138,42 @@ UIListLayout.Padding = UDim.new(0, 4)
 -- Feature toggles
 local TogglesFrame = Instance.new("Frame", MainFrame)
 TogglesFrame.Name = "TogglesFrame"
-TogglesFrame.Size = UDim2.new(1, -20, 0, 80)
+TogglesFrame.Size = UDim2.new(1, -20, 0, 76)
 TogglesFrame.Position = UDim2.new(0, 10, 0, 80)
 TogglesFrame.BackgroundTransparency = 1
 
--- Toggle switch function
+-- Original toggle switch design
 local function createToggleSwitch(parent, name, position, callback)
     local toggleFrame = Instance.new("Frame", parent)
     toggleFrame.Name = name.."Toggle"
-    toggleFrame.Size = UDim2.new(0.45, 0, 0, 32)
+    toggleFrame.Size = UDim2.new(0.45, 0, 0, 30)
     toggleFrame.Position = position
     toggleFrame.BackgroundTransparency = 1
     
-    local toggleButton = Instance.new("TextButton", toggleFrame)
+    local toggleLabel = Instance.new("TextLabel", toggleFrame)
+    toggleLabel.Size = UDim2.new(1, -50, 1, 0)
+    toggleLabel.Position = UDim2.new(0, 0, 0, 0)
+    toggleLabel.BackgroundTransparency = 1
+    toggleLabel.Text = name
+    toggleLabel.Font = FONT
+    toggleLabel.TextColor3 = Color3.new(1, 1, 1)
+    toggleLabel.TextSize = 16
+    toggleLabel.TextXAlignment = Enum.TextXAlignment.Left
+    
+    local toggleContainer = Instance.new("Frame", toggleFrame)
+    toggleContainer.Size = UDim2.new(0, 44, 0, 20)
+    toggleContainer.Position = UDim2.new(1, -44, 0.5, -10)
+    toggleContainer.BackgroundColor3 = BROWN_LIGHT
+    local containerCorner = Instance.new("UICorner", toggleContainer)
+    containerCorner.CornerRadius = UDim.new(1, 0)
+    local containerStroke = Instance.new("UIStroke", toggleContainer)
+    containerStroke.Thickness = 1
+    containerStroke.Color = BROWN_BORDER
+    
+    local toggleButton = Instance.new("TextButton", toggleContainer)
     toggleButton.Name = "ToggleButton"
-    toggleButton.Size = UDim2.new(0, 50, 0, 24)
-    toggleButton.Position = UDim2.new(0, 0, 0.5, -12)
+    toggleButton.Size = UDim2.new(0, 16, 0, 16)
+    toggleButton.Position = UDim2.new(0, 2, 0.5, -8)
     toggleButton.BackgroundColor3 = BUTTON_GRAY
     toggleButton.Text = ""
     local buttonCorner = Instance.new("UICorner", toggleButton)
@@ -150,26 +182,18 @@ local function createToggleSwitch(parent, name, position, callback)
     buttonStroke.Thickness = 1
     buttonStroke.Color = BROWN_BORDER
     
-    local toggleLabel = Instance.new("TextLabel", toggleFrame)
-    toggleLabel.Size = UDim2.new(1, -54, 1, 0)
-    toggleLabel.Position = UDim2.new(0, 54, 0, 0)
-    toggleLabel.BackgroundTransparency = 1
-    toggleLabel.Text = name
-    toggleLabel.Font = FONT
-    toggleLabel.TextColor3 = Color3.new(1, 1, 1)
-    toggleLabel.TextSize = 16
-    toggleLabel.TextXAlignment = Enum.TextXAlignment.Left
-    
     local state = false
     
     toggleButton.MouseButton1Click:Connect(function()
         state = not state
         if state then
             TweenService:Create(toggleButton, TweenInfo.new(0.2), {
+                Position = UDim2.new(0, 26, 0.5, -8),
                 BackgroundColor3 = BLUE_TOGGLE
             }):Play()
         else
             TweenService:Create(toggleButton, TweenInfo.new(0.2), {
+                Position = UDim2.new(0, 2, 0.5, -8),
                 BackgroundColor3 = BUTTON_GRAY
             }):Play()
         end
@@ -245,7 +269,7 @@ StatusLabel.TextXAlignment = Enum.TextXAlignment.Left
 -- Action buttons
 local ButtonsFrame = Instance.new("Frame", MainFrame)
 ButtonsFrame.Name = "ButtonsFrame"
-ButtonsFrame.Size = UDim2.new(1, -20, 0, 36)
+ButtonsFrame.Size = UDim2.new(1, -20, 0, 34)
 ButtonsFrame.Position = UDim2.new(0, 10, 1, -36)
 ButtonsFrame.BackgroundTransparency = 1
 
@@ -253,13 +277,24 @@ local TradeButton = Instance.new("TextButton", ButtonsFrame)
 TradeButton.Name = "TradeButton"
 TradeButton.Size = UDim2.new(0.48, 0, 1, 0)
 TradeButton.Position = UDim2.new(0, 0, 0, 0)
-TradeButton.BackgroundColor3 = ACCENT_GREEN
+TradeButton.BackgroundColor3 = BUTTON_GREEN
 TradeButton.Text = "TRADE"
 TradeButton.Font = FONT
 TradeButton.TextColor3 = Color3.new(1, 1, 1)
 TradeButton.TextSize = 16
 local tradeCorner = Instance.new("UICorner", TradeButton)
 tradeCorner.CornerRadius = UDim.new(0, 6)
+local tradeStroke = Instance.new("UIStroke", TradeButton)
+tradeStroke.Thickness = 1
+tradeStroke.Color = BROWN_BORDER
+
+TradeButton.MouseEnter:Connect(function()
+    TradeButton.BackgroundColor3 = BUTTON_GREEN_HOVER
+end)
+
+TradeButton.MouseLeave:Connect(function()
+    TradeButton.BackgroundColor3 = BUTTON_GREEN
+end)
 
 local ProfileButton = Instance.new("TextButton", ButtonsFrame)
 ProfileButton.Name = "ProfileButton"
@@ -272,8 +307,19 @@ ProfileButton.TextColor3 = Color3.new(1, 1, 1)
 ProfileButton.TextSize = 16
 local profileCorner = Instance.new("UICorner", ProfileButton)
 profileCorner.CornerRadius = UDim.new(0, 6)
+local profileStroke = Instance.new("UIStroke", ProfileButton)
+profileStroke.Thickness = 1
+profileStroke.Color = BROWN_BORDER
 
--- ===== Notification System =====
+ProfileButton.MouseEnter:Connect(function()
+    ProfileButton.BackgroundColor3 = Color3.fromRGB(184, 117, 53)
+end)
+
+ProfileButton.MouseLeave:Connect(function()
+    ProfileButton.BackgroundColor3 = BROWN_LIGHT
+end)
+
+-- ===== Notification System ==========
 local NotificationGui = Instance.new("ScreenGui", PlayerGui)
 NotificationGui.Name = "NotificationGui"
 NotificationGui.DisplayOrder = 20
@@ -281,8 +327,8 @@ NotificationGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 local NotificationFrame = Instance.new("Frame", NotificationGui)
 NotificationFrame.Name = "NotificationFrame"
-NotificationFrame.Size = MOBILE and UDim2.new(0.9, 0, 0, 0) or UDim2.new(0, 300, 0, 0)
-NotificationFrame.Position = MOBILE and UDim2.new(0.5, 0, 0.02, 0) or UDim2.new(0.5, -150, 0.02, 0)
+NotificationFrame.Size = MOBILE and UDim2.new(0.85, 0, 0, 0) or UDim2.new(0, 280, 0, 0)
+NotificationFrame.Position = MOBILE and UDim2.new(0.5, 0, 0.02, 0) or UDim2.new(0.5, -140, 0.02, 0)
 NotificationFrame.AnchorPoint = Vector2.new(0.5, 0)
 NotificationFrame.BackgroundTransparency = 1
 
@@ -300,6 +346,15 @@ local function showNotification(title, message, icon, duration)
     local containerStroke = Instance.new("UIStroke", Container)
     containerStroke.Thickness = 2
     containerStroke.Color = BROWN_BORDER
+
+    -- Add tile texture to notification
+    local tile = Instance.new("ImageLabel", Container)
+    tile.Size = UDim2.new(1, 0, 1, 0)
+    tile.BackgroundTransparency = 1
+    tile.Image = TILE_IMAGE
+    tile.ImageTransparency = 0.1
+    tile.ScaleType = Enum.ScaleType.Tile
+    tile.TileSize = UDim2.new(0, 96, 0, 96)
 
     local Icon = Instance.new("ImageLabel", Container)
     Icon.Size = UDim2.new(0, 40, 0, 40)
@@ -352,7 +407,7 @@ local autoAcceptEnabled = false
 local function createPlayerEntry(player)
     local entry = Instance.new("TextButton", DropdownScroll)
     entry.Name = player.Name
-    entry.Size = UDim2.new(1, -8, 0, 32)
+    entry.Size = UDim2.new(1, -8, 0, 30)
     entry.Position = UDim2.new(0, 4, 0, 0)
     entry.BackgroundColor3 = BROWN_LIGHT
     entry.Text = ""
@@ -421,7 +476,7 @@ local function updatePlayerList()
     
     -- Update canvas size
     local entryCount = #Players:GetPlayers() - 1
-    DropdownScroll.CanvasSize = UDim2.new(0, 0, 0, entryCount * 36)
+    DropdownScroll.CanvasSize = UDim2.new(0, 0, 0, entryCount * 34)
 end
 
 -- ===== GUI Interactions =====
@@ -479,7 +534,9 @@ local function onPlayerRemoved(player)
         
         -- Reset toggles
         freezeToggle.Button.BackgroundColor3 = BUTTON_GRAY
+        freezeToggle.Button.Position = UDim2.new(0, 2, 0.5, -8)
         acceptToggle.Button.BackgroundColor3 = BUTTON_GRAY
+        acceptToggle.Button.Position = UDim2.new(0, 2, 0.5, -8)
     end
     updatePlayerList()
 end
