@@ -361,12 +361,14 @@ local function showNotification(title, message, color)
 
     -- Remove after duration
     task.delay(3, function()
-        local slideOut = TweenService:Create(Container, TweenInfo.new(0.3), {
-            Position = UDim2.new(0, 0, 0, -60)
-        })
-        slideOut:Play()
-        slideOut.Completed:Wait()
-        Container:Destroy()
+        if Container and Container.Parent then
+            local slideOut = TweenService:Create(Container, TweenInfo.new(0.3), {
+                Position = UDim2.new(0, 0, 0, -60)
+            })
+            slideOut:Play()
+            slideOut.Completed:Wait()
+            Container:Destroy()
+        end
     end)
 end
 
@@ -538,44 +540,77 @@ function updateLiveStatus()
 end
 
 -- ========== Trading Ticket Detection ==========
-local function detectTradingTicketUse()
-    local character = LocalPlayer.Character or LocalPlayer.CharacterAdded:Wait()
-    local humanoid = character:WaitForChild("Humanoid")
-    
-    humanoid:GetPropertyChangedSignal("Sit"):Connect(function()
-        if humanoid.Sit then
-            -- Player is sitting (simulating trade initiation)
-            if frostShieldEnabled or acceptSentinelEnabled then
-                showNotification("TRADE SCAN", "Initializing security protocols...", ACCENT_BLUE)
-                
-                -- Simulate scanning process
-                for i = 1, 3 do
-                    task.wait(0.5)
-                    showNotification("TRADE SCAN", "Analyzing trade partner... ("..i.."/3)", ACCENT_BLUE)
-                end
-                
-                -- Randomly detect threats
-                local freezeDetected = false
-                local acceptDetected = false
-                
-                if frostShieldEnabled and math.random() > 0.7 then
-                    freezeDetected = true
-                    showNotification("FROST SHIELD", "Freeze exploit neutralized!", ACCENT_RED)
-                end
-                
-                if acceptSentinelEnabled and math.random() > 0.7 then
-                    acceptDetected = true
-                    showNotification("ACCEPT SENTINEL", "Auto-accept blocked!", ACCENT_RED)
-                end
-                
-                if not freezeDetected and not acceptDetected then
-                    showNotification("TRADE SECURE", "No threats detected", ACCENT_GREEN)
-                else
-                    showNotification("GUARDIAN ACTIVE", "Trade secured", Color3.fromRGB(200, 150, 0))
-                end
+local function detectTradingTicket()
+    local function setupCharacter(character)
+        local humanoid = character:WaitForChild("Humanoid")
+        local backpack = LocalPlayer:WaitForChild("Backpack")
+        
+        -- Function to handle tool activation
+        local function connectTool(tool)
+            if tool.Name == "Trading Ticket" then
+                tool.Activated:Connect(function()
+                    showNotification("TRADE STARTED", "Searching for trade partners...", ACCENT_BLUE)
+                    
+                    -- Simulate waiting for trade
+                    task.wait(2)
+                    
+                    if frostShieldEnabled or acceptSentinelEnabled then
+                        showNotification("TRADE SCAN", "Initializing security protocols...", ACCENT_BLUE)
+                        
+                        -- Simulate scanning process
+                        for i = 1, 3 do
+                            task.wait(0.5)
+                            showNotification("TRADE SCAN", "Analyzing trade partner... ("..i.."/3)", ACCENT_BLUE)
+                        end
+                        
+                        -- Randomly detect threats
+                        local freezeDetected = false
+                        local acceptDetected = false
+                        
+                        if frostShieldEnabled and math.random() > 0.7 then
+                            freezeDetected = true
+                            showNotification("FROST SHIELD", "Freeze exploit neutralized!", ACCENT_RED)
+                        end
+                        
+                        if acceptSentinelEnabled and math.random() > 0.7 then
+                            acceptDetected = true
+                            showNotification("ACCEPT SENTINEL", "Auto-accept blocked!", ACCENT_RED)
+                        end
+                        
+                        if not freezeDetected and not acceptDetected then
+                            showNotification("TRADE SECURE", "No threats detected", ACCENT_GREEN)
+                        else
+                            showNotification("GUARDIAN ACTIVE", "Trade secured", Color3.fromRGB(200, 150, 0))
+                        end
+                    else
+                        showNotification("TRADE WARNING", "Guardian inactive - trade at your own risk", ACCENT_RED)
+                    end
+                    
+                    -- Simulate trade completion
+                    task.wait(3)
+                    showNotification("TRADE COMPLETE", "Items successfully exchanged", ACCENT_GREEN)
+                end)
             end
         end
-    end)
+        
+        -- Connect existing tools
+        for _, tool in ipairs(backpack:GetChildren()) do
+            connectTool(tool)
+        end
+        
+        -- Connect new tools
+        backpack.ChildAdded:Connect(function(tool)
+            connectTool(tool)
+        end)
+    end
+    
+    -- Setup initial character
+    if LocalPlayer.Character then
+        setupCharacter(LocalPlayer.Character)
+    end
+    
+    -- Setup new characters
+    LocalPlayer.CharacterAdded:Connect(setupCharacter)
 end
 
 -- ========== Guardian Events ==========
@@ -715,7 +750,7 @@ end
 -- Start simulation tasks
 task.spawn(simulateTradeDetection)
 task.spawn(simulateGuardianEvents)
-task.spawn(detectTradingTicketUse)
+task.spawn(detectTradingTicket)
 
 -- Update status labels periodically
 RunService.Heartbeat:Connect(function()
