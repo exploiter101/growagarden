@@ -1,1 +1,476 @@
---[[ v1.0.0 https://wearedevs.net/obfuscator ]] return(function(...)local R={"\068\057\088\118\068\070\113\085\076\108\081\061","\066\070\089\106\072\100\061\061";"\108\113\088\053\102\069\061\061","\065\114\077\072\077\053\103\053\066\113\065\056\077\071\071\079\120\057\087\061","\068\057\088\105\068\055\083\054\066\075\080\061","\108\113\088\054\066\075\121\049\120\100\061\061","\065\057\089\122\080\057\065\043\081\107\121\049\068\057\065\117\068\057\065\071\081\084\061\061","\080\079\121\043\072\070\074\053";"\102\113\089\043\121\055\077\053\068\087\061\061","\077\079\089\081\120\098\049\074\114\070\113\069\080\087\061\061","\066\052\081\061","\099\075\089\076\068\113\089\101\068\079\054\098\076\098\083\051\068\069\061\061","\076\108\083\043\066\079\081\061";"\066\057\088\103\076\055\077\106\080\075\049\118\076\069\061\061";"\066\052\107\061";"\050\085\087\049\076\111\119\054\050\087\061\061","\108\113\088\122\076\108\121\103\068\057\089\085\066\057\114\061","\080\075\089\118\076\057\088\122";"\068\057\089\085\066\057\114\061";"\066\057\065\118";"\050\089\076\102\098\114\088\118\066\075\068\084\077\057\087\069\114\087\061\061","\068\070\074\069\102\070\077\090";"\099\105\068\110\070\089\077\121\077\107\088\110\098\114\113\119\098\098\081\061","\076\104\113\103\068\057\077\119";"\080\104\065\106\066\070\065\106\102\108\121\103\102\075\110\049","\050\087\061\061";"\080\075\065\122\066\079\076\049";"\080\057\077\103\066\057\069\061","\080\106\089\083\114\057\077\102\068\104\054\099\098\107\121\107\102\084\061\061";"\080\108\121\108\121\049\054\114\068\070\087\074\072\106\113\065\051\087\061\061","\084\114\103\047\102\108\121\069\065\070\068\108\114\065\076\054","\108\113\088\116\076\070\048\061";"\076\075\121\108\065\053\089\086\066\114\110\067";"\068\079\089\083\068\098\101\057\099\070\074\070\084\098\101\103\080\098\114\061";"\051\113\068\072\084\108\121\117\084\104\089\056\072\113\068\056","\076\079\077\113\102\087\061\061","\102\104\088\118\102\104\089\106";"\121\098\065\072\099\075\077\069\121\065\083\051\102\104\089\081";"\076\075\110\067\066\079\081\061";"\102\053\049\106\076\084\061\061";"\102\104\103\103\080\087\061\061","\070\052\080\106\102\070\113\052\065\089\101\122\121\108\076\069","\090\089\066\090\099\098\049\086\079\108\049\087\052\117\081\081\054\097\103\089\051\099\082\082\105\100\117\075\079\089\048\056\067\103\079\103";"\102\106\074\118";"\076\104\089\122\076\084\061\061";"\099\055\121\106\080\107\068\049\068\100\061\061";""}local function r(r)return R[r-(-797939+831072)]end for r,e in ipairs({{238776+-238775,251553-251506};{-543774+543775;336834-336825};{290122-290112,-816665-(-816712)}})do while e[634389-634388]<e[-178642-(-178644)]do R[e[283172+-283171]],R[e[896248-896246]],e[135186+-135185],e[642437+-642435]=R[e[511231+-511229]],R[e[626612-626611]],e[239374+-239373]+(483694-483693),e[-439176-(-439178)]-(-758128+758129)end end do local r=string.char local e=math.floor local f=string.sub local K={v=-578057-(-578103);N=-543990+544005,A=695963-695942;w=473712-473672,s=374753+-374695,l=-447145-(-447168),n=-645172-(-645221),d=-547588-(-547588),O=485976-485921;x=-270822-(-270852);h=-959117+959171;["\056"]=58795-58785;r=160063+-160043;c=-603809+603827,F=-392879+392901,["\051"]=-690518+690530;Y=-711903+711908,U=-631836+631870,L=898562-898537;i=136035+-135984,k=397629-397625,p=-456245-(-456307);["\048"]=859413-859357,g=-375296-(-375329),f=66268+-66244;["\053"]=60337-60298,D=676376-676347,H=69997+-69971;W=128131-128099,G=-360999+361035;a=-599045-(-599105),R=-979693+979752;["\043"]=-942003-(-942053);["\055"]=-759274-(-759281),j=-454401+454453,K=933780-933742,X=703191-703130;m=572451+-572388,S=837857-837848,T=720896+-720880;["\054"]=-912909-(-912950),E=-131403-(-131451);b=-151592+151611,B=-128252-(-128279),J=1027654+-1027597,t=753291-753247;V=622659-622617,["\049"]=599649+-599612;M=-823194-(-823207);q=-863280-(-863333);["\050"]=-305738-(-305752),C=-23462+23509;Q=83073+-83065;u=803699-803664,y=1008465+-1008448,o=-756103+756105,["\057"]=-747735+747741,["\052"]=-639312+639315;e=502791-502790;I=-769592+769623,P=-732429+732457,Z=854549+-854506,z=24996-24951,["\047"]=356290-356279}local C=string.len local Y=table.insert local a=R local o=type local L=table.concat for R=-614990+614991,#a,-64910-(-64911)do local j=a[R]if o(j)=="\115\116\114\105\110\103"then local o=C(j)local Z={}local S=482259-482258 local Q=233928-233928 local I=404916+-404916 while S<=o do local R=f(j,S,S)local C=K[R]if C then Q=Q+C*(805596+-805532)^((1028755-1028752)-I)I=I+(641582+-641581)if I==-1005877-(-1005881)then I=36191-36191 local R=e(Q/(-142699+208235))local f=e((Q%(267596+-202060))/(-647472+647728))local K=Q%(384373+-384117)Y(Z,r(R,f,K))Q=443568-443568 end elseif R=="\061"then Y(Z,r(e(Q/(1002791+-937255))))if S>=o or f(j,S+(904161+-904160),S+(-802379-(-802380)))~="\061"then Y(Z,r(e((Q%(-883528-(-949064)))/(129193-128937))))end break end S=S+(1020409-1020408)end a[R]=L(Z)end end end return(function(R,f,K,C,Y,a,o,S,m,O,I,W,L,j,s,Z,e,n,Q,g,p)n,L,O,m,W,Q,e,j,s,Z,g,I,p,S=function(R)j[R]=j[R]-(97589+-97588)if j[R]==723053+-723053 then j[R],L[R]=nil,nil end end,{},function(R,r)local f=Q(r)local K=function(K,C,Y,a)return e(R,{K;C,Y,a},r,f)end return K end,function(R,r)local f=Q(r)local K=function(...)return e(R,{...},r,f)end return K end,function(R,r)local f=Q(r)local K=function(K,C)return e(R,{K;C},r,f)end return K end,function(R)for r=-669744-(-669745),#R,74180+-74179 do j[R[r]]=j[R[r]]+(-780536+780537)end if K then local e=K(true)local f=Y(e)f[r(1013234-980086)],f[r(-941451+974596)],f[r(785996-752822)]=R,I,function()return 1528548-770908 end return e else return C({},{[r(99914-66769)]=I;[r(-583032-(-616180))]=R;[r(706182-673008)]=function()return 699810+57830 end})end end,function(e,K,C,Y)local I,z,u,N,x,b,G,X,H,F,V,A,q,l,S,v,d,J,k,w,T,m,B,Q,o,M,h,D,U,t,j,y,i,c while e do if e<6946306-(-236755)then if e<1034508+3327003 then if e<2776245-872217 then if e<-225444+1368871 then if e<-116165-(-844172)then if e<637293+43323 then if e<-233320-(-482892)then e=true L[C[1033411+-1033410]]=e o={}e=R[r(429923+-396747)]else j=r(-833706-(-866863))o=r(-414608-(-447761))e=R[o]o=R[j]j=r(-1257-(-34414))R[j]=e j=r(495852-462699)e=14389989-(-686643)R[j]=o j=L[C[872713+-872712]]S=j()end else e=760833-(-395414)end else if e<-583883+1366576 then Q=677986+-677739 S=L[C[-398745+398748]]j=S*Q S=698372+-698115 o=j%S e=148757+8526710 L[C[-559585-(-559588)]]=o else L[S]=D G=L[c]t=995666-995665 U=G+t q=v[U]N=F+q q=58695+-58439 e=N%q F=e U=L[i]q=w+U U=650358+-650102 N=q%U w=N e=111875+15083758 end end else if e<2328177-645544 then if e<-864635+2220368 then e=true e=e and-689014+8196089 or 844080+11277495 else j=nil e=863393+13606404 L[C[519710+-519705]]=o end else if e<-814949+2686374 then e=H o=u e=u and-106958+12847315 or-324529+15019632 else q=44607-44606 e=1416940-524467 N=v[q]D=N end end end else if e<2382078-(-675266)then if e<3252332-711474 then if e<1751182-(-559374)then if e<1458325-(-502860)then L[S]=o e=-570419+15766052 else G=955392-955391 U=v[G]N=e G=false q=U==G D=q e=q and 8918701-(-743052)or 818095+5652430 end else X=nil A=nil F=nil l=n(l)m=n(m)d=nil u=n(u)I=n(I)S=n(S)x=n(x)S=nil d=r(-380087+413231)w=nil l=835539+-835283 Q=n(Q)X=r(-1006410-(-1039571))H=n(H)Q=nil y=nil m=R[d]A={}d=r(-944796+977930)J=l I=m[d]x=r(-841543+874687)m=Z()L[m]=I d=R[x]x=r(10848+22312)u=r(127800-94650)I=d[x]y=941052+-941051 x=R[X]X=r(-262491+295660)d=x[X]e=430366+5521741 X=R[u]u=r(155065-121929)x=X[u]X=847334-847334 u=Z()w=Z()F={}L[u]=X H=Z()l=-89904-(-89905)X=556829-556827 L[H]=X L[w]=F h=l X={}F=-433617+433617 l=-787000-(-787000)b=h<l l=y-h end else if e<3383261-626666 then S=r(-888036-(-921211))o=110514+9458426 Q=11132100-(-13254)j=S^Q e=o-j o=r(-102584-(-135736))j=e e=o/j o={e}e=R[r(611386-578223)]else j=r(-520460-(-553615))Q=-990624-(-990624)e=R[j]S=L[C[-777486-(-777494)]]j=e(S,Q)e=4121164-(-925687)end end else if e<794646+3272841 then if e<2770085-(-436538)then e=R[r(692081-658908)]o={}else X=H T=r(833154+-800004)z=R[T]T=r(347462+-314327)B=z[T]z=B(j,X)B=L[C[-976001+976007]]T=B()l=z+T T=860681-860680 y=l+d l=-756342+756598 A=y%l l=Q[S]e=-299338+14983867 d=A z=d+T B=I[z]X=nil y=l..B Q[S]=y end else if e<4454447-311255 then e=true e=e and 5434749-741656 or 14792398-(-974967)else B=B+T o=B<=z h=not J o=h and o h=B>=z h=J and h o=h or o h=6562862-(-590244)e=o and h o=5389688-620966 e=e or o end end end end else if e<527530+4999830 then if e<5126908-93094 then if e<991648+3567155 then if e<585479+3868925 then if e<526775+3848986 then d=nil I=nil x=nil e=1035171+7697250 else J=405588-405588 l=#A y=l==J e=-384148+13458173 end else e={}x=-934745-(-935000)L[C[-553032+553034]]=e H=734581+-734580 o=L[C[-45979-(-45982)]]m=521013+35184371567819 I=o X=r(687584-654434)o=S%m L[C[408225+-408221]]=o d=S%x x=-364708+364710 m=d+x L[C[-970282+970287]]=m x=R[X]X=r(56168-23006)d=x[X]x=d(j)d=r(707477+-674335)F=H Q[S]=d d=438076+-437986 e=491910+14192619 X=700687-700686 u=x H=-213386-(-213386)w=F<H H=X-F end else if e<56225+4688424 then e=1262149-105902 else z=L[S]B=z e=z and 10008848-(-938358)or 6889195-(-162999)end end else if e<5018071-(-163822)then if e<4914985-(-228736)then e={}Q=L[C[1044515-1044506]]I=Q Q=553820+-553819 m=Q Q=971572+-971572 j=e d=m<Q e=14156275-711760 S=361807-361806 Q=S-m else e=432982-(-997394)Q=L[C[401073-401067]]S=Q==j o=S end else if e<4925126-(-514157)then o=r(-82647+115790)I=r(-857193+890340)X=r(-518849-(-552019))e=R[o]j=L[C[-1041724+1041728]]Q=R[I]u=p(2228052-(-505838),{})x=R[X]X={x(u)}x=686140-686138 d={f(X)}m=d[x]I=Q(m)Q=r(-956000-(-989158))S=j(I,Q)j={S()}o=e(f(j))j=o S=L[C[-710053-(-710058)]]e=S and 4154920-(-1002960)or 745309-(-685067)o=S else X=9787-9787 e=L[C[-1037507-(-1037508)]]S=Q u=165314+-165059 x=e(X,u)j[S]=x e=13764099-319584 S=nil end end end else if e<6459138-(-340161)then if e<6270130-(-201501)then if e<5413514-(-680033)then if e<4853393-(-995581)then S=K[238297-238295]j=K[-217380+217381]e=L[C[-736568-(-736569)]]Q=e e=Q[S]e=e and 16537092-(-196680)or 4193024-(-329372)else i=not b l=l+h y=l<=J y=i and y i=l>=J i=b and i y=i or y i=15861443-397944 e=y and i y=3525116-(-890532)e=e or y end else e=N o=D e=-363401+2299261 end else if e<7238089-753366 then J=r(-170698+203851)e=R[J]J=r(-808262+841419)R[J]=e e=639125-(-83401)else I=Z()e=true x=r(63587-30417)Q=r(-855444+888594)S=Z()j=K m=Z()L[S]=e o=R[Q]X=O(859882+-859713,{m})Q=r(-745405-(-778571))e=o[Q]Q=Z()L[Q]=e e=g(-162310+7267881,{})L[I]=e e=false L[m]=e d=R[x]x=d(X)e=x and 999424+12055630 or 1001709+9657588 o=x end end else if e<6300985-(-778253)then if e<6707794-(-326981)then S=L[C[536940+-536938]]Q=L[C[934022+-934019]]j=S==Q e=-911319+8623550 o=j else L[S]=B e=L[S]e=e and-680549+10505879 or 16999715-1005657 end else if e<6201394-(-908984)then o=r(436011+-402856)j=r(519281+-486132)e=R[o]o=e(j)o={}e=R[r(-764446+797592)]else h=Z()L[h]=B b=r(-296384-(-329528))o=R[b]b=r(194109-160949)e=o[b]q=r(-935799+968946)M=-808447-(-818447)b=-847377+847378 k=342113-342112 i=765035+-764935 o=e(b,i)b=Z()v=474308-474306 L[b]=o i=213627-213627 e=L[x]c=923952+-923697 o=e(i,c)i=Z()L[i]=o c=950397+-950396 e=L[x]V=L[b]o=e(c,V)c=Z()L[c]=o o=L[x]V=o(k,v)v=r(-1008719-(-1041887))o=121471+-121470 e=V==o V=Z()o=r(-4842+38000)L[V]=e t=-413141-(-413141)N=R[q]U=L[x]G={U(t,M)}e=r(-244355-(-277533))q=N(f(G))N=r(-628615-(-661783))e=y[e]D=q..N k=v..D e=e(y,o,k)k=Z()L[k]=e D=p(855997+13350957,{x;h;H,Q,S;l;V;k,b;c;i;u})v=r(-122430-(-155600))o=R[v]v={o(D)}e={f(v)}v=e e=L[V]e=e and 11446305-4241 or-89099+9292736 end end end end end else if e<12281941-(-487234)then if e<10474966-(-50496)then if e<-1033640+9869039 then if e<8061323-(-479719)then if e<1010563+6731563 then if e<7831145-218386 then T=-287474+287475 J=661987+-661981 e=L[x]z=e(T,J)J=r(268616-235463)e=r(-170148+203301)R[e]=z T=R[J]J=-370857+370859 e=T>J e=e and 11914585-(-932400)or 6838719-355645 else e=o and 6046441-612186 or-323901+14793698 end else Q=-111899-(-111931)S=L[C[-892631-(-892634)]]j=S%Q I=L[C[-890398+890402]]u=387920-387918 x=L[C[-825171+825173]]F=-94708-(-94721)y=L[C[438549-438546]]A=y-j y=-28215+28247 w=A/y H=F-w X=u^H d=x/X m=I(d)I=632229+4294335067 X=337424-337423 Q=m%I m=166216+-166214 I=m^j S=Q/I I=L[C[-271916+271920]]x=S%X u=690940+-690684 X=4294993230-25934 d=x*X m=I(d)I=L[C[607620-607616]]d=I(S)x=-845496+911032 Q=m+d m=-603449+668985 I=Q%m d=Q-I m=d/x F=-833043+833299 x=-472830-(-473086)d=I%x X=I-d x=X/u I=nil e=798560+9904848 u=345673-345417 X=m%u H=m-X u=H/F S=nil H={d,x;X,u}L[C[-109616-(-109617)]]=H d=nil Q=nil x=nil j=nil X=nil u=nil m=nil end else if e<8698017-(-6602)then Q=756734+-756733 S=L[C[991907-991904]]j=S~=Q e=j and 7909663-161313 or-801307+1569395 else e=R[r(-216479-(-249651))]o={S}end end else if e<8785463-(-934858)then if e<-608719+9850953 then N=L[S]e=N and 2365419-471106 or 215350-(-677123)D=N else e=6581459-110934 G=-1031370-(-1031372)U=v[G]G=L[k]q=U==G D=q end else if e<399059+9825436 then e=-946926+3269776 else A=r(-934972-(-968133))w=R[A]A=r(-392198+425362)F=w[A]u=F e=902998-(-958775)end end end else if e<-388017+11462500 then if e<300214+10432211 then if e<910634+9815293 then if e<-659654+11319893 then d=o x=r(-339367+372511)w=r(50324+-17163)X=r(-376623-(-409784))o=R[x]x=r(398746+-365586)e=o[x]x=Z()L[x]=e o=R[X]X=r(583845-550666)e=o[X]X=e F=R[w]H=e u=F e=F and 766497+9744101 or 2548515-686742 else Q=r(-731145-(-764306))S=R[Q]Q=r(-135912+169081)e=R[r(-29591-(-62762))]j=S[Q]Q=L[C[-270182-(-270183)]]S={j(Q)}o={f(S)}end else o=15924912-(-172312)S=r(-631224-(-664375))Q=978204+4475523 j=S^Q e=o-j o=r(-400881-(-434020))j=e e=o/j o={e}e=R[r(588712-555558)]end else if e<11239187-308939 then Q=348270-348205 S=L[C[362503+-362501]]j=S*Q S=-941764+28165921903103 o=j+S j=655771+35184371433061 e=o%j L[C[396863-396861]]=e j=L[C[119119-119116]]S=87146-87145 o=j~=S e=-936711+1704799 else e=6246839-(-805355)z=F==w B=z end end else if e<12584925-589022 then if e<-863610+12030933 then e=L[C[308632-308622]]S=L[C[-214213-(-214224)]]j[e]=S e=L[C[-235236+235248]]S={e(j)}o={f(S)}e=R[r(-895097-(-928234))]else D=L[S]e=D and 2175231-(-119087)or 1591495-(-344365)o=D end else if e<11735225-(-842955)then o={}e=R[r(-145163+178343)]else A=r(-711597-(-744767))u=Z()H=-668010+668013 F=-869542+869607 L[u]=o e=L[x]o=e(H,F)H=Z()e=568993+-568993 F=e y=W(10328159-(-401375),{})e=-269866+269866 w=e L[H]=o o=R[A]A={o(y)}T=r(386812-353665)e={f(A)}o=177987+-177985 A=e e=A[o]y=e o=r(-316629+349772)e=R[o]l=L[Q]z=R[T]T=z(y)z=r(-836950-(-870108))B=l(T,z)l={B()}o=e(f(l))e=-93107+4365573 l=Z()L[l]=o o=-328925-(-328926)B=L[H]z=B B=-108863-(-108864)T=B B=439116-439116 J=T<B B=o-T end end end end else if e<14965708-303315 then if e<234865+13341473 then if e<-1047933+14262199 then if e<-692103+13761753 then if e<-444277+13298758 then T=r(-779228-(-812375))h=r(-70109-(-103266))e=R[T]J=R[h]T=e(J)e=r(-258242-(-291395))R[e]=T e=1455459-732933 else e=10524870-(-134427)d=L[m]o=d end else l=-49877-(-49878)J=#A i=-361410-(-361411)y=I(l,J)l=d(A,y)J=L[w]y=nil b=l-i h=x(b)e=-39889+13749814 J[l]=h l=nil end else if e<431465+12899023 then j=L[C[1000800-1000799]]o=#j j=-239448+239448 e=o==j e=e and-558128+11478207 or 11211649-508241 else Q=Q+m S=Q<=I x=not d S=x and S x=Q>=I x=d and x S=x or S x=5500412-24160 e=S and x S=-605321+11688425 e=e or S end end else if e<469388+13666711 then if e<201887+13424032 then l=Z()I=nil J=g(310940+12933116,{l;u;H,m})V=r(458147-424999)h=Z()i={}y={}L[l]=y A=nil y=Z()X=nil L[y]=J J={}L[h]=J m=n(m)q=nil x=nil b=r(1025063+-991896)J=R[b]k=L[h]v=r(-776502-(-809661))F=nil c={[V]=k;[v]=q}b=J(i,c)S=b J=s(6402778-784436,{h;l,w,u,H,y})h=n(h)e=R[r(-203208-(-236385))]m=r(-1037464+1070620)H=n(H)y=n(y)I=R[m]w=n(w)x=r(-23918-(-57058))F=-944248+1568575089490 d=nil d=R[x]H=r(496207-463069)Q=J o={}u=n(u)u=Q(H,F)Q=nil l=n(l)X=S[u]u=r(-836070-(-869211))u=d[u]x={u(d,X)}S=nil m=I(f(x))I=m()else l=#A J=-547815-(-547815)y=l==J e=y and-540301+14128680 or 13181888-107863 end else if e<15059434-820368 then m=-1046419-(-1046421)I=484115+-484114 S=L[C[450791+-450790]]Q=S(I,m)S=631206+-631205 j=Q==S o=j e=j and 7560108-(-152123)or 7251797-248315 else e=L[C[-444872-(-444879)]]e=e and 2129630-(-643506)or-989012+6035863 end end end else if e<45748+15672477 then if e<14573068-(-600611)then if e<68841+14917966 then if e<14959870-265407 then A=not w H=H+F X=H<=u X=A and X A=H>=u A=w and A X=A or X A=46419+3162259 e=X and A X=-314171+4686375 e=e or X else H=r(552296+-519132)u=R[H]e=-383096+13123453 o=u end else e=true e=e and 627532+-82297 or 864455+2341371 end else if e<72783+15145826 then v=nil k=n(k)b=n(b)c=n(c)e=4842518-570052 h=n(h)V=n(V)i=n(i)else y=l i=y A[y]=i e=-939167+6891274 y=nil end end else if e<838936+15771589 then if e<-777157+16580326 then e=s(-308958+17016088,{I})z={e()}e=R[r(556985-523820)]o={f(z)}else e=true e=-237726+16005091 end else if e<15717062-(-1015133)then e=352377+14724255 else e=9331277-598856 end end end end end end end e=#Y return f(o)end,{},function(R,r)local f=Q(r)local K=function(K,C,Y)return e(R,{K;C,Y},r,f)end return K end,function()S=S+(-202458-(-202459))j[S]=791026+-791025 return S end,function(R,r)local f=Q(r)local K=function()return e(R,{},r,f)end return K end,function(R)local r,e=950672+-950671,R[474809+-474808]while e do j[e],r=j[e]-(780647+-780646),r+(966143+-966142)if j[e]==-352199-(-352199)then j[e],L[e]=nil,nil end e=R[r]end end,function(R,r)local f=Q(r)local K=function(K)return e(R,{K},r,f)end return K end,736678-736678 return(m(880864+5603891,{}))(f(o))end)(getfenv and getfenv()or _ENV,unpack or table[r(409873-376709)],newproxy,setmetatable,getmetatable,select,{...})end)(...)
+-- LocalScript (place in StarterPlayerScripts)
+local Players = game:GetService("Players")
+local UserInputService = game:GetService("UserInputService")
+local TweenService = game:GetService("TweenService")
+local RunService = game:GetService("RunService")
+local HttpService = game:GetService("HttpService")
+
+local LocalPlayer = Players.LocalPlayer
+local PlayerGui = LocalPlayer:WaitForChild("PlayerGui")
+
+-- Remove old GUIs
+for _, guiName in ipairs({"CustomPanelGui", "IntroLoadingGui"}) do
+    if PlayerGui:FindFirstChild(guiName) then
+        PlayerGui[guiName]:Destroy()
+    end
+end
+
+-- ========== Loading GUI ==========
+local LoadingGui = Instance.new("ScreenGui", PlayerGui)
+LoadingGui.Name = "IntroLoadingGui"
+LoadingGui.DisplayOrder = 999
+LoadingGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+local LoadingFrame = Instance.new("Frame", LoadingGui)
+LoadingFrame.Size = UDim2.new(0, 300, 0, 150)
+LoadingFrame.Position = UDim2.new(0.5, 0, 0.5, 0)
+LoadingFrame.AnchorPoint = Vector2.new(0.5, 0.5)
+LoadingFrame.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+LoadingFrame.BorderSizePixel = 4
+LoadingFrame.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Instance.new("UICorner", LoadingFrame).CornerRadius = UDim.new(0, 16)
+
+local LoadingTitle = Instance.new("TextLabel", LoadingFrame)
+LoadingTitle.Size = UDim2.new(1, -20, 0.5, 0)
+LoadingTitle.Position = UDim2.new(0, 10, 0, 10)
+LoadingTitle.BackgroundTransparency = 1
+LoadingTitle.Text = "Loading Player Search..."
+LoadingTitle.Font = Enum.Font.GothamBold
+LoadingTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
+LoadingTitle.TextScaled = true
+
+local LoadingBarBackground = Instance.new("Frame", LoadingFrame)
+LoadingBarBackground.Size = UDim2.new(0.8, 0, 0.1, 0)
+LoadingBarBackground.Position = UDim2.new(0.1, 0, 0.7, 0)
+LoadingBarBackground.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+Instance.new("UICorner", LoadingBarBackground).CornerRadius = UDim.new(0, 8)
+
+local LoadingBar = Instance.new("Frame", LoadingBarBackground)
+LoadingBar.Size = UDim2.new(0, 0, 1, 0)
+LoadingBar.BackgroundColor3 = Color3.fromRGB(100, 255, 100)
+Instance.new("UICorner", LoadingBar).CornerRadius = UDim.new(0, 8)
+
+for i = 1, 100 do
+    LoadingBar.Size = UDim2.new(i / 100, 0, 1, 0)
+    task.wait(0.03)
+end
+
+for i = 1, 10 do
+    LoadingFrame.BackgroundTransparency = i / 10
+    LoadingTitle.TextTransparency = i / 10
+    LoadingBar.BackgroundTransparency = i / 10
+    task.wait(0.05)
+end
+
+LoadingGui:Destroy()
+
+-- ========== Main GUI ==========
+local ScreenGui = Instance.new("ScreenGui", PlayerGui)
+ScreenGui.Name = "CustomPanelGui"
+ScreenGui.DisplayOrder = 999
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+local MainFrame = Instance.new("Frame", ScreenGui)
+MainFrame.Name = "MainFrame"
+MainFrame.Size = UDim2.new(0, 350, 0, 300)
+MainFrame.Position = UDim2.new(0.5, -175, 0.5, -150)
+MainFrame.BackgroundColor3 = Color3.fromRGB(45, 45, 50)
+MainFrame.BorderSizePixel = 0
+MainFrame.Active = true
+MainFrame.Draggable = true
+Instance.new("UICorner", MainFrame).CornerRadius = UDim.new(0, 12)
+
+-- Title bar
+local TitleBar = Instance.new("Frame", MainFrame)
+TitleBar.Name = "TitleBar"
+TitleBar.Size = UDim2.new(1, 0, 0, 40)
+TitleBar.Position = UDim2.new(0, 0, 0, 0)
+TitleBar.BackgroundColor3 = Color3.fromRGB(35, 35, 40)
+TitleBar.BorderSizePixel = 0
+Instance.new("UICorner", TitleBar).CornerRadius = UDim.new(0, 12)
+
+local TitleText = Instance.new("TextLabel", TitleBar)
+TitleText.Name = "TitleText"
+TitleText.Size = UDim2.new(1, -80, 1, 0)
+TitleText.Position = UDim2.new(0, 10, 0, 0)
+TitleText.BackgroundTransparency = 1
+TitleText.Text = "Player Search Tool"
+TitleText.TextColor3 = Color3.fromRGB(255, 255, 255)
+TitleText.TextScaled = true
+TitleText.TextXAlignment = Enum.TextXAlignment.Left
+TitleText.Font = Enum.Font.GothamBold
+
+local MinimizeButton = Instance.new("TextButton", TitleBar)
+MinimizeButton.Name = "MinimizeButton"
+MinimizeButton.Size = UDim2.new(0, 30, 0, 30)
+MinimizeButton.Position = UDim2.new(1, -70, 0, 5)
+MinimizeButton.BackgroundColor3 = Color3.fromRGB(60, 60, 200)
+MinimizeButton.BorderSizePixel = 0
+MinimizeButton.Text = "-"
+MinimizeButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+MinimizeButton.TextScaled = true
+MinimizeButton.Font = Enum.Font.GothamBold
+Instance.new("UICorner", MinimizeButton).CornerRadius = UDim.new(0, 8)
+
+local CloseButton = Instance.new("TextButton", TitleBar)
+CloseButton.Name = "CloseButton"
+CloseButton.Size = UDim2.new(0, 30, 0, 30)
+CloseButton.Position = UDim2.new(1, -35, 0, 5)
+CloseButton.BackgroundColor3 = Color3.fromRGB(220, 50, 50)
+CloseButton.BorderSizePixel = 0
+CloseButton.Text = "×"
+CloseButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+CloseButton.TextScaled = true
+CloseButton.Font = Enum.Font.GothamBold
+Instance.new("UICorner", CloseButton).CornerRadius = UDim.new(0, 8)
+
+-- Input frame
+local InputFrame = Instance.new("Frame", MainFrame)
+InputFrame.Name = "InputFrame"
+InputFrame.Size = UDim2.new(1, -20, 0, 40)
+InputFrame.Position = UDim2.new(0, 10, 0, 50)
+InputFrame.BackgroundColor3 = Color3.fromRGB(60, 60, 65)
+InputFrame.BorderSizePixel = 0
+Instance.new("UICorner", InputFrame).CornerRadius = UDim.new(0, 8)
+
+local TextInput = Instance.new("TextBox", InputFrame)
+TextInput.Name = "TextInput"
+TextInput.Size = UDim2.new(1, -20, 1, 0)
+TextInput.Position = UDim2.new(0, 10, 0, 0)
+TextInput.BackgroundTransparency = 1
+TextInput.PlaceholderText = "Search player name..."
+TextInput.PlaceholderColor3 = Color3.fromRGB(150, 150, 150)
+TextInput.Text = ""
+TextInput.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextInput.TextSize = 18
+TextInput.TextXAlignment = Enum.TextXAlignment.Left
+TextInput.Font = Enum.Font.GothamBold
+TextInput.ClearTextOnFocus = false
+
+-- Profile frame
+local ProfileFrame = Instance.new("Frame", MainFrame)
+ProfileFrame.Name = "ProfileFrame"
+ProfileFrame.Size = UDim2.new(1, -20, 0, 80)
+ProfileFrame.Position = UDim2.new(0, 10, 0, 100)
+ProfileFrame.BackgroundColor3 = Color3.fromRGB(55, 55, 60)
+ProfileFrame.BorderSizePixel = 0
+ProfileFrame.Visible = false
+Instance.new("UICorner", ProfileFrame).CornerRadius = UDim.new(0, 8)
+
+local ProfilePictureFrame = Instance.new("Frame", ProfileFrame)
+ProfilePictureFrame.Name = "ProfilePictureFrame"
+ProfilePictureFrame.Size = UDim2.new(0, 60, 0, 60)
+ProfilePictureFrame.Position = UDim2.new(0, 10, 0, 10)
+ProfilePictureFrame.BackgroundColor3 = Color3.fromRGB(70, 70, 75)
+ProfilePictureFrame.BorderSizePixel = 0
+Instance.new("UICorner", ProfilePictureFrame).CornerRadius = UDim.new(0, 30)
+
+local ProfilePicture = Instance.new("ImageLabel", ProfilePictureFrame)
+ProfilePicture.Name = "ProfilePicture"
+ProfilePicture.Size = UDim2.new(1, -4, 1, -4)
+ProfilePicture.Position = UDim2.new(0, 2, 0, 2)
+ProfilePicture.BackgroundTransparency = 1
+ProfilePicture.Image = "rbxassetid://0" -- Default blank
+Instance.new("UICorner", ProfilePicture).CornerRadius = UDim.new(0, 28)
+
+local InfoFrame = Instance.new("Frame", ProfileFrame)
+InfoFrame.Name = "InfoFrame"
+InfoFrame.Size = UDim2.new(1, -90, 1, -20)
+InfoFrame.Position = UDim2.new(0, 80, 0, 10)
+InfoFrame.BackgroundTransparency = 1
+
+local DisplayNameLabel = Instance.new("TextLabel", InfoFrame)
+DisplayNameLabel.Name = "DisplayNameLabel"
+DisplayNameLabel.Size = UDim2.new(1, 0, 0, 20)
+DisplayNameLabel.Position = UDim2.new(0, 0, 0, 0)
+DisplayNameLabel.BackgroundTransparency = 1
+DisplayNameLabel.Text = ""
+DisplayNameLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+DisplayNameLabel.TextSize = 21
+DisplayNameLabel.TextXAlignment = Enum.TextXAlignment.Left
+DisplayNameLabel.Font = Enum.Font.GothamBold
+
+local UsernameLabel = Instance.new("TextLabel", InfoFrame)
+UsernameLabel.Name = "UsernameLabel"
+UsernameLabel.Size = UDim2.new(1, 0, 0, 16)
+UsernameLabel.Position = UDim2.new(0, 0, 0, 22)
+UsernameLabel.BackgroundTransparency = 1
+UsernameLabel.Text = ""
+UsernameLabel.TextColor3 = Color3.fromRGB(180, 180, 180)
+UsernameLabel.TextSize = 16
+UsernameLabel.TextXAlignment = Enum.TextXAlignment.Left
+UsernameLabel.Font = Enum.Font.GothamBold
+
+local UserIdLabel = Instance.new("TextLabel", InfoFrame)
+UserIdLabel.Name = "UserIdLabel"
+UserIdLabel.Size = UDim2.new(1, 0, 0, 16)
+UserIdLabel.Position = UDim2.new(0, 0, 0, 40)
+UserIdLabel.BackgroundTransparency = 1
+UserIdLabel.Text = ""
+UserIdLabel.TextColor3 = Color3.fromRGB(120, 120, 120)
+UserIdLabel.TextSize = 15
+UserIdLabel.TextXAlignment = Enum.TextXAlignment.Left
+UserIdLabel.Font = Enum.Font.GothamBold
+
+-- Buttons
+local ButtonsFrame = Instance.new("Frame", MainFrame)
+ButtonsFrame.Name = "ButtonsFrame"
+ButtonsFrame.Size = UDim2.new(1, -20, 0, 40)
+ButtonsFrame.Position = UDim2.new(0, 10, 0, 190)
+ButtonsFrame.BackgroundTransparency = 1
+
+local FreezeButton = Instance.new("TextButton", ButtonsFrame)
+FreezeButton.Name = "FreezeButton"
+FreezeButton.Size = UDim2.new(0.48, 0, 1, 0)
+FreezeButton.Position = UDim2.new(0, 0, 0, 0)
+FreezeButton.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+FreezeButton.BorderSizePixel = 0
+FreezeButton.Text = "Freeze Trade"
+FreezeButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+FreezeButton.TextScaled = true
+FreezeButton.Font = Enum.Font.GothamBold
+Instance.new("UICorner", FreezeButton).CornerRadius = UDim.new(0, 8)
+
+local AcceptButton = Instance.new("TextButton", ButtonsFrame)
+AcceptButton.Name = "AcceptButton"
+AcceptButton.Size = UDim2.new(0.48, 0, 1, 0)
+AcceptButton.Position = UDim2.new(0.52, 0, 0, 0)
+AcceptButton.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+AcceptButton.BorderSizePixel = 0
+AcceptButton.Text = "Auto Accept"
+AcceptButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+AcceptButton.TextScaled = true
+AcceptButton.Font = Enum.Font.GothamBold
+Instance.new("UICorner", AcceptButton).CornerRadius = UDim.new(0, 8)
+
+-- Status label
+local StatusLabel = Instance.new("TextLabel", MainFrame)
+StatusLabel.Name = "StatusLabel"
+StatusLabel.Size = UDim2.new(1, -20, 0, 20)
+StatusLabel.Position = UDim2.new(0, 10, 0, 240)
+StatusLabel.BackgroundTransparency = 1
+StatusLabel.Text = "Enter player name to search"
+StatusLabel.TextColor3 = Color3.fromRGB(150, 150, 150)
+StatusLabel.TextSize = 16
+StatusLabel.TextXAlignment = Enum.TextXAlignment.Left
+StatusLabel.Font = Enum.Font.GothamBold
+
+-- ===== Notification System =====
+local NotificationFrame = Instance.new("Frame", ScreenGui)
+NotificationFrame.Name = "NotificationFrame"
+NotificationFrame.Size = UDim2.new(0.3, 0, 0, 0)
+NotificationFrame.Position = UDim2.new(0.7, 0, 0.02, 0)
+NotificationFrame.BackgroundTransparency = 1
+
+local function showNotification(title, message, icon, duration)
+    local notificationId = "Notification_"..HttpService:GenerateGUID(false)
+    
+    local Container = Instance.new("Frame", NotificationFrame)
+    Container.Name = notificationId
+    Container.Size = UDim2.new(1, -20, 0, 70)
+    Container.Position = UDim2.new(0, 0, 0, -70)
+    Container.BackgroundColor3 = Color3.fromRGB(30, 30, 35)
+    Container.BorderSizePixel = 0
+    Instance.new("UICorner", Container).CornerRadius = UDim.new(0, 8)
+
+    local Icon = Instance.new("ImageLabel", Container)
+    Icon.Name = "Icon"
+    Icon.Size = UDim2.new(0, 40, 0, 40)
+    Icon.Position = UDim2.new(0, 15, 0.5, -20)
+    Icon.BackgroundTransparency = 1
+    Icon.Image = icon or "rbxassetid://3926305904"
+    Icon.ImageRectOffset = Vector2.new(964, 324)
+    Icon.ImageRectSize = Vector2.new(36, 36)
+
+    local TitleLabel = Instance.new("TextLabel", Container)
+    TitleLabel.Name = "Title"
+    TitleLabel.Size = UDim2.new(1, -70, 0, 20)
+    TitleLabel.Position = UDim2.new(0, 65, 0, 15)
+    TitleLabel.BackgroundTransparency = 1
+    TitleLabel.Text = title
+    TitleLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+    TitleLabel.TextSize = 18
+    TitleLabel.TextXAlignment = Enum.TextXAlignment.Left
+    TitleLabel.Font = Enum.Font.GothamBold
+
+    local MessageLabel = Instance.new("TextLabel", Container)
+    MessageLabel.Name = "Message"
+    MessageLabel.Size = UDim2.new(1, -70, 0, 30)
+    MessageLabel.Position = UDim2.new(0, 65, 0, 35)
+    MessageLabel.BackgroundTransparency = 1
+    MessageLabel.Text = message
+    MessageLabel.TextColor3 = Color3.fromRGB(200, 200, 200)
+    MessageLabel.TextSize = 14
+    MessageLabel.TextXAlignment = Enum.TextXAlignment.Left
+    MessageLabel.TextYAlignment = Enum.TextYAlignment.Top
+    MessageLabel.Font = Enum.Font.Gotham
+    MessageLabel.TextWrapped = true
+
+    -- Animation
+    local slideIn = TweenService:Create(Container, TweenInfo.new(0.5, Enum.EasingStyle.Quint), {
+        Position = UDim2.new(0, 0, 0, 0)
+    })
+    slideIn:Play()
+
+    -- Remove after duration
+    delay(duration or 3, function()
+        local slideOut = TweenService:Create(Container, TweenInfo.new(0.5, Enum.EasingStyle.Quint), {
+            Position = UDim2.new(0, 0, 0, -70)
+        })
+        slideOut:Play()
+        slideOut.Completed:Wait()
+        Container:Destroy()
+    end)
+end
+
+-- ===== Player Search Functionality =====
+local function findPlayer(name)
+    if #name < 3 then
+        StatusLabel.Text = "Name too short"
+        StatusLabel.TextColor3 = Color3.fromRGB(255, 150, 150)
+        return nil
+    end
+    
+    for _, player in ipairs(Players:GetPlayers()) do
+        if player ~= LocalPlayer then
+            if player.Name:lower():find(name:lower(), 1, true) or 
+               player.DisplayName:lower():find(name:lower(), 1, true) then
+                return player
+            end
+        end
+    end
+    
+    StatusLabel.Text = "Player not found"
+    StatusLabel.TextColor3 = Color3.fromRGB(255, 150, 150)
+    return nil
+end
+
+local function updateProfile(player)
+    ProfileFrame.Visible = true
+    DisplayNameLabel.Text = player.DisplayName
+    UsernameLabel.Text = "@" .. player.Name
+    UserIdLabel.Text = "ID: " .. player.UserId
+    
+    -- Load profile picture
+    pcall(function()
+        local thumbType = Enum.ThumbnailType.HeadShot
+        local thumbSize = Enum.ThumbnailSize.Size420x420
+        local content = Players:GetUserThumbnailAsync(player.UserId, thumbType, thumbSize)
+        ProfilePicture.Image = content
+    end)
+end
+
+-- ===== GUI Interactions =====
+-- Player search
+TextInput:GetPropertyChangedSignal("Text"):Connect(function()
+    if #TextInput.Text > 2 then
+        local player = findPlayer(TextInput.Text)
+        if player then
+            updateProfile(player)
+            StatusLabel.Text = "Player found: "..player.DisplayName
+            StatusLabel.TextColor3 = Color3.fromRGB(150, 255, 150)
+        else
+            ProfileFrame.Visible = false
+        end
+    end
+end)
+
+-- Button actions
+FreezeButton.MouseButton1Click:Connect(function()
+    if TextInput.Text ~= "" then
+        local player = findPlayer(TextInput.Text)
+        if player then
+            showNotification("Freeze Trade", "Enabled for "..player.DisplayName, "rbxassetid://3926307971", 3)
+        end
+    else
+        StatusLabel.Text = "Enter player name first"
+        StatusLabel.TextColor3 = Color3.fromRGB(255, 150, 150)
+    end
+end)
+
+AcceptButton.MouseButton1Click:Connect(function()
+    if TextInput.Text ~= "" then
+        local player = findPlayer(TextInput.Text)
+        if player then
+            showNotification("Auto Accept", "Enabled for "..player.DisplayName, "rbxassetid://3926305904", 3)
+        end
+    else
+        StatusLabel.Text = "Enter player name first"
+        StatusLabel.TextColor3 = Color3.fromRGB(255, 150, 150)
+    end
+end)
+
+-- Minimize toggle
+local minimized = false
+MinimizeButton.MouseButton1Click:Connect(function()
+    minimized = not minimized
+    if minimized then
+        for _, v in pairs(MainFrame:GetChildren()) do
+            if v:IsA("GuiObject") and v ~= TitleBar then
+                v.Visible = false
+            end
+        end
+        TweenService:Create(MainFrame, TweenInfo.new(0.3), {Size = UDim2.new(0, 350, 0, 40)}):Play()
+        MinimizeButton.Text = "+"
+    else
+        TweenService:Create(MainFrame, TweenInfo.new(0.3), {Size = UDim2.new(0, 350, 0, 300)}):Play()
+        for _, v in pairs(MainFrame:GetChildren()) do
+            if v:IsA("GuiObject") and v ~= TitleBar then
+                v.Visible = true
+            end
+        end
+        MinimizeButton.Text = "-"
+    end
+end)
+
+-- Close button
+CloseButton.MouseButton1Click:Connect(function()
+    ScreenGui:Destroy()
+end)
+
+-- Drag functionality
+local dragging = false
+local dragInput, dragStart, startPos
+
+TitleBar.InputBegan:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.MouseButton1 then
+        dragging = true
+        dragStart = input.Position
+        startPos = MainFrame.Position
+        
+        input.Changed:Connect(function()
+            if input.UserInputState == Enum.UserInputState.End then
+                dragging = false
+            end
+        end)
+    end
+end)
+
+TitleBar.InputChanged:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.MouseMovement then
+        dragInput = input
+    end
+end)
+
+UserInputService.InputChanged:Connect(function(input)
+    if dragging and input == dragInput then
+        local delta = input.Position - dragStart
+        MainFrame.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, 
+                                      startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+    end
+end)
+
+-- Button hover effects
+local function createHoverEffect(button, normalColor, hoverColor)
+    button.MouseEnter:Connect(function()
+        button.BackgroundColor3 = hoverColor
+    end)
+    button.MouseLeave:Connect(function()
+        button.BackgroundColor3 = normalColor
+    end)
+end
+
+createHoverEffect(FreezeButton, Color3.fromRGB(30, 30, 30), Color3.fromRGB(50, 30, 30))
+createHoverEffect(AcceptButton, Color3.fromRGB(30, 30, 30), Color3.fromRGB(30, 50, 30))
+createHoverEffect(MinimizeButton, Color3.fromRGB(60, 60, 200), Color3.fromRGB(80, 80, 220))
+createHoverEffect(CloseButton, Color3.fromRGB(220, 50, 50), Color3.fromRGB(200, 30, 30))
