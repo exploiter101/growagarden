@@ -37,7 +37,7 @@ ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 -- Main frame with responsive sizing
 local MainFrame = Instance.new("Frame", ScreenGui)
 MainFrame.Name = "MainFrame"
-MainFrame.Size = MOBILE and UDim2.new(0.9, 0, 0, 260) or UDim2.new(0, 300, 0, 260)
+MainFrame.Size = MOBILE and UDim2.new(0.9, 0, 0, 260) or UDim2.new(0, 150, 0, 250)
 MainFrame.Position = MOBILE and UDim2.new(0.5, 0, 0.05, 0) or UDim2.new(0.5, -150, 0.05, 0)
 MainFrame.AnchorPoint = Vector2.new(0.5, 0)
 MainFrame.BackgroundColor3 = BROWN_BG
