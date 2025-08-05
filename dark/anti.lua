@@ -10,323 +10,284 @@ local PlayerGui = LocalPlayer:WaitForChild("PlayerGui")
 
 -- Remove old GUIs
 for _, gui in ipairs(PlayerGui:GetChildren()) do
-    if gui.Name == "GlobalAntiTradeGui" or gui.Name == "NotificationGui" then
+    if gui.Name == "AntiTradeGui" or gui.Name == "NotificationGui" then
         gui:Destroy()
     end
 end
 
 -- ========== Theme Settings ==========
-local BROWN_BG = Color3.fromRGB(118, 61, 25)
-local BROWN_LIGHT = Color3.fromRGB(164, 97, 43)
-local BROWN_BORDER = Color3.fromRGB(51, 25, 0)
-local ACCENT_GREEN = Color3.fromRGB(110, 196, 99)
-local BUTTON_RED = Color3.fromRGB(255, 62, 62)
-local BUTTON_GRAY = Color3.fromRGB(190, 190, 190)
-local BLUE_TOGGLE = Color3.fromRGB(100, 180, 255)
-local BLUE_TOGGLE_HOVER = Color3.fromRGB(130, 210, 255)
-local FONT = Enum.Font.FredokaOne
-local TILE_IMAGE = "rbxassetid://15910695828"
-local MOBILE = UserInputService.TouchEnabled
+local DARK_BG = Color3.fromRGB(30, 30, 40)
+local CARD_BG = Color3.fromRGB(45, 45, 60)
+local ACCENT_BLUE = Color3.fromRGB(70, 130, 200)
+local ACCENT_GREEN = Color3.fromRGB(80, 200, 120)
+local ACCENT_RED = Color3.fromRGB(220, 80, 80)
+local TEXT_MAIN = Color3.fromRGB(240, 240, 240)
+local TEXT_SECONDARY = Color3.fromRGB(180, 180, 200)
+local TOGGLE_ON = ACCENT_BLUE
+local TOGGLE_OFF = Color3.fromRGB(100, 100, 120)
+local FONT = Enum.Font.Gotham
+local SHADOW_COLOR = Color3.fromRGB(20, 20, 30)
 
 -- ========== Create Main GUI ==========
 local ScreenGui = Instance.new("ScreenGui", PlayerGui)
-ScreenGui.Name = "GlobalAntiTradeGui"
+ScreenGui.Name = "AntiTradeGui"
 ScreenGui.DisplayOrder = 10
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
--- Main frame
+-- Compact main frame
 local MainFrame = Instance.new("Frame", ScreenGui)
 MainFrame.Name = "MainFrame"
-MainFrame.Size = MOBILE and UDim2.new(0.9, 0, 0, 280) or UDim2.new(0, 350, 0, 280)
-MainFrame.Position = MOBILE and UDim2.new(0.5, 0, 0.1, 0) or UDim2.new(0.5, -175, 0.1, 0)
-MainFrame.AnchorPoint = Vector2.new(0.5, 0)
-MainFrame.BackgroundColor3 = BROWN_BG
+MainFrame.Size = UDim2.new(0, 260, 0, 140)
+MainFrame.Position = UDim2.new(0.5, -130, 0.5, -70)
+MainFrame.AnchorPoint = Vector2.new(0.5, 0.5)
+MainFrame.BackgroundColor3 = DARK_BG
 MainFrame.Active = true
-MainFrame.Draggable = not MOBILE
+MainFrame.Draggable = true
 local mainCorner = Instance.new("UICorner", MainFrame)
-mainCorner.CornerRadius = UDim.new(0, 12)
-local mainStroke = Instance.new("UIStroke", MainFrame)
-mainStroke.Thickness = 2
-mainStroke.Color = BROWN_BORDER
-
--- Add tile texture
-local tileTexture = Instance.new("ImageLabel", MainFrame)
-tileTexture.Size = UDim2.new(1, 0, 1, 0)
-tileTexture.BackgroundTransparency = 1
-tileTexture.Image = TILE_IMAGE
-tileTexture.ImageTransparency = 0.1
-tileTexture.ScaleType = Enum.ScaleType.Tile
-tileTexture.TileSize = UDim2.new(0, 96, 0, 96)
+mainCorner.CornerRadius = UDim.new(0, 8)
+local mainShadow = Instance.new("ImageLabel", MainFrame)
+mainShadow.Name = "Shadow"
+mainShadow.Size = UDim2.new(1, 10, 1, 10)
+mainShadow.Position = UDim2.new(0, -5, 0, -5)
+mainShadow.BackgroundTransparency = 1
+mainShadow.Image = "rbxassetid://1316045217"
+mainShadow.ImageColor3 = SHADOW_COLOR
+mainShadow.ImageTransparency = 0.2
+mainShadow.ScaleType = Enum.ScaleType.Slice
+mainShadow.SliceCenter = Rect.new(10, 10, 118, 118)
+mainShadow.ZIndex = -1
 
 -- Title bar
 local TitleBar = Instance.new("Frame", MainFrame)
 TitleBar.Name = "TitleBar"
-TitleBar.Size = UDim2.new(1, 0, 0, 32)
-TitleBar.BackgroundColor3 = ACCENT_GREEN
+TitleBar.Size = UDim2.new(1, 0, 0, 28)
+TitleBar.BackgroundColor3 = CARD_BG
 local titleBarCorner = Instance.new("UICorner", TitleBar)
-titleBarCorner.CornerRadius = UDim.new(0, 12, 0, 0)
+titleBarCorner.CornerRadius = UDim.new(0, 8, 0, 0)
 
 local TitleText = Instance.new("TextLabel", TitleBar)
 TitleText.Name = "TitleText"
 TitleText.Size = UDim2.new(0.7, 0, 1, 0)
 TitleText.Position = UDim2.new(0, 10, 0, 0)
 TitleText.BackgroundTransparency = 1
-TitleText.Text = "Global Anti-Trade Exploit"
+TitleText.Text = "TRADE PROTECTION"
 TitleText.Font = FONT
-TitleText.TextColor3 = Color3.new(1, 1, 1)
-TitleText.TextSize = 18
+TitleText.TextColor3 = TEXT_MAIN
+TitleText.TextSize = 14
 TitleText.TextXAlignment = Enum.TextXAlignment.Left
 
 local CloseButton = Instance.new("TextButton", TitleBar)
 CloseButton.Name = "CloseButton"
-CloseButton.Size = UDim2.new(0, 26, 0, 26)
-CloseButton.Position = UDim2.new(1, -28, 0.5, -13)
-CloseButton.BackgroundColor3 = BUTTON_RED
+CloseButton.Size = UDim2.new(0, 24, 0, 24)
+CloseButton.Position = UDim2.new(1, -28, 0.5, -12)
+CloseButton.BackgroundColor3 = ACCENT_RED
 CloseButton.Text = "×"
 CloseButton.Font = Enum.Font.GothamBold
-CloseButton.TextColor3 = Color3.new(1, 1, 1)
-CloseButton.TextSize = 20
+CloseButton.TextColor3 = TEXT_MAIN
+CloseButton.TextSize = 18
 local closeCorner = Instance.new("UICorner", CloseButton)
 closeCorner.CornerRadius = UDim.new(1, 0)
-local closeStroke = Instance.new("UIStroke", CloseButton)
-closeStroke.Thickness = 1
-closeStroke.Color = Color3.fromRGB(150, 0, 0)
 
--- Description label
-local Description = Instance.new("TextLabel", MainFrame)
-Description.Size = UDim2.new(1, -20, 0, 70)
-Description.Position = UDim2.new(0, 10, 0, 38)
-Description.BackgroundTransparency = 1
-Description.Text = "Protects against trade exploits from ALL players. No need to select specific players - this is global protection."
-Description.Font = FONT
-Description.TextColor3 = Color3.new(1, 1, 1)
-Description.TextSize = 14
-Description.TextWrapped = true
-Description.TextXAlignment = Enum.TextXAlignment.Left
+-- ========== Protection Boxes ==========
+-- Anti-Freeze Box
+local AntiFreezeBox = Instance.new("Frame", MainFrame)
+AntiFreezeBox.Name = "AntiFreezeBox"
+AntiFreezeBox.Size = UDim2.new(0.45, -10, 0, 70)
+AntiFreezeBox.Position = UDim2.new(0, 10, 0, 35)
+AntiFreezeBox.BackgroundColor3 = CARD_BG
+local boxCorner = Instance.new("UICorner", AntiFreezeBox)
+boxCorner.CornerRadius = UDim.new(0, 6)
 
--- Toggles frame
-local TogglesFrame = Instance.new("Frame", MainFrame)
-TogglesFrame.Name = "TogglesFrame"
-TogglesFrame.Size = UDim2.new(1, -20, 0, 100)
-TogglesFrame.Position = UDim2.new(0, 10, 0, 115)
-TogglesFrame.BackgroundTransparency = 1
+-- Box header
+local FreezeIcon = Instance.new("ImageLabel", AntiFreezeBox)
+FreezeIcon.Size = UDim2.new(0, 24, 0, 24)
+FreezeIcon.Position = UDim2.new(0.5, -12, 0, 8)
+FreezeIcon.BackgroundTransparency = 1
+FreezeIcon.Image = "rbxassetid://3926305904" -- Snowflake icon
+FreezeIcon.ImageColor3 = TEXT_MAIN
 
--- Toggle switch function
-local function createToggleSwitch(parent, name, position, callback)
-    local toggleFrame = Instance.new("Frame", parent)
-    toggleFrame.Name = name.."Toggle"
-    toggleFrame.Size = UDim2.new(1, 0, 0, 40)
-    toggleFrame.Position = position
-    toggleFrame.BackgroundTransparency = 1
-    
-    local toggleLabel = Instance.new("TextLabel", toggleFrame)
-    toggleLabel.Size = UDim2.new(0.7, 0, 1, 0)
-    toggleLabel.Position = UDim2.new(0, 0, 0, 0)
-    toggleLabel.BackgroundTransparency = 1
-    toggleLabel.Text = name
-    toggleLabel.Font = FONT
-    toggleLabel.TextColor3 = Color3.new(1, 1, 1)
-    toggleLabel.TextSize = 18
-    toggleLabel.TextXAlignment = Enum.TextXAlignment.Left
-    
-    local toggleContainer = Instance.new("Frame", toggleFrame)
-    toggleContainer.Size = UDim2.new(0, 44, 0, 20)
-    toggleContainer.Position = UDim2.new(1, -44, 0.5, -10)
-    toggleContainer.BackgroundColor3 = BROWN_LIGHT
-    local containerCorner = Instance.new("UICorner", toggleContainer)
-    containerCorner.CornerRadius = UDim.new(1, 0)
-    local containerStroke = Instance.new("UIStroke", toggleContainer)
-    containerStroke.Thickness = 1
-    containerStroke.Color = BROWN_BORDER
-    
-    local toggleButton = Instance.new("TextButton", toggleContainer)
-    toggleButton.Name = "ToggleButton"
-    toggleButton.Size = UDim2.new(0, 16, 0, 16)
-    toggleButton.Position = UDim2.new(0, 2, 0.5, -8)
-    toggleButton.BackgroundColor3 = BUTTON_GRAY
-    toggleButton.Text = ""
-    local buttonCorner = Instance.new("UICorner", toggleButton)
-    buttonCorner.CornerRadius = UDim.new(1, 0)
-    local buttonStroke = Instance.new("UIStroke", toggleButton)
-    buttonStroke.Thickness = 1
-    buttonStroke.Color = BROWN_BORDER
-    
-    local state = false
-    
-    toggleButton.MouseButton1Click:Connect(function()
-        state = not state
-        if state then
-            TweenService:Create(toggleButton, TweenInfo.new(0.2), {
-                Position = UDim2.new(0, 26, 0.5, -8),
-                BackgroundColor3 = BLUE_TOGGLE
-            }):Play()
-        else
-            TweenService:Create(toggleButton, TweenInfo.new(0.2), {
-                Position = UDim2.new(0, 2, 0.5, -8),
-                BackgroundColor3 = BUTTON_GRAY
-            }):Play()
-        end
-        callback(state)
-    end)
-    
-    toggleButton.MouseEnter:Connect(function()
-        if state then
-            toggleButton.BackgroundColor3 = BLUE_TOGGLE_HOVER
-        else
-            toggleButton.BackgroundColor3 = Color3.fromRGB(220, 220, 220)
-        end
-    end)
-    
-    toggleButton.MouseLeave:Connect(function()
-        if state then
-            toggleButton.BackgroundColor3 = BLUE_TOGGLE
-        else
-            toggleButton.BackgroundColor3 = BUTTON_GRAY
-        end
-    end)
-    
-    return {Frame = toggleFrame, Button = toggleButton, State = function() return state end}
-end
+-- Toggle switch
+local FreezeToggle = Instance.new("Frame", AntiFreezeBox)
+FreezeToggle.Name = "Toggle"
+FreezeToggle.Size = UDim2.new(0, 40, 0, 20)
+FreezeToggle.Position = UDim2.new(0.5, -20, 1, -28)
+FreezeToggle.BackgroundColor3 = TOGGLE_OFF
+local toggleCorner = Instance.new("UICorner", FreezeToggle)
+toggleCorner.CornerRadius = UDim.new(1, 0)
 
--- Create toggle switches
-local antiFreezeToggle = createToggleSwitch(TogglesFrame, "Anti-Freeze Protection", UDim2.new(0, 0, 0, 0), function(state)
-    antiFreezeEnabled = state
-    if state then
-        showNotification("Anti-Freeze", "Global protection activated for "..antiFreezeDuration.."s", "rbxassetid://6031094677", 3)
-        StatusLabel.Text = "Anti-Freeze: Active"
-        StatusLabel.TextColor3 = BLUE_TOGGLE
-        startAntiFreeze()
-    else
-        StatusLabel.Text = "Anti-Freeze: Disabled"
-        StatusLabel.TextColor3 = Color3.fromRGB(200, 200, 200)
-    end
-end)
+local ToggleButton = Instance.new("TextButton", FreezeToggle)
+ToggleButton.Name = "Button"
+ToggleButton.Size = UDim2.new(0, 16, 0, 16)
+ToggleButton.Position = UDim2.new(0, 2, 0.5, -8)
+ToggleButton.BackgroundColor3 = TEXT_MAIN
+ToggleButton.Text = ""
+local buttonCorner = Instance.new("UICorner", ToggleButton)
+buttonCorner.CornerRadius = UDim.new(1, 0)
 
-local antiAcceptToggle = createToggleSwitch(TogglesFrame, "Anti-Auto Accept Protection", UDim2.new(0, 0, 0, 50), function(state)
-    antiAcceptEnabled = state
-    if state then
-        showNotification("Anti-Auto Accept", "Global protection activated for "..antiAcceptDuration.."s", "rbxassetid://6031094677", 3)
-        StatusLabel.Text = "Anti-Auto Accept: Active"
-        StatusLabel.TextColor3 = ACCENT_GREEN
-        startAntiAutoAccept()
-    else
-        StatusLabel.Text = "Anti-Auto Accept: Disabled"
-        StatusLabel.TextColor3 = Color3.fromRGB(200, 200, 200)
-    end
-end)
-
--- Settings buttons
-local function createSettingsButton(parent, name, position)
-    local button = Instance.new("TextButton", parent)
-    button.Name = name.."Settings"
-    button.Size = UDim2.new(0, 30, 0, 30)
-    button.Position = position
-    button.BackgroundColor3 = BROWN_LIGHT
-    button.Text = "⚙️"
-    button.Font = Enum.Font.Gotham
-    button.TextSize = 16
-    local buttonCorner = Instance.new("UICorner", button)
-    buttonCorner.CornerRadius = UDim.new(0, 6)
-    local buttonStroke = Instance.new("UIStroke", button)
-    buttonStroke.Thickness = 1
-    buttonStroke.Color = BROWN_BORDER
-    
-    button.MouseEnter:Connect(function()
-        button.BackgroundColor3 = Color3.fromRGB(184, 117, 53)
-    end)
-    
-    button.MouseLeave:Connect(function()
-        button.BackgroundColor3 = BROWN_LIGHT
-    end)
-    
-    return button
-end
-
--- Create settings buttons
-local antiFreezeSettings = createSettingsButton(antiFreezeToggle.Frame, "AntiFreeze", UDim2.new(1, -40, 0, 5))
-local antiAcceptSettings = createSettingsButton(antiAcceptToggle.Frame, "AntiAccept", UDim2.new(1, -40, 0, 5))
+-- Settings button
+local FreezeSettings = Instance.new("TextButton", AntiFreezeBox)
+FreezeSettings.Name = "SettingsButton"
+FreezeSettings.Size = UDim2.new(0, 24, 0, 24)
+FreezeSettings.Position = UDim2.new(1, -28, 0, 8)
+FreezeSettings.BackgroundTransparency = 1
+FreezeSettings.Text = "⚙️"
+FreezeSettings.Font = Enum.Font.Gotham
+FreezeSettings.TextSize = 14
+FreezeSettings.TextColor3 = TEXT_MAIN
 
 -- Status label
-local StatusLabel = Instance.new("TextLabel", MainFrame)
-StatusLabel.Name = "StatusLabel"
-StatusLabel.Size = UDim2.new(1, -20, 0, 24)
-StatusLabel.Position = UDim2.new(0, 10, 1, -30)
-StatusLabel.BackgroundTransparency = 1
-StatusLabel.Text = "Protection inactive - toggle to activate"
-StatusLabel.Font = FONT
-StatusLabel.TextColor3 = Color3.fromRGB(220, 220, 220)
-StatusLabel.TextSize = 14
-StatusLabel.TextXAlignment = Enum.TextXAlignment.Left
+local FreezeStatus = Instance.new("TextLabel", AntiFreezeBox)
+FreezeStatus.Size = UDim2.new(1, -10, 0, 16)
+FreezeStatus.Position = UDim2.new(0, 5, 1, -40)
+FreezeStatus.BackgroundTransparency = 1
+FreezeStatus.Text = "Inactive"
+FreezeStatus.Font = FONT
+FreezeStatus.TextColor3 = TEXT_SECONDARY
+FreezeStatus.TextSize = 12
+FreezeStatus.TextXAlignment = Enum.TextXAlignment.Center
+
+-- Anti-Auto Accept Box
+local AntiAcceptBox = Instance.new("Frame", MainFrame)
+AntiAcceptBox.Name = "AntiAcceptBox"
+AntiAcceptBox.Size = UDim2.new(0.45, -10, 0, 70)
+AntiAcceptBox.Position = UDim2.new(1, -120, 0, 35)
+AntiAcceptBox.BackgroundColor3 = CARD_BG
+local boxCorner2 = Instance.new("UICorner", AntiAcceptBox)
+boxCorner2.CornerRadius = UDim.new(0, 6)
+
+-- Box header
+local AcceptIcon = Instance.new("ImageLabel", AntiAcceptBox)
+AcceptIcon.Size = UDim2.new(0, 24, 0, 24)
+AcceptIcon.Position = UDim2.new(0.5, -12, 0, 8)
+AcceptIcon.BackgroundTransparency = 1
+AcceptIcon.Image = "rbxassetid://3926307971" -- Checkmark icon
+AcceptIcon.ImageColor3 = TEXT_MAIN
+
+-- Toggle switch
+local AcceptToggle = Instance.new("Frame", AntiAcceptBox)
+AcceptToggle.Name = "Toggle"
+AcceptToggle.Size = UDim2.new(0, 40, 0, 20)
+AcceptToggle.Position = UDim2.new(0.5, -20, 1, -28)
+AcceptToggle.BackgroundColor3 = TOGGLE_OFF
+local toggleCorner2 = Instance.new("UICorner", AcceptToggle)
+toggleCorner2.CornerRadius = UDim.new(1, 0)
+
+local ToggleButton2 = Instance.new("TextButton", AcceptToggle)
+ToggleButton2.Name = "Button"
+ToggleButton2.Size = UDim2.new(0, 16, 0, 16)
+ToggleButton2.Position = UDim2.new(0, 2, 0.5, -8)
+ToggleButton2.BackgroundColor3 = TEXT_MAIN
+ToggleButton2.Text = ""
+local buttonCorner2 = Instance.new("UICorner", ToggleButton2)
+buttonCorner2.CornerRadius = UDim.new(1, 0)
+
+-- Settings button
+local AcceptSettings = Instance.new("TextButton", AntiAcceptBox)
+AcceptSettings.Name = "SettingsButton"
+AcceptSettings.Size = UDim2.new(0, 24, 0, 24)
+AcceptSettings.Position = UDim2.new(1, -28, 0, 8)
+AcceptSettings.BackgroundTransparency = 1
+AcceptSettings.Text = "⚙️"
+AcceptSettings.Font = Enum.Font.Gotham
+AcceptSettings.TextSize = 14
+AcceptSettings.TextColor3 = TEXT_MAIN
+
+-- Status label
+local AcceptStatus = Instance.new("TextLabel", AntiAcceptBox)
+AcceptStatus.Size = UDim2.new(1, -10, 0, 16)
+AcceptStatus.Position = UDim2.new(0, 5, 1, -40)
+AcceptStatus.BackgroundTransparency = 1
+AcceptStatus.Text = "Inactive"
+AcceptStatus.Font = FONT
+AcceptStatus.TextColor3 = TEXT_SECONDARY
+AcceptStatus.TextSize = 12
+AcceptStatus.TextXAlignment = Enum.TextXAlignment.Center
+
+-- Global status
+local GlobalStatus = Instance.new("TextLabel", MainFrame)
+GlobalStatus.Size = UDim2.new(1, -20, 0, 18)
+GlobalStatus.Position = UDim2.new(0, 10, 1, -22)
+GlobalStatus.BackgroundTransparency = 1
+GlobalStatus.Text = "Protections inactive"
+GlobalStatus.Font = FONT
+GlobalStatus.TextColor3 = TEXT_SECONDARY
+GlobalStatus.TextSize = 12
+GlobalStatus.TextXAlignment = Enum.TextXAlignment.Center
 
 -- ========== Settings Modal ==========
 local ModalFrame = Instance.new("Frame", ScreenGui)
 ModalFrame.Name = "SettingsModal"
-ModalFrame.Size = UDim2.new(0, 280, 0, 180)
-ModalFrame.Position = UDim2.new(0.5, -140, 0.5, -90)
+ModalFrame.Size = UDim2.new(0, 220, 0, 160)
+ModalFrame.Position = UDim2.new(0.5, -110, 0.5, -80)
 ModalFrame.AnchorPoint = Vector2.new(0.5, 0.5)
-ModalFrame.BackgroundColor3 = BROWN_BG
+ModalFrame.BackgroundColor3 = CARD_BG
 ModalFrame.Visible = false
 local modalCorner = Instance.new("UICorner", ModalFrame)
-modalCorner.CornerRadius = UDim.new(0, 12)
-local modalStroke = Instance.new("UIStroke", ModalFrame)
-modalStroke.Thickness = 2
-modalStroke.Color = BROWN_BORDER
+modalCorner.CornerRadius = UDim.new(0, 8)
+local modalShadow = Instance.new("ImageLabel", ModalFrame)
+modalShadow.Name = "Shadow"
+modalShadow.Size = UDim2.new(1, 10, 1, 10)
+modalShadow.Position = UDim2.new(0, -5, 0, -5)
+modalShadow.BackgroundTransparency = 1
+modalShadow.Image = "rbxassetid://1316045217"
+modalShadow.ImageColor3 = SHADOW_COLOR
+modalShadow.ImageTransparency = 0.2
+modalShadow.ScaleType = Enum.ScaleType.Slice
+modalShadow.SliceCenter = Rect.new(10, 10, 118, 118)
+modalShadow.ZIndex = -1
 
 local ModalTitle = Instance.new("TextLabel", ModalFrame)
-ModalTitle.Size = UDim2.new(1, 0, 0, 40)
+ModalTitle.Size = UDim2.new(1, 0, 0, 32)
 ModalTitle.Position = UDim2.new(0, 0, 0, 0)
-ModalTitle.BackgroundColor3 = ACCENT_GREEN
-ModalTitle.Text = "Duration Settings"
+ModalTitle.BackgroundColor3 = ACCENT_BLUE
+ModalTitle.Text = "DURATION SETTINGS"
 ModalTitle.Font = FONT
-ModalTitle.TextColor3 = Color3.new(1, 1, 1)
-ModalTitle.TextSize = 18
+ModalTitle.TextColor3 = TEXT_MAIN
+ModalTitle.TextSize = 14
 local titleCorner = Instance.new("UICorner", ModalTitle)
-titleCorner.CornerRadius = UDim.new(0, 12, 0, 0)
+titleCorner.CornerRadius = UDim.new(0, 8, 0, 0)
 
 local DurationLabel = Instance.new("TextLabel", ModalFrame)
-DurationLabel.Size = UDim2.new(1, -20, 0, 30)
-DurationLabel.Position = UDim2.new(0, 10, 0, 50)
+DurationLabel.Size = UDim2.new(1, -20, 0, 24)
+DurationLabel.Position = UDim2.new(0, 10, 0, 40)
 DurationLabel.BackgroundTransparency = 1
-DurationLabel.Text = "Set duration in seconds:"
+DurationLabel.Text = "Set duration (seconds):"
 DurationLabel.Font = FONT
-DurationLabel.TextColor3 = Color3.new(1, 1, 1)
-DurationLabel.TextSize = 16
+DurationLabel.TextColor3 = TEXT_SECONDARY
+DurationLabel.TextSize = 12
 DurationLabel.TextXAlignment = Enum.TextXAlignment.Left
 
 local DurationInput = Instance.new("TextBox", ModalFrame)
-DurationInput.Size = UDim2.new(1, -20, 0, 36)
-DurationInput.Position = UDim2.new(0, 10, 0, 85)
-DurationInput.BackgroundColor3 = BROWN_LIGHT
-DurationInput.PlaceholderText = "Enter duration (seconds)"
-DurationInput.Text = "300"  -- Default to 5 minutes
-DurationInput.TextColor3 = Color3.new(1, 1, 1)
-DurationInput.TextSize = 16
+DurationInput.Size = UDim2.new(1, -30, 0, 30)
+DurationInput.Position = UDim2.new(0, 15, 0, 70)
+DurationInput.BackgroundColor3 = Color3.fromRGB(55, 55, 70)
+DurationInput.PlaceholderText = "Enter duration"
+DurationInput.Text = "300"
+DurationInput.TextColor3 = TEXT_MAIN
+DurationInput.TextSize = 14
 DurationInput.Font = FONT
 local inputCorner = Instance.new("UICorner", DurationInput)
 inputCorner.CornerRadius = UDim.new(0, 6)
-local inputStroke = Instance.new("UIStroke", DurationInput)
-inputStroke.Thickness = 1
-inputStroke.Color = BROWN_BORDER
 
 local ConfirmButton = Instance.new("TextButton", ModalFrame)
-ConfirmButton.Size = UDim2.new(0.4, 0, 0, 30)
-ConfirmButton.Position = UDim2.new(0.1, 0, 1, -40)
+ConfirmButton.Size = UDim2.new(0.4, 0, 0, 28)
+ConfirmButton.Position = UDim2.new(0.1, 0, 1, -34)
 ConfirmButton.BackgroundColor3 = ACCENT_GREEN
 ConfirmButton.Text = "CONFIRM"
 ConfirmButton.Font = FONT
-ConfirmButton.TextColor3 = Color3.new(1, 1, 1)
-ConfirmButton.TextSize = 16
+ConfirmButton.TextColor3 = TEXT_MAIN
+ConfirmButton.TextSize = 12
 local confirmCorner = Instance.new("UICorner", ConfirmButton)
 confirmCorner.CornerRadius = UDim.new(0, 6)
 
 local CancelButton = Instance.new("TextButton", ModalFrame)
-CancelButton.Size = UDim2.new(0.4, 0, 0, 30)
-CancelButton.Position = UDim2.new(0.55, 0, 1, -40)
-CancelButton.BackgroundColor3 = BROWN_LIGHT
+CancelButton.Size = UDim2.new(0.4, 0, 0, 28)
+CancelButton.Position = UDim2.new(0.55, 0, 1, -34)
+CancelButton.BackgroundColor3 = ACCENT_RED
 CancelButton.Text = "CANCEL"
 CancelButton.Font = FONT
-CancelButton.TextColor3 = Color3.new(1, 1, 1)
-CancelButton.TextSize = 16
+CancelButton.TextColor3 = TEXT_MAIN
+CancelButton.TextSize = 12
 local cancelCorner = Instance.new("UICorner", CancelButton)
 cancelCorner.CornerRadius = UDim.new(0, 6)
 
@@ -338,51 +299,59 @@ NotificationGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 local NotificationFrame = Instance.new("Frame", NotificationGui)
 NotificationFrame.Name = "NotificationFrame"
-NotificationFrame.Size = MOBILE and UDim2.new(0.9, 0, 0, 0) or UDim2.new(0, 280, 0, 0)
-NotificationFrame.Position = MOBILE and UDim2.new(0.5, 0, 0.02, 0) or UDim2.new(0.5, -140, 0.02, 0)
+NotificationFrame.Size = UDim2.new(0, 240, 0, 0)
+NotificationFrame.Position = UDim2.new(0.5, -120, 0.02, 0)
 NotificationFrame.AnchorPoint = Vector2.new(0.5, 0)
 NotificationFrame.BackgroundTransparency = 1
 
-local function showNotification(title, message, icon, duration)
+local function showNotification(title, message, color)
     local notificationId = "Notification_"..HttpService:GenerateGUID(false)
     
     local Container = Instance.new("Frame", NotificationFrame)
     Container.Name = notificationId
-    Container.Size = UDim2.new(1, 0, 0, 70)
-    Container.BackgroundColor3 = BROWN_BG
-    Container.BorderSizePixel = 0
-    Container.Position = UDim2.new(0, 0, 0, -70)
+    Container.Size = UDim2.new(1, 0, 0, 60)
+    Container.BackgroundColor3 = CARD_BG
+    Container.Position = UDim2.new(0, 0, 0, -60)
     local containerCorner = Instance.new("UICorner", Container)
     containerCorner.CornerRadius = UDim.new(0, 8)
-    local containerStroke = Instance.new("UIStroke", Container)
-    containerStroke.Thickness = 2
-    containerStroke.Color = BROWN_BORDER
-
-    local Icon = Instance.new("ImageLabel", Container)
-    Icon.Size = UDim2.new(0, 40, 0, 40)
-    Icon.Position = UDim2.new(0, 10, 0.5, -20)
-    Icon.BackgroundTransparency = 1
-    Icon.Image = icon
+    local containerShadow = Instance.new("ImageLabel", Container)
+    containerShadow.Name = "Shadow"
+    containerShadow.Size = UDim2.new(1, 10, 1, 10)
+    containerShadow.Position = UDim2.new(0, -5, 0, -5)
+    containerShadow.BackgroundTransparency = 1
+    containerShadow.Image = "rbxassetid://1316045217"
+    containerShadow.ImageColor3 = SHADOW_COLOR
+    containerShadow.ImageTransparency = 0.2
+    containerShadow.ScaleType = Enum.ScaleType.Slice
+    containerShadow.SliceCenter = Rect.new(10, 10, 118, 118)
+    containerShadow.ZIndex = -1
 
     local TitleLabel = Instance.new("TextLabel", Container)
-    TitleLabel.Size = UDim2.new(1, -60, 0.5, 0)
-    TitleLabel.Position = UDim2.new(0, 60, 0, 10)
+    TitleLabel.Size = UDim2.new(1, -20, 0.5, 0)
+    TitleLabel.Position = UDim2.new(0, 10, 0, 5)
     TitleLabel.BackgroundTransparency = 1
     TitleLabel.Text = title
     TitleLabel.Font = FONT
-    TitleLabel.TextColor3 = Color3.new(1, 1, 1)
-    TitleLabel.TextSize = 18
+    TitleLabel.TextColor3 = TEXT_MAIN
+    TitleLabel.TextSize = 14
     TitleLabel.TextXAlignment = Enum.TextXAlignment.Left
 
     local MessageLabel = Instance.new("TextLabel", Container)
-    MessageLabel.Size = UDim2.new(1, -60, 0.5, 0)
-    MessageLabel.Position = UDim2.new(0, 60, 0.5, 0)
+    MessageLabel.Size = UDim2.new(1, -20, 0.5, 0)
+    MessageLabel.Position = UDim2.new(0, 10, 0.5, 0)
     MessageLabel.BackgroundTransparency = 1
     MessageLabel.Text = message
-    MessageLabel.TextColor3 = Color3.new(0.9, 0.9, 0.9)
-    MessageLabel.TextSize = 16
-    MessageLabel.TextXAlignment = Enum.TextXAlignment.Left
     MessageLabel.Font = FONT
+    MessageLabel.TextColor3 = TEXT_SECONDARY
+    MessageLabel.TextSize = 12
+    MessageLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+    local AccentBar = Instance.new("Frame", Container)
+    AccentBar.Size = UDim2.new(0, 4, 1, 0)
+    AccentBar.Position = UDim2.new(0, 0, 0, 0)
+    AccentBar.BackgroundColor3 = color
+    local barCorner = Instance.new("UICorner", AccentBar)
+    barCorner.CornerRadius = UDim.new(0, 8, 0, 0)
 
     -- Animation
     local slideIn = TweenService:Create(Container, TweenInfo.new(0.3), {
@@ -391,9 +360,9 @@ local function showNotification(title, message, icon, duration)
     slideIn:Play()
 
     -- Remove after duration
-    task.delay(duration or 3, function()
+    task.delay(3, function()
         local slideOut = TweenService:Create(Container, TweenInfo.new(0.3), {
-            Position = UDim2.new(0, 0, 0, -70)
+            Position = UDim2.new(0, 0, 0, -60)
         })
         slideOut:Play()
         slideOut.Completed:Wait()
@@ -404,52 +373,117 @@ end
 -- ========== Anti-Exploit Functions ==========
 local antiFreezeEnabled = false
 local antiAcceptEnabled = false
-local antiFreezeDuration = 300  -- Default duration in seconds (5 minutes)
-local antiAcceptDuration = 300  -- Default duration in seconds (5 minutes)
+local antiFreezeDuration = 300
+local antiAcceptDuration = 300
 local currentSetting = ""
+local freezeEndTime = 0
+local acceptEndTime = 0
 
+-- Update status labels
+local function updateStatusLabels()
+    -- Anti-Freeze status
+    if antiFreezeEnabled then
+        local remaining = math.ceil(freezeEndTime - tick())
+        if remaining > 0 then
+            FreezeStatus.Text = remaining.."s"
+            FreezeStatus.TextColor3 = ACCENT_BLUE
+        else
+            antiFreezeEnabled = false
+            FreezeStatus.Text = "Inactive"
+            FreezeStatus.TextColor3 = TEXT_SECONDARY
+        end
+    else
+        FreezeStatus.Text = "Inactive"
+        FreezeStatus.TextColor3 = TEXT_SECONDARY
+    end
+    
+    -- Anti-Auto Accept status
+    if antiAcceptEnabled then
+        local remaining = math.ceil(acceptEndTime - tick())
+        if remaining > 0 then
+            AcceptStatus.Text = remaining.."s"
+            AcceptStatus.TextColor3 = ACCENT_GREEN
+        else
+            antiAcceptEnabled = false
+            AcceptStatus.Text = "Inactive"
+            AcceptStatus.TextColor3 = TEXT_SECONDARY
+        end
+    else
+        AcceptStatus.Text = "Inactive"
+        AcceptStatus.TextColor3 = TEXT_SECONDARY
+    end
+    
+    -- Global status
+    if antiFreezeEnabled or antiAcceptEnabled then
+        GlobalStatus.Text = "Protections active"
+        GlobalStatus.TextColor3 = TEXT_MAIN
+    else
+        GlobalStatus.Text = "Protections inactive"
+        GlobalStatus.TextColor3 = TEXT_SECONDARY
+    end
+end
+
+-- Toggle animations
+local function toggleSwitch(button, frame, state)
+    if state then
+        TweenService:Create(button, TweenInfo.new(0.2), {
+            Position = UDim2.new(0, 22, 0.5, -8),
+            BackgroundColor3 = TEXT_MAIN
+        }):Play()
+        TweenService:Create(frame, TweenInfo.new(0.2), {
+            BackgroundColor3 = TOGGLE_ON
+        }):Play()
+    else
+        TweenService:Create(button, TweenInfo.new(0.2), {
+            Position = UDim2.new(0, 2, 0.5, -8),
+            BackgroundColor3 = TEXT_MAIN
+        }):Play()
+        TweenService:Create(frame, TweenInfo.new(0.2), {
+            BackgroundColor3 = TOGGLE_OFF
+        }):Play()
+    end
+end
+
+-- Anti-Freeze protection
 local function startAntiFreeze()
-    if not antiFreezeEnabled then return end
+    antiFreezeEnabled = true
+    freezeEndTime = tick() + antiFreezeDuration
+    toggleSwitch(ToggleButton, FreezeToggle, true)
+    showNotification("Anti-Freeze", "Active for "..antiFreezeDuration.."s", ACCENT_BLUE)
     
     -- Simulate protection
-    local startTime = tick()
-    local endTime = startTime + antiFreezeDuration
-    
-    while tick() < endTime and antiFreezeEnabled do
-        local remaining = math.ceil(endTime - tick())
-        StatusLabel.Text = string.format("Anti-Freeze: Active (%d:%02d left)", math.floor(remaining/60), remaining % 60)
+    while tick() < freezeEndTime and antiFreezeEnabled do
+        updateStatusLabels()
         task.wait(1)
     end
     
     if antiFreezeEnabled then
         antiFreezeEnabled = false
-        antiFreezeToggle.Button.BackgroundColor3 = BUTTON_GRAY
-        antiFreezeToggle.Button.Position = UDim2.new(0, 2, 0.5, -8)
-        StatusLabel.Text = "Anti-Freeze: Expired"
-        showNotification("Anti-Freeze", "Protection expired", "rbxassetid://6031094677", 3)
+        toggleSwitch(ToggleButton, FreezeToggle, false)
+        showNotification("Anti-Freeze", "Protection expired", TEXT_SECONDARY)
     end
+    updateStatusLabels()
 end
 
+-- Anti-Auto Accept protection
 local function startAntiAutoAccept()
-    if not antiAcceptEnabled then return end
+    antiAcceptEnabled = true
+    acceptEndTime = tick() + antiAcceptDuration
+    toggleSwitch(ToggleButton2, AcceptToggle, true)
+    showNotification("Anti-Auto Accept", "Active for "..antiAcceptDuration.."s", ACCENT_GREEN)
     
     -- Simulate protection
-    local startTime = tick()
-    local endTime = startTime + antiAcceptDuration
-    
-    while tick() < endTime and antiAcceptEnabled do
-        local remaining = math.ceil(endTime - tick())
-        StatusLabel.Text = string.format("Anti-Auto Accept: Active (%d:%02d left)", math.floor(remaining/60), remaining % 60)
+    while tick() < acceptEndTime and antiAcceptEnabled do
+        updateStatusLabels()
         task.wait(1)
     end
     
     if antiAcceptEnabled then
         antiAcceptEnabled = false
-        antiAcceptToggle.Button.BackgroundColor3 = BUTTON_GRAY
-        antiAcceptToggle.Button.Position = UDim2.new(0, 2, 0.5, -8)
-        StatusLabel.Text = "Anti-Auto Accept: Expired"
-        showNotification("Anti-Auto Accept", "Protection expired", "rbxassetid://6031094677", 3)
+        toggleSwitch(ToggleButton2, AcceptToggle, false)
+        showNotification("Anti-Auto Accept", "Protection expired", TEXT_SECONDARY)
     end
+    updateStatusLabels()
 end
 
 -- ========== GUI Interactions ==========
@@ -459,17 +493,43 @@ CloseButton.MouseButton1Click:Connect(function()
     NotificationGui:Destroy()
 end)
 
+-- Anti-Freeze toggle
+ToggleButton.MouseButton1Click:Connect(function()
+    if not antiFreezeEnabled then
+        startAntiFreeze()
+    else
+        antiFreezeEnabled = false
+        toggleSwitch(ToggleButton, FreezeToggle, false)
+        showNotification("Anti-Freeze", "Protection disabled", TEXT_SECONDARY)
+        updateStatusLabels()
+    end
+end)
+
+-- Anti-Auto Accept toggle
+ToggleButton2.MouseButton1Click:Connect(function()
+    if not antiAcceptEnabled then
+        startAntiAutoAccept()
+    else
+        antiAcceptEnabled = false
+        toggleSwitch(ToggleButton2, AcceptToggle, false)
+        showNotification("Anti-Auto Accept", "Protection disabled", TEXT_SECONDARY)
+        updateStatusLabels()
+    end
+end)
+
 -- Settings buttons
-antiFreezeSettings.MouseButton1Click:Connect(function()
+FreezeSettings.MouseButton1Click:Connect(function()
     ModalFrame.Visible = true
-    ModalTitle.Text = "Anti-Freeze Duration"
+    ModalTitle.Text = "ANTI-FREEZE DURATION"
+    ModalTitle.BackgroundColor3 = ACCENT_BLUE
     currentSetting = "AntiFreeze"
     DurationInput.Text = tostring(antiFreezeDuration)
 end)
 
-antiAcceptSettings.MouseButton1Click:Connect(function()
+AcceptSettings.MouseButton1Click:Connect(function()
     ModalFrame.Visible = true
-    ModalTitle.Text = "Anti-Auto Accept Duration"
+    ModalTitle.Text = "ANTI-ACCEPT DURATION"
+    ModalTitle.BackgroundColor3 = ACCENT_GREEN
     currentSetting = "AntiAccept"
     DurationInput.Text = tostring(antiAcceptDuration)
 end)
@@ -480,13 +540,14 @@ ConfirmButton.MouseButton1Click:Connect(function()
     if duration and duration > 0 then
         if currentSetting == "AntiFreeze" then
             antiFreezeDuration = duration
-            showNotification("Duration Set", "Anti-Freeze: "..duration.." seconds", "rbxassetid://6031094677", 3)
+            showNotification("Anti-Freeze", "Duration: "..duration.."s", ACCENT_BLUE)
         elseif currentSetting == "AntiAccept" then
             antiAcceptDuration = duration
-            showNotification("Duration Set", "Anti-Auto Accept: "..duration.." seconds", "rbxassetid://6031094677", 3)
+            showNotification("Anti-Auto Accept", "Duration: "..duration.."s", ACCENT_GREEN)
         end
+        updateStatusLabels()
     else
-        showNotification("Error", "Invalid duration value", "rbxassetid://6031094677", 3)
+        showNotification("Error", "Invalid duration", ACCENT_RED)
     end
     ModalFrame.Visible = false
 end)
@@ -495,62 +556,30 @@ CancelButton.MouseButton1Click:Connect(function()
     ModalFrame.Visible = false
 end)
 
+-- Initial update
+updateStatusLabels()
+
 -- Initial welcome notification
 task.delay(1, function()
     showNotification(
-        "Global Anti-Trade Exploit",
-        "Toggle protections to secure your trades against all players",
-        "rbxassetid://6031094677",
-        5
+        "Trade Protection",
+        "Activate protections to secure trades",
+        ACCENT_BLUE
     )
 end)
 
--- Mobile drag functionality
-if MOBILE then
-    local dragging = false
-    local dragStart, startPos
-    
-    TitleBar.InputBegan:Connect(function(input)
-        if input.UserInputType == Enum.UserInputType.Touch then
-            dragging = true
-            dragStart = input.Position
-            startPos = MainFrame.Position
-            
-            input.Changed:Connect(function()
-                if input.UserInputState == Enum.UserInputState.End then
-                    dragging = false
-                end
-            end)
-        end
-    end)
-    
-    UserInputService.InputChanged:Connect(function(input)
-        if dragging and input.UserInputType == Enum.UserInputType.Touch then
-            local delta = input.Position - dragStart
-            MainFrame.Position = UDim2.new(
-                startPos.X.Scale, 
-                startPos.X.Offset + delta.X,
-                startPos.Y.Scale,
-                startPos.Y.Offset + delta.Y
-            )
-        end
-    end)
-end
-
--- Simulate trade detection (for demonstration)
+-- Simulate trade detection
 local function simulateTradeDetection()
     while true do
         if antiFreezeEnabled then
-            -- Random chance to detect a freeze exploit attempt
             if math.random(1, 100) > 90 then
-                showNotification("Exploit Blocked", "Anti-Freeze prevented a trade freeze attempt", "rbxassetid://6031094677", 3)
+                showNotification("Anti-Freeze", "Blocked freeze attempt", ACCENT_BLUE)
             end
         end
         
         if antiAcceptEnabled then
-            -- Random chance to detect an auto-accept exploit attempt
             if math.random(1, 100) > 90 then
-                showNotification("Exploit Blocked", "Anti-Auto Accept prevented a forced trade", "rbxassetid://6031094677", 3)
+                showNotification("Anti-Auto Accept", "Blocked forced trade", ACCENT_GREEN)
             end
         end
         
@@ -559,3 +588,8 @@ local function simulateTradeDetection()
 end
 
 task.spawn(simulateTradeDetection)
+
+-- Update status labels periodically
+RunService.Heartbeat:Connect(function()
+    updateStatusLabels()
+end)
