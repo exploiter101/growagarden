@@ -10,7 +10,7 @@ local PlayerGui = LocalPlayer:WaitForChild("PlayerGui")
 
 -- Remove old GUIs
 for _, gui in ipairs(PlayerGui:GetChildren()) do
-    if gui.Name == "AntiTradeGui" or gui.Name == "NotificationGui" then
+    if gui.Name == "GlobalAntiTradeGui" or gui.Name == "NotificationGui" then
         gui:Destroy()
     end
 end
@@ -30,14 +30,14 @@ local MOBILE = UserInputService.TouchEnabled
 
 -- ========== Create Main GUI ==========
 local ScreenGui = Instance.new("ScreenGui", PlayerGui)
-ScreenGui.Name = "AntiTradeGui"
+ScreenGui.Name = "GlobalAntiTradeGui"
 ScreenGui.DisplayOrder = 10
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 -- Main frame
 local MainFrame = Instance.new("Frame", ScreenGui)
 MainFrame.Name = "MainFrame"
-MainFrame.Size = MOBILE and UDim2.new(0.9, 0, 0, 300) or UDim2.new(0, 350, 0, 300)
+MainFrame.Size = MOBILE and UDim2.new(0.9, 0, 0, 280) or UDim2.new(0, 350, 0, 280)
 MainFrame.Position = MOBILE and UDim2.new(0.5, 0, 0.1, 0) or UDim2.new(0.5, -175, 0.1, 0)
 MainFrame.AnchorPoint = Vector2.new(0.5, 0)
 MainFrame.BackgroundColor3 = BROWN_BG
@@ -71,7 +71,7 @@ TitleText.Name = "TitleText"
 TitleText.Size = UDim2.new(0.7, 0, 1, 0)
 TitleText.Position = UDim2.new(0, 10, 0, 0)
 TitleText.BackgroundTransparency = 1
-TitleText.Text = "Anti-Trade Exploit"
+TitleText.Text = "Global Anti-Trade Exploit"
 TitleText.Font = FONT
 TitleText.TextColor3 = Color3.new(1, 1, 1)
 TitleText.TextSize = 18
@@ -94,79 +94,39 @@ closeStroke.Color = Color3.fromRGB(150, 0, 0)
 
 -- Description label
 local Description = Instance.new("TextLabel", MainFrame)
-Description.Size = UDim2.new(1, -20, 0, 60)
+Description.Size = UDim2.new(1, -20, 0, 70)
 Description.Position = UDim2.new(0, 10, 0, 38)
 Description.BackgroundTransparency = 1
-Description.Text = "Protect against trade exploits by selecting a player and activating anti-features"
+Description.Text = "Protects against trade exploits from ALL players. No need to select specific players - this is global protection."
 Description.Font = FONT
 Description.TextColor3 = Color3.new(1, 1, 1)
 Description.TextSize = 14
 Description.TextWrapped = true
 Description.TextXAlignment = Enum.TextXAlignment.Left
 
--- Player selection
-local DropdownButton = Instance.new("TextButton", MainFrame)
-DropdownButton.Name = "DropdownButton"
-DropdownButton.Size = UDim2.new(1, -20, 0, 36)
-DropdownButton.Position = UDim2.new(0, 10, 0, 105)
-DropdownButton.BackgroundColor3 = BROWN_LIGHT
-DropdownButton.Text = "Select Player ▼"
-DropdownButton.Font = FONT
-DropdownButton.TextColor3 = Color3.new(1, 1, 1)
-DropdownButton.TextSize = 16
-local dropCorner = Instance.new("UICorner", DropdownButton)
-dropCorner.CornerRadius = UDim.new(0, 6)
-local dropStroke = Instance.new("UIStroke", DropdownButton)
-dropStroke.Thickness = 1
-dropStroke.Color = BROWN_BORDER
-
--- Player dropdown
-local DropdownFrame = Instance.new("Frame", MainFrame)
-DropdownFrame.Name = "DropdownFrame"
-DropdownFrame.Size = UDim2.new(1, -20, 0, 120)
-DropdownFrame.Position = UDim2.new(0, 10, 0, 145)
-DropdownFrame.BackgroundColor3 = BROWN_BG
-DropdownFrame.Visible = false
-DropdownFrame.ClipsDescendants = true
-local dropFrameCorner = Instance.new("UICorner", DropdownFrame)
-dropFrameCorner.CornerRadius = UDim.new(0, 6)
-local dropFrameStroke = Instance.new("UIStroke", DropdownFrame)
-dropFrameStroke.Thickness = 2
-dropFrameStroke.Color = BROWN_BORDER
-
-local DropdownScroll = Instance.new("ScrollingFrame", DropdownFrame)
-DropdownScroll.Name = "Scroll"
-DropdownScroll.Size = UDim2.new(1, 0, 1, 0)
-DropdownScroll.BackgroundTransparency = 1
-DropdownScroll.ScrollBarThickness = 6
-DropdownScroll.CanvasSize = UDim2.new(0, 0, 0, 0)
-
-local UIListLayout = Instance.new("UIListLayout", DropdownScroll)
-UIListLayout.Padding = UDim.new(0, 4)
-
 -- Toggles frame
 local TogglesFrame = Instance.new("Frame", MainFrame)
 TogglesFrame.Name = "TogglesFrame"
-TogglesFrame.Size = UDim2.new(1, -20, 0, 80)
-TogglesFrame.Position = UDim2.new(0, 10, 0, 145)
+TogglesFrame.Size = UDim2.new(1, -20, 0, 100)
+TogglesFrame.Position = UDim2.new(0, 10, 0, 115)
 TogglesFrame.BackgroundTransparency = 1
 
 -- Toggle switch function
 local function createToggleSwitch(parent, name, position, callback)
     local toggleFrame = Instance.new("Frame", parent)
     toggleFrame.Name = name.."Toggle"
-    toggleFrame.Size = UDim2.new(0.45, 0, 0, 30)
+    toggleFrame.Size = UDim2.new(1, 0, 0, 40)
     toggleFrame.Position = position
     toggleFrame.BackgroundTransparency = 1
     
     local toggleLabel = Instance.new("TextLabel", toggleFrame)
-    toggleLabel.Size = UDim2.new(1, -50, 1, 0)
+    toggleLabel.Size = UDim2.new(0.7, 0, 1, 0)
     toggleLabel.Position = UDim2.new(0, 0, 0, 0)
     toggleLabel.BackgroundTransparency = 1
     toggleLabel.Text = name
     toggleLabel.Font = FONT
     toggleLabel.TextColor3 = Color3.new(1, 1, 1)
-    toggleLabel.TextSize = 16
+    toggleLabel.TextSize = 18
     toggleLabel.TextXAlignment = Enum.TextXAlignment.Left
     
     local toggleContainer = Instance.new("Frame", toggleFrame)
@@ -229,15 +189,10 @@ local function createToggleSwitch(parent, name, position, callback)
 end
 
 -- Create toggle switches
-local antiFreezeToggle = createToggleSwitch(TogglesFrame, "Anti-Freeze", UDim2.new(0, 0, 0, 0), function(state)
-    if not targetPlayer then
-        showNotification("Error", "Select a player first!", "rbxassetid://6031094677", 2)
-        return
-    end
-    
+local antiFreezeToggle = createToggleSwitch(TogglesFrame, "Anti-Freeze Protection", UDim2.new(0, 0, 0, 0), function(state)
     antiFreezeEnabled = state
     if state then
-        showNotification("Anti-Freeze", "Enabled for "..targetPlayer.DisplayName, "rbxassetid://6031094677", 3)
+        showNotification("Anti-Freeze", "Global protection activated for "..antiFreezeDuration.."s", "rbxassetid://6031094677", 3)
         StatusLabel.Text = "Anti-Freeze: Active"
         StatusLabel.TextColor3 = BLUE_TOGGLE
         startAntiFreeze()
@@ -247,15 +202,10 @@ local antiFreezeToggle = createToggleSwitch(TogglesFrame, "Anti-Freeze", UDim2.n
     end
 end)
 
-local antiAcceptToggle = createToggleSwitch(TogglesFrame, "Anti-Auto Accept", UDim2.new(0.55, 0, 0, 0), function(state)
-    if not targetPlayer then
-        showNotification("Error", "Select a player first!", "rbxassetid://6031094677", 2)
-        return
-    end
-    
+local antiAcceptToggle = createToggleSwitch(TogglesFrame, "Anti-Auto Accept Protection", UDim2.new(0, 0, 0, 50), function(state)
     antiAcceptEnabled = state
     if state then
-        showNotification("Anti-Auto Accept", "Enabled for "..targetPlayer.DisplayName, "rbxassetid://6031094677", 3)
+        showNotification("Anti-Auto Accept", "Global protection activated for "..antiAcceptDuration.."s", "rbxassetid://6031094677", 3)
         StatusLabel.Text = "Anti-Auto Accept: Active"
         StatusLabel.TextColor3 = ACCENT_GREEN
         startAntiAutoAccept()
@@ -293,8 +243,8 @@ local function createSettingsButton(parent, name, position)
 end
 
 -- Create settings buttons
-local antiFreezeSettings = createSettingsButton(TogglesFrame, "AntiFreeze", UDim2.new(0, 180, 0, 0))
-local antiAcceptSettings = createSettingsButton(TogglesFrame, "AntiAccept", UDim2.new(0.55, 180, 0, 0))
+local antiFreezeSettings = createSettingsButton(antiFreezeToggle.Frame, "AntiFreeze", UDim2.new(1, -40, 0, 5))
+local antiAcceptSettings = createSettingsButton(antiAcceptToggle.Frame, "AntiAccept", UDim2.new(1, -40, 0, 5))
 
 -- Status label
 local StatusLabel = Instance.new("TextLabel", MainFrame)
@@ -302,7 +252,7 @@ StatusLabel.Name = "StatusLabel"
 StatusLabel.Size = UDim2.new(1, -20, 0, 24)
 StatusLabel.Position = UDim2.new(0, 10, 1, -30)
 StatusLabel.BackgroundTransparency = 1
-StatusLabel.Text = "Select a player to begin"
+StatusLabel.Text = "Protection inactive - toggle to activate"
 StatusLabel.Font = FONT
 StatusLabel.TextColor3 = Color3.fromRGB(220, 220, 220)
 StatusLabel.TextSize = 14
@@ -348,7 +298,7 @@ DurationInput.Size = UDim2.new(1, -20, 0, 36)
 DurationInput.Position = UDim2.new(0, 10, 0, 85)
 DurationInput.BackgroundColor3 = BROWN_LIGHT
 DurationInput.PlaceholderText = "Enter duration (seconds)"
-DurationInput.Text = "30"
+DurationInput.Text = "300"  -- Default to 5 minutes
 DurationInput.TextColor3 = Color3.new(1, 1, 1)
 DurationInput.TextSize = 16
 DurationInput.Font = FONT
@@ -451,98 +401,23 @@ local function showNotification(title, message, icon, duration)
     end)
 end
 
--- ========== Player Management ==========
-local targetPlayer = nil
+-- ========== Anti-Exploit Functions ==========
 local antiFreezeEnabled = false
 local antiAcceptEnabled = false
-local antiFreezeDuration = 30  -- Default duration in seconds
-local antiAcceptDuration = 30  -- Default duration in seconds
+local antiFreezeDuration = 300  -- Default duration in seconds (5 minutes)
+local antiAcceptDuration = 300  -- Default duration in seconds (5 minutes)
+local currentSetting = ""
 
-local function createPlayerEntry(player)
-    local entry = Instance.new("TextButton", DropdownScroll)
-    entry.Name = player.Name
-    entry.Size = UDim2.new(1, -8, 0, 30)
-    entry.Position = UDim2.new(0, 4, 0, 0)
-    entry.BackgroundColor3 = BROWN_LIGHT
-    entry.Text = ""
-    entry.AutoButtonColor = false
-    local entryCorner = Instance.new("UICorner", entry)
-    entryCorner.CornerRadius = UDim.new(0, 4)
-    local entryStroke = Instance.new("UIStroke", entry)
-    entryStroke.Thickness = 1
-    entryStroke.Color = BROWN_BORDER
-
-    local DisplayName = Instance.new("TextLabel", entry)
-    DisplayName.Size = UDim2.new(0.7, 0, 1, 0)
-    DisplayName.Position = UDim2.new(0, 10, 0, 0)
-    DisplayName.BackgroundTransparency = 1
-    DisplayName.Text = player.DisplayName
-    DisplayName.Font = FONT
-    DisplayName.TextColor3 = Color3.new(1, 1, 1)
-    DisplayName.TextSize = 16
-    DisplayName.TextXAlignment = Enum.TextXAlignment.Left
-
-    local Username = Instance.new("TextLabel", entry)
-    Username.Size = UDim2.new(0.3, -10, 1, 0)
-    Username.Position = UDim2.new(0.7, 0, 0, 0)
-    Username.BackgroundTransparency = 1
-    Username.Text = "@"..player.Name
-    Username.Font = FONT
-    Username.TextColor3 = Color3.new(0.8, 0.8, 0.8)
-    Username.TextSize = 14
-    Username.TextXAlignment = Enum.TextXAlignment.Right
-
-    -- Highlight on hover
-    entry.MouseEnter:Connect(function()
-        entry.BackgroundColor3 = Color3.fromRGB(140, 80, 35)
-    end)
-    
-    entry.MouseLeave:Connect(function()
-        entry.BackgroundColor3 = BROWN_LIGHT
-    end)
-
-    -- Select player on click
-    entry.MouseButton1Click:Connect(function()
-        targetPlayer = player
-        DropdownButton.Text = player.DisplayName
-        DropdownFrame.Visible = false
-        StatusLabel.Text = "Selected: "..player.DisplayName
-        StatusLabel.TextColor3 = ACCENT_GREEN
-    end)
-    
-    return entry
-end
-
-local function updatePlayerList()
-    -- Clear existing entries
-    for _, child in ipairs(DropdownScroll:GetChildren()) do
-        if child:IsA("TextButton") then
-            child:Destroy()
-        end
-    end
-    
-    -- Create new entries
-    for _, player in ipairs(Players:GetPlayers()) do
-        if player ~= LocalPlayer then
-            createPlayerEntry(player)
-        end
-    end
-    
-    -- Update canvas size
-    local entryCount = #Players:GetPlayers() - 1
-    DropdownScroll.CanvasSize = UDim2.new(0, 0, 0, entryCount * 34)
-end
-
--- ========== Anti-Exploit Functions ==========
 local function startAntiFreeze()
-    if not targetPlayer then return end
-    
-    showNotification("Anti-Freeze", "Protecting against freeze exploits ("..antiFreezeDuration.."s)", "rbxassetid://6031094677", 3)
+    if not antiFreezeEnabled then return end
     
     -- Simulate protection
-    local endTime = tick() + antiFreezeDuration
+    local startTime = tick()
+    local endTime = startTime + antiFreezeDuration
+    
     while tick() < endTime and antiFreezeEnabled do
-        StatusLabel.Text = string.format("Anti-Freeze: Active (%d sec left)", math.ceil(endTime - tick()))
+        local remaining = math.ceil(endTime - tick())
+        StatusLabel.Text = string.format("Anti-Freeze: Active (%d:%02d left)", math.floor(remaining/60), remaining % 60)
         task.wait(1)
     end
     
@@ -551,19 +426,20 @@ local function startAntiFreeze()
         antiFreezeToggle.Button.BackgroundColor3 = BUTTON_GRAY
         antiFreezeToggle.Button.Position = UDim2.new(0, 2, 0.5, -8)
         StatusLabel.Text = "Anti-Freeze: Expired"
-        showNotification("Anti-Freeze", "Protection expired for "..targetPlayer.DisplayName, "rbxassetid://6031094677", 3)
+        showNotification("Anti-Freeze", "Protection expired", "rbxassetid://6031094677", 3)
     end
 end
 
 local function startAntiAutoAccept()
-    if not targetPlayer then return end
-    
-    showNotification("Anti-Auto Accept", "Protecting against auto-accept ("..antiAcceptDuration.."s)", "rbxassetid://6031094677", 3)
+    if not antiAcceptEnabled then return end
     
     -- Simulate protection
-    local endTime = tick() + antiAcceptDuration
+    local startTime = tick()
+    local endTime = startTime + antiAcceptDuration
+    
     while tick() < endTime and antiAcceptEnabled do
-        StatusLabel.Text = string.format("Anti-Auto Accept: Active (%d sec left)", math.ceil(endTime - tick()))
+        local remaining = math.ceil(endTime - tick())
+        StatusLabel.Text = string.format("Anti-Auto Accept: Active (%d:%02d left)", math.floor(remaining/60), remaining % 60)
         task.wait(1)
     end
     
@@ -572,22 +448,11 @@ local function startAntiAutoAccept()
         antiAcceptToggle.Button.BackgroundColor3 = BUTTON_GRAY
         antiAcceptToggle.Button.Position = UDim2.new(0, 2, 0.5, -8)
         StatusLabel.Text = "Anti-Auto Accept: Expired"
-        showNotification("Anti-Auto Accept", "Protection expired for "..targetPlayer.DisplayName, "rbxassetid://6031094677", 3)
+        showNotification("Anti-Auto Accept", "Protection expired", "rbxassetid://6031094677", 3)
     end
 end
 
 -- ========== GUI Interactions ==========
--- Toggle dropdown
-DropdownButton.MouseButton1Click:Connect(function()
-    DropdownFrame.Visible = not DropdownFrame.Visible
-    if DropdownFrame.Visible then
-        DropdownButton.Text = "Select Player ▲"
-        updatePlayerList()
-    else
-        DropdownButton.Text = "Select Player ▼"
-    end
-end)
-
 -- Close button
 CloseButton.MouseButton1Click:Connect(function()
     ScreenGui:Destroy()
@@ -630,36 +495,13 @@ CancelButton.MouseButton1Click:Connect(function()
     ModalFrame.Visible = false
 end)
 
--- Handle player leaving
-Players.PlayerRemoving:Connect(function(player)
-    if player == targetPlayer then
-        targetPlayer = nil
-        DropdownButton.Text = "Select Player ▼"
-        StatusLabel.Text = "Player left - select another"
-        StatusLabel.TextColor3 = Color3.fromRGB(255, 150, 150)
-        showNotification("Player Left", player.DisplayName.." left", "rbxassetid://6031094677", 3)
-        
-        -- Reset toggles
-        antiFreezeEnabled = false
-        antiAcceptEnabled = false
-        antiFreezeToggle.Button.BackgroundColor3 = BUTTON_GRAY
-        antiFreezeToggle.Button.Position = UDim2.new(0, 2, 0.5, -8)
-        antiAcceptToggle.Button.BackgroundColor3 = BUTTON_GRAY
-        antiAcceptToggle.Button.Position = UDim2.new(0, 2, 0.5, -8)
-    end
-end)
-
--- Initialize player list
-Players.PlayerAdded:Connect(updatePlayerList)
-updatePlayerList()
-
 -- Initial welcome notification
 task.delay(1, function()
     showNotification(
-        "Anti-Trade Exploit",
-        "Select a player and set protection durations",
+        "Global Anti-Trade Exploit",
+        "Toggle protections to secure your trades against all players",
         "rbxassetid://6031094677",
-        4
+        5
     )
 end)
 
@@ -694,3 +536,26 @@ if MOBILE then
         end
     end)
 end
+
+-- Simulate trade detection (for demonstration)
+local function simulateTradeDetection()
+    while true do
+        if antiFreezeEnabled then
+            -- Random chance to detect a freeze exploit attempt
+            if math.random(1, 100) > 90 then
+                showNotification("Exploit Blocked", "Anti-Freeze prevented a trade freeze attempt", "rbxassetid://6031094677", 3)
+            end
+        end
+        
+        if antiAcceptEnabled then
+            -- Random chance to detect an auto-accept exploit attempt
+            if math.random(1, 100) > 90 then
+                showNotification("Exploit Blocked", "Anti-Auto Accept prevented a forced trade", "rbxassetid://6031094677", 3)
+            end
+        end
+        
+        task.wait(5)
+    end
+end
+
+task.spawn(simulateTradeDetection)
