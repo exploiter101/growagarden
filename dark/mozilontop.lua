@@ -8,7 +8,7 @@ local UserInputService = game:GetService("UserInputService")
 local LocalPlayer = Players.LocalPlayer
 
 local gui = Instance.new("ScreenGui")
-gui.Name = "TradeScamUI"
+gui.Name = "TradeUI"
 gui.ResetOnSpawn = false
 gui.IgnoreGuiInset = true
 gui.Parent = game:GetService("CoreGui")
