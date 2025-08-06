@@ -19,14 +19,14 @@ local ACCENT_GREEN = Color3.fromRGB(50, 255, 150)
 local TEXT_MAIN = Color3.fromRGB(240, 240, 255)
 local FONT = Enum.Font.GothamBold
 
--- ========== CREATE MAIN GUI ==========
+-- ========== CREATE COMPACT GUI ==========
 local ScreenGui = Instance.new("ScreenGui", PlayerGui)
 ScreenGui.Name = "TradeGuardGui"
 
 local MainFrame = Instance.new("Frame", ScreenGui)
 MainFrame.Name = "MainFrame"
-MainFrame.Size = UDim2.new(0, 360, 0, 300)
-MainFrame.Position = UDim2.new(0.5, -180, 0.5, -150)
+MainFrame.Size = UDim2.new(0, 260, 0, 100)  -- Compact size
+MainFrame.Position = UDim2.new(0.5, -130, 0.5, -50)
 MainFrame.AnchorPoint = Vector2.new(0.5, 0.5)
 MainFrame.BackgroundColor3 = DARK_BG
 MainFrame.BackgroundTransparency = 0.1
@@ -36,93 +36,94 @@ MainFrame.Draggable = true
 local corner = Instance.new("UICorner", MainFrame)
 corner.CornerRadius = UDim.new(0, 12)
 
+-- Status labels
 local tradeRequestStatus = Instance.new("TextLabel", MainFrame)
 tradeRequestStatus.Name = "TradeRequestStatus"
-tradeRequestStatus.Size = UDim2.new(1, -20, 0, 30)
-tradeRequestStatus.Position = UDim2.new(0, 10, 0, 10)
+tradeRequestStatus.Size = UDim2.new(1, -10, 0, 20)
+tradeRequestStatus.Position = UDim2.new(0, 5, 0, 5)
 tradeRequestStatus.BackgroundTransparency = 1
 tradeRequestStatus.Text = "Trade Request: NOT DETECTED"
 tradeRequestStatus.Font = FONT
 tradeRequestStatus.TextColor3 = ACCENT_RED
-tradeRequestStatus.TextSize = 14
+tradeRequestStatus.TextSize = 12
 tradeRequestStatus.TextXAlignment = Enum.TextXAlignment.Left
 
 local confirmationStatus = Instance.new("TextLabel", MainFrame)
 confirmationStatus.Name = "ConfirmationStatus"
-confirmationStatus.Size = UDim2.new(1, -20, 0, 30)
-confirmationStatus.Position = UDim2.new(0, 10, 0, 50)
+confirmationStatus.Size = UDim2.new(1, -10, 0, 20)
+confirmationStatus.Position = UDim2.new(0, 5, 0, 25)
 confirmationStatus.BackgroundTransparency = 1
 confirmationStatus.Text = "Transaction: PENDING"
 confirmationStatus.Font = FONT
 confirmationStatus.TextColor3 = ACCENT_BLUE
-confirmationStatus.TextSize = 14
+confirmationStatus.TextSize = 12
 confirmationStatus.TextXAlignment = Enum.TextXAlignment.Left
 
 -- Anti-Freeze Toggle
 local antiFreezeFrame = Instance.new("Frame", MainFrame)
 antiFreezeFrame.Name = "AntiFreezeFrame"
-antiFreezeFrame.Size = UDim2.new(1, -20, 0, 40)
-antiFreezeFrame.Position = UDim2.new(0, 10, 0, 100)
+antiFreezeFrame.Size = UDim2.new(1, -10, 0, 30)  -- Compact height
+antiFreezeFrame.Position = UDim2.new(0, 5, 0, 50)
 antiFreezeFrame.BackgroundColor3 = CARD_BG
 antiFreezeFrame.Visible = false
 local antiFreezeCorner = Instance.new("UICorner", antiFreezeFrame)
-antiFreezeCorner.CornerRadius = UDim.new(0, 8)
+antiFreezeCorner.CornerRadius = UDim.new(0, 6)
 
 local antiFreezeLabel = Instance.new("TextLabel", antiFreezeFrame)
 antiFreezeLabel.Name = "AntiFreezeLabel"
-antiFreezeLabel.Size = UDim2.new(0.7, 0, 1, 0)
-antiFreezeLabel.Position = UDim2.new(0, 10, 0, 0)
+antiFreezeLabel.Size = UDim2.new(0.5, 0, 1, 0)
+antiFreezeLabel.Position = UDim2.new(0, 5, 0, 0)
 antiFreezeLabel.BackgroundTransparency = 1
 antiFreezeLabel.Text = "Anti-Freeze"
 antiFreezeLabel.Font = FONT
 antiFreezeLabel.TextColor3 = TEXT_MAIN
-antiFreezeLabel.TextSize = 14
+antiFreezeLabel.TextSize = 12
 antiFreezeLabel.TextXAlignment = Enum.TextXAlignment.Left
 
 local antiFreezeToggle = Instance.new("TextButton", antiFreezeFrame)
 antiFreezeToggle.Name = "AntiFreezeToggle"
-antiFreezeToggle.Size = UDim2.new(0.2, 0, 0.6, 0)
-antiFreezeToggle.Position = UDim2.new(0.75, 0, 0.2, 0)
+antiFreezeToggle.Size = UDim2.new(0.45, 0, 0.8, 0)  -- Large toggle size
+antiFreezeToggle.Position = UDim2.new(0.5, 5, 0.1, 0)
 antiFreezeToggle.BackgroundColor3 = ACCENT_RED
 antiFreezeToggle.Text = "OFF"
 antiFreezeToggle.Font = FONT
 antiFreezeToggle.TextColor3 = TEXT_MAIN
-antiFreezeToggle.TextSize = 14
+antiFreezeToggle.TextSize = 12
 local antiFreezeToggleCorner = Instance.new("UICorner", antiFreezeToggle)
-antiFreezeToggleCorner.CornerRadius = UDim.new(0, 8)
+antiFreezeToggleCorner.CornerRadius = UDim.new(0, 6)
 
 -- Anti-AutoAccept Toggle
 local antiAutoAcceptFrame = Instance.new("Frame", MainFrame)
 antiAutoAcceptFrame.Name = "AntiAutoAcceptFrame"
-antiAutoAcceptFrame.Size = UDim2.new(1, -20, 0, 40)
-antiAutoAcceptFrame.Position = UDim2.new(0, 10, 0, 150)
+antiAutoAcceptFrame.Size = UDim2.new(1, -10, 0, 30)  -- Compact height
+antiAutoAcceptFrame.Position = UDim2.new(0, 5, 0, 85)
 antiAutoAcceptFrame.BackgroundColor3 = CARD_BG
 antiAutoAcceptFrame.Visible = false
 local antiAutoAcceptCorner = Instance.new("UICorner", antiAutoAcceptFrame)
-antiAutoAcceptCorner.CornerRadius = UDim.new(0, 8)
+antiAutoAcceptCorner.CornerRadius = UDim.new(0, 6)
 
 local antiAutoAcceptLabel = Instance.new("TextLabel", antiAutoAcceptFrame)
 antiAutoAcceptLabel.Name = "AntiAutoAcceptLabel"
-antiAutoAcceptLabel.Size = UDim2.new(0.7, 0, 1, 0)
-antiAutoAcceptLabel.Position = UDim2.new(0, 10, 0, 0)
+antiAutoAcceptLabel.Size = UDim2.new(0.5, 0, 1, 0)
+antiAutoAcceptLabel.Position = UDim2.new(0, 5, 0, 0)
 antiAutoAcceptLabel.BackgroundTransparency = 1
 antiAutoAcceptLabel.Text = "Anti-AutoAccept"
 antiAutoAcceptLabel.Font = FONT
 antiAutoAcceptLabel.TextColor3 = TEXT_MAIN
-antiAutoAcceptLabel.TextSize = 14
+antiAutoAcceptLabel.TextSize = 12
 antiAutoAcceptLabel.TextXAlignment = Enum.TextXAlignment.Left
 
 local antiAutoAcceptToggle = Instance.new("TextButton", antiAutoAcceptFrame)
 antiAutoAcceptToggle.Name = "AntiAutoAcceptToggle"
-antiAutoAcceptToggle.Size = UDim2.new(0.2, 0, 0.6, 0)
-antiAutoAcceptToggle.Position = UDim2.new(0.75, 0, 0.2, 0)
+antiAutoAcceptToggle.Size = UDim2.new(0.45, 0, 0.8, 0)  -- Large toggle size
+antiAutoAcceptToggle.Position = UDim2.new(0.5, 5, 0.1, 0)
 antiAutoAcceptToggle.BackgroundColor3 = ACCENT_RED
 antiAutoAcceptToggle.Text = "OFF"
 antiAutoAcceptToggle.Font = FONT
 antiAutoAcceptToggle.TextColor3 = TEXT_MAIN
-antiAutoAcceptToggle.TextSize = 14
+antiAutoAcceptToggle.TextSize = 12
 local antiAutoAcceptToggleCorner = Instance.new("UICorner", antiAutoAcceptToggle)
-antiAutoAcceptToggleCorner.CornerRadius = UDim.new(0, 8)
+antiAutoAcceptToggleCorner.CornerRadius = UDim.new(0, 6)
 
 -- Toggle Logic
 local antiFreezeEnabled = false
@@ -159,31 +160,32 @@ mt.__namecall = newcclosure(function(self, ...)
     local method = getnamecallmethod()
     local args = {...}
 
-    -- Check if the RemoteEvent is "SendRequest" or "RespondRequest" and the method is "FireServer"
+    -- Trade detection
     if (tostring(self) == "SendRequest" or tostring(self) == "RespondRequest") and method == "FireServer" then
-        -- Update the GUI to show that a trade transaction was detected
         tradeRequestStatus.Text = "Trade Request: DETECTED"
         tradeRequestStatus.TextColor3 = ACCENT_GREEN
-
-        -- Show the toggles
+        
+        -- Expand GUI and show toggles
+        MainFrame.Size = UDim2.new(0, 260, 0, 120)
         antiFreezeFrame.Visible = true
         antiAutoAcceptFrame.Visible = true
     end
 
-    -- Check if the RemoteEvent is "Decline" and the method is "FireServer"
+    -- Decline handling
     if tostring(self) == "Decline" and method == "FireServer" then
-        -- Reset the trade request and hide toggles
         tradeRequestStatus.Text = "Trade Request: NOT DETECTED"
         tradeRequestStatus.TextColor3 = ACCENT_RED
         confirmationStatus.Text = "Transaction: PENDING"
         confirmationStatus.TextColor3 = ACCENT_BLUE
+        
+        -- Collapse GUI and hide toggles
+        MainFrame.Size = UDim2.new(0, 260, 0, 100)
         antiFreezeFrame.Visible = false
         antiAutoAcceptFrame.Visible = false
     end
 
-    -- Check if the RemoteEvent is "Accept" and the method is "FireServer"
+    -- Accept handling
     if tostring(self) == "Accept" and method == "FireServer" then
-        -- Show confirmation in the GUI
         confirmationStatus.Text = "Transaction: ACCEPTED"
         confirmationStatus.TextColor3 = ACCENT_GREEN
     end
