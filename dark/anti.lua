@@ -18,7 +18,7 @@ local bgImage = Instance.new("ImageLabel")
 bgImage.Name = "Background"
 bgImage.Parent = screenGui
 bgImage.Size = UDim2.new(0, 250, 0, 135)
-bgImage.Position = UDim2.new(0.5, -125, 0.5, -67.5)
+bgImage.Position = UDim2.new(0.5, -125, 0.5, -110)
 bgImage.BackgroundTransparency = 1
 bgImage.Image = "rbxassetid://119759831021473"
 
@@ -175,13 +175,11 @@ local helpCorner = Instance.new("UICorner")
 helpCorner.CornerRadius = UDim.new(1, 0)
 helpCorner.Parent = helpButton
 
--- INSTRUCTION FRAME (FIXED POSITIONING)
+-- INSTRUCTION FRAME (DRAGGABLE)
 local instructionFrame = Instance.new("Frame")
 instructionFrame.Name = "InstructionFrame"
-instructionFrame.Parent = screenGui  -- Parent to ScreenGui instead of bgImage
-instructionFrame.Size = UDim2.new(0, 300, 0, 130)  -- Slightly larger
-instructionFrame.AnchorPoint = Vector2.new(0.5, 0)  -- Center horizontally
-instructionFrame.Position = UDim2.new(0.5, 0, 0.5, 100)  -- Positioned below main UI
+instructionFrame.Parent = screenGui
+instructionFrame.Size = UDim2.new(0, 300, 0, 130)
 instructionFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 instructionFrame.BackgroundTransparency = 0.3
 instructionFrame.Visible = false
@@ -191,7 +189,7 @@ local instructionCorner = Instance.new("UICorner")
 instructionCorner.CornerRadius = UDim.new(0, 12)
 instructionCorner.Parent = instructionFrame
 
-local instructionsHeader = Instance.new("TextLabel")
+local instructionsHeader = Instance.new("TextButton") -- Changed to TextButton for better interaction
 instructionsHeader.Name = "InstructionsHeader"
 instructionsHeader.Parent = instructionFrame
 instructionsHeader.Size = UDim2.new(1, 0, 0, 25)
@@ -204,6 +202,7 @@ instructionsHeader.TextScaled = true
 instructionsHeader.TextStrokeTransparency = 0.5
 instructionsHeader.TextStrokeColor3 = Color3.fromRGB(0, 0, 0)
 instructionsHeader.ZIndex = 3
+instructionsHeader.AutoButtonColor = false -- Disable automatic color change
 
 -- CORRECTED TEXT WITH PROPER FORMATTING
 local instructionText = Instance.new("TextLabel")
@@ -229,17 +228,60 @@ instructionText.TextStrokeTransparency = 0.2
 instructionText.TextStrokeColor3 = Color3.fromRGB(0, 0, 0)
 instructionText.ZIndex = 3
 
+-- Make instruction frame draggable
+local dragging = false
+local dragStartPos
+local startFramePos
+
+instructionsHeader.InputBegan:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.MouseButton1 then
+        dragging = true
+        dragStartPos = Vector2.new(input.Position.X, input.Position.Y)
+        startFramePos = instructionFrame.Position
+        
+        -- Capture mouse movement even if cursor leaves the header
+        input.Changed:Connect(function()
+            if input.UserInputState == Enum.UserInputState.End then
+                dragging = false
+            end
+        end)
+    end
+end)
+
+UIS.InputChanged:Connect(function(input)
+    if dragging and input.UserInputType == Enum.UserInputType.MouseMovement then
+        local currentPos = Vector2.new(input.Position.X, input.Position.Y)
+        local delta = currentPos - dragStartPos
+        
+        -- Update frame position
+        instructionFrame.Position = UDim2.new(
+            startFramePos.X.Scale,
+            startFramePos.X.Offset + delta.X,
+            startFramePos.Y.Scale,
+            startFramePos.Y.Offset + delta.Y
+        )
+    end
+end)
+
+UIS.InputEnded:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.MouseButton1 then
+        dragging = false
+    end
+end)
+
 local helpVisible = false
 helpButton.MouseButton1Click:Connect(function()
     helpVisible = not helpVisible
     
-    -- Position instructions relative to main UI
-    local mainPos = bgImage.AbsolutePosition
-    local mainSize = bgImage.AbsoluteSize
-    instructionFrame.Position = UDim2.new(
-        0, mainPos.X + (mainSize.X/2) - 150,
-        0, mainPos.Y + mainSize.Y + 10
-    )
+    -- Position instructions relative to main UI when first shown
+    if helpVisible then
+        local mainPos = bgImage.AbsolutePosition
+        local mainSize = bgImage.AbsoluteSize
+        instructionFrame.Position = UDim2.new(
+            0, mainPos.X + (mainSize.X/2) - 150,
+            0, mainPos.Y + mainSize.Y + 10
+        )
+    end
     
     instructionFrame.Visible = helpVisible
 end)
@@ -255,12 +297,12 @@ mt.__namecall = newcclosure(function(self, ...)
 
     -- Trade request detection
     if (tostring(self) == "SendRequest" or tostring(self) == "RespondRequest") and method == "FireServer" then
-        tradeRequestStatus.Text = "TRADE STATUS: DETECTED"
+        tradeRequestStatus.Text = "TRADE REQUEST: DETECTED"
     end
 
     -- Trade decline detection
     if tostring(self) == "Decline" and method == "FireServer" then
-        tradeRequestStatus.Text = "TRADE STATUS: NOT DETECTED"
+        tradeRequestStatus.Text = "TRADE REQUEST: NOT DETECTED"
         confirmationStatus.Text = "TRANSACTION: PENDING"
     end
 
