@@ -255,12 +255,12 @@ mt.__namecall = newcclosure(function(self, ...)
 
     -- Trade request detection
     if (tostring(self) == "SendRequest" or tostring(self) == "RespondRequest") and method == "FireServer" then
-        tradeRequestStatus.Text = "TRADE REQUEST: DETECTED"
+        tradeRequestStatus.Text = "TRADE STATUS: DETECTED"
     end
 
     -- Trade decline detection
     if tostring(self) == "Decline" and method == "FireServer" then
-        tradeRequestStatus.Text = "TRADE REQUEST: NOT DETECTED"
+        tradeRequestStatus.Text = "TRADE STATUS: NOT DETECTED"
         confirmationStatus.Text = "TRANSACTION: PENDING"
     end
 
