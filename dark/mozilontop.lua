@@ -133,6 +133,10 @@ main.Active = true
 main.Draggable = true
 main.Parent = gui
 
+-- Library
+loadstring(game:HttpGet("https://raw.githubusercontent.com/exploiter101/growagarden/refs/heads/main/GuiLibrary/Load/prompt.lua"))()
+
+
 -- Logo bật tắt
 
 toggleLogo.MouseButton1Click:Connect(function()
