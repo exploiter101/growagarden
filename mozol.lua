@@ -365,7 +365,7 @@ local Confirmed = false
 
 WindUI:Popup(
     {
-        Title = "Loaded!!! Spawner & Egg ESP",
+        Title = "ZeoHub | Spawner & Egg ESP",
         Icon = "sparkles",
         IconThemed = true,
         Content = "This is a " ..
